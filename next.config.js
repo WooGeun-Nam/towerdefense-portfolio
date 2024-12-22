@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/game-portfolio'  // 여기에 당신의 레포지토리 이름을 넣으세요
+  basePath: '/towerdefense-portfolio'  // 여기에 당신의 레포지토리 이름을 넣으세요
 }
 
 module.exports = nextConfig
