@@ -471,6 +471,117 @@ const GamePortfolio = () => {
         </div>
       </div>
 
+      {/* 문제 해결 */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">문제 해결</h2>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <h4 className="font-semibold mb-2">1. 몬스터 경로이탈</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <p>[1번 지점 -> 2번 지점] 이동 시 발생하는 문제</p>
+            <li>문제점 :</li>
+            <p>
+              - 2번 방향으로 직진 후 if상황 (두번째지점과 인접할 떄) 방향을 전환
+            </p>
+            <p>
+              - 패널 등을 열거나 알트탭 등의 지연 발생 시 방향전환하지 못하고
+              기존 방향으로 직진
+            </p>
+            <li>개선 :</li>
+            <p>
+              - 현재 위치와 목표 지점 간의 거리와 방향을 계산 하여 목표 지점으로
+              이동 (목표지점 이상으로 이동 X)
+            </p>
+          </ul>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <h4 className="font-semibold mb-2">2. 적 추적 알고리즘 최적화</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>문제점 : </li>
+            <p>- 타워와 몬스터간의 거리를 최우선하여 공격 우선순위를 설정 함</p>
+            <p>
+              - 문제점 : 먼저 등장한 적이 우선적으로 처리되지 않는 문제 발생
+            </p>
+            <li>개선 :</li>
+            <p>- 먼저 등장한 적을 우선순위를 높게 주어서 해결</p>
+            <p>
+              - 공격거리내 적 탐지 시 생성 순서대로 탐색하고 break문을 통한 해결
+            </p>
+          </ul>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <h4 className="font-semibold mb-2">
+            3. 설치된 타워 선택 불가능 오류
+          </h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              문제점 : 일정 이상 타워 설치 시 타워 선택(UI 제공) 안되는 오류
+              발생
+            </li>
+            <li>
+              개선 : 타워 설치 시 Z축 미 지정으로 인해 설치 구문에 -1로 지정되게
+              변경
+            </li>
+          </ul>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <h4 className="font-semibold mb-2">
+            4. 타일맵에 Box Collider 및 태그 부여하여 타워 배치 UI 구현 시
+            문제점 해결
+          </h4>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <h4 className="font-semibold mb-2">5. 검사타워 공격 시 에러</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>문제점 : 검사타워 공격 시 NullException 발생</li>
+            <li>
+              개선 : 최종 AttackEnemy 함수 호출 시에도 attackTarget의 null상태
+              확인 후 공격
+            </li>
+          </ul>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <h4 className="font-semibold mb-2">
+            6. 타워 공격 시 HitEffect 비정상적인 출력
+          </h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              문제점1 : 공격속도가 빠르면 이펙트가 정상적으로 출력되지 않음
+            </li>
+            <li>
+              개선1 : 이펙트를 Instantiate로 clone하여 특정 초 뒤에 destroy 함
+            </li>
+            <li>
+              문제점2 : 이펙트 발생도중 타워 판매 시 이펙트가 Destroy 되지 않는
+              문제
+            </li>
+            <li>
+              개선2 : Destroy(clone, time) 을 통해 타워가 Destroy 되면 같이 삭제
+              되도록 수정
+            </li>
+          </ul>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <h4 className="font-semibold mb-2">7. 웨이브 랜덤 보상 오류</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>문제점1 : SP 초과 보상</li>
+            <li>개선1 : 조건문 추가하여 초과되지 않게 수정</li>
+            <li>문제점2 : 랜덤보상으로 설치되는 랜덤타워 겹침 현상 발생</li>
+            <li>
+              개선2 : 타워 설치 전 타일의 타워 설치여부 확인 후 비어있는 타일에
+              설치
+            </li>
+            <p>* 모든 타일이 설치된 타워면 에러 발생 확률 있음</p>
+          </ul>
+        </div>
+      </div>
+
       {/* 개발 계획 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">개발 계획</h2>
