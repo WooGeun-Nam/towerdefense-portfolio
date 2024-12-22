@@ -478,10 +478,10 @@ const GamePortfolio = () => {
         <div className="p-4 bg-gray-50 rounded">
           <h4 className="font-semibold mb-2">1. 몬스터 경로이탈</h4>
           <ul className="list-disc pl-5 text-sm">
-            <p>[1번 지점 -> 2번 지점] 이동 시 발생하는 문제</p>
-            <li>문제점 :</li>
+            <li>문제점 : n번 지점에서 n+1번 지점 이동 시 발생하는 문제</li>
             <p>
-              - 2번 방향으로 직진 후 if상황 (두번째지점과 인접할 떄) 방향을 전환
+              - n+1번 방향으로 직진 후 if상황 (두번째지점과 인접할 떄) 방향을
+              전환
             </p>
             <p>
               - 패널 등을 열거나 알트탭 등의 지연 발생 시 방향전환하지 못하고
