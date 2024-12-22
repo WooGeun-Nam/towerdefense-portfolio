@@ -474,7 +474,9 @@ const GamePortfolio = () => {
       {/* 음악 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">게임 음악</h2>
-        <audio src="./audio/sample1.mp3" loop controls id="myAudio"></audio>
+        <audio src="./audio/sample1.mp3" controls id="myAudio"></audio>
+        <audio src="./audio/sample2.mp3" controls id="myAudio"></audio>
+        <audio src="./audio/sample6.wav" controls id="myAudio"></audio>
       </div>
       
       {/* 문제 해결 */}
