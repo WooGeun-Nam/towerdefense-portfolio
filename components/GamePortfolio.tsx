@@ -226,7 +226,7 @@ const GamePortfolio = () => {
           <h3 className="font-semibold mb-2">게임 UI 레이아웃</h3>
           <div className="rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/game-ui.png"
+              src="./game-ui.png"
               alt="게임 UI 레이아웃"
               className="w-full object-cover"
             />
@@ -261,7 +261,7 @@ const GamePortfolio = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img
-                src="/user-ui.png"
+                src="./user-ui.png"
                 alt="게임 UI 레이아웃"
                 className="w-full object-cover"
               />
@@ -269,7 +269,7 @@ const GamePortfolio = () => {
 
             <div className="rounded-lg overflow-hidden shadow-lg">
               <img
-                src="/tower-ui.png"
+                src="./tower-ui.png"
                 alt="게임 UI 레이아웃"
                 className="w-full object-cover"
               />
@@ -302,7 +302,7 @@ const GamePortfolio = () => {
 
           <div className="rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/skill-ui.png"
+              src="./skill-ui.png"
               alt="게임 UI 레이아웃"
               className="w-full object-cover"
             />
@@ -319,7 +319,7 @@ const GamePortfolio = () => {
 
           <div className="rounded-lg overflow-hidden shadow-lg">
             <img
-              src="/random-reward.png"
+              src="./random-reward.png"
               alt="게임 UI 레이아웃"
               className="w-full object-cover"
             />
@@ -357,54 +357,54 @@ const GamePortfolio = () => {
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
                   <img
-                    src="/character/CharacterBase01.png"
+                    src="./character/CharacterBase01.png"
                     className="w-full object-cover"
                   />
                   <img
-                    src="/character/WarriorTower01.png"
+                    src="./character/WarriorTower01.png"
                     className="w-full object-cover"
                   />
                   <img
-                    src="/character/SpearTower01.png"
+                    src="./character/SpearTower01.png"
                     className="w-full object-cover"
                   />
                   <img
-                    src="/character/ArcherTower01.png"
+                    src="./character/ArcherTower01.png"
                     className="w-full object-cover"
                   />
                   <img
-                    src="/character/LaserTower01.png"
+                    src="./character/LaserTower01.png"
                     className="w-full object-cover"
                   />
                   <img
-                    src="/character/BuffTower01.png"
+                    src="./character/BuffTower01.png"
                     className="w-full object-cover"
                   />
                   <img
-                    src="/character/WarriorTower02.png"
+                    src="./character/WarriorTower02.png"
                     className="w-full object-cover"
                   />
                   <img
-                    src="/character/WarriorTower03.png"
+                    src="./character/WarriorTower03.png"
                     className="w-full object-cover"
                   />
                 </div>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="/character/CharacterBaseAnim.png"
+                    src="./character/CharacterBaseAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="/character/ArcherTowerAnim.png"
+                    src="./character/ArcherTowerAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="/character/BuffTowerAnim.png"
+                    src="./character/BuffTowerAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -421,22 +421,22 @@ const GamePortfolio = () => {
                 </ul>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
-                  <img src="/SkillFist.png" className="w-full object-cover" />
+                  <img src="./SkillFist.png" className="w-full object-cover" />
                   <img
-                    src="/SkillDamageUp.png"
+                    src="./SkillDamageUp.png"
                     className="w-full object-cover"
                   />
-                  <img src="/SkillSlow.png" className="w-full object-cover" />
+                  <img src="./SkillSlow.png" className="w-full object-cover" />
                   <img
-                    src="/SkillThunder.png"
+                    src="./SkillThunder.png"
                     className="w-full object-cover"
                   />
-                  <img src="/ArrowRain.png" className="w-full object-cover" />
+                  <img src="./ArrowRain.png" className="w-full object-cover" />
                 </div>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <img
-                    src="/SkillSpearLanding.png"
+                    src="./SkillSpearLanding.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -450,7 +450,7 @@ const GamePortfolio = () => {
                 </ul>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
-                  <img src="/Tileset.png" className="w-full object-cover" />
+                  <img src="./Tileset.png" className="w-full object-cover" />
                 </div>
               </div>
 
@@ -462,8 +462,8 @@ const GamePortfolio = () => {
                 </ul>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
-                  <img src="/Arrow.png" className="w-full object-cover" />
-                  <img src="/Stone.png" className="w-full object-cover" />
+                  <img src="./Arrow.png" className="w-full object-cover" />
+                  <img src="./Stone.png" className="w-full object-cover" />
                 </div>
               </div>
             </div>
