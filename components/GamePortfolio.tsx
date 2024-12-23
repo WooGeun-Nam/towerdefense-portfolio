@@ -466,9 +466,42 @@ const GamePortfolio = () => {
       {/* 음악 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">게임 음악</h2>
-        <audio src="./audio/sample1.mp3" controls id="myAudio"></audio>
-        <audio src="./audio/sample2.mp3" controls id="myAudio"></audio>
-        <audio src="./audio/sample6.wav" controls id="myAudio"></audio>
+        <audio className="mb-4" src="./audio/sample1.mp3" controls id="myAudio"></audio>
+        <audio className="mb-4" src="./audio/sample2.mp3" controls id="myAudio"></audio>
+        <audio className="mb-4" src="./audio/sample6.wav" controls id="myAudio"></audio>
+      </div>
+
+      {/* 데모 */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">데모</h2>
+
+        <div className="p-4 bg-gray-50 rounded">
+          <div className="grid grid-cols-2">
+            <p className="font-semibold mb-2">Demo01</p>
+            <a
+              href="./Demo/TowerDefenseDemo01.7z"
+              download
+              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            >
+              다운로드
+            </a>
+          </div>
+
+          <h4 className="font-semibold mb-2">피드백</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>기능적 문제</li>
+            <p>- 오디오 크기 조절</p>
+            <p>- 랜덤보상으로 들어오는 SP가 상한선을 초과</p>
+            <p>- 랜덤보상으로 설치되는 랜덤타워 겹침 현상 발생</p>
+            <p className="mb-2">- 특정한 상황에서 몬스터 경로이탈</p>
+            <li>밸런스</li>
+            <p>- 화살비스킬 하향필요, DPS감소 또는 SP상향</p>
+            <p>- 레이저스킬 하향필요</p>
+            <p className="mb-2">- 낙뢰스킬 버프 필요</p>
+            <li>개선 필요 사항</li>
+            <p>- 아이콘에 마우스 오버를 통한 스킬 설명 필요</p>
+          </ul>
+        </div>
       </div>
       
       {/* 문제 해결 */}
