@@ -260,19 +260,11 @@ const GamePortfolio = () => {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="./user-ui.png"
-                alt="게임 UI 레이아웃"
-                className="w-full object-cover"
-              />
+              <img src="./user-ui.png" className="h-full w-full object-fill" />
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="./tower-ui.png"
-                alt="게임 UI 레이아웃"
-                className="w-full object-cover"
-              />
+              <img src="./tower-ui.png" className="w-full object-fill" />
             </div>
           </div>
 
