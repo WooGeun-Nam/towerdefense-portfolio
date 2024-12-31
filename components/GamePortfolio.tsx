@@ -2,9 +2,10 @@ const GamePortfolio = () => {
   return (
     <div className="w-full max-w-4xl mx-auto bg-white p-8">
       {/* 헤더 섹션 */}
+      <title>RogueTower 게임기획서</title>
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Roguelike Tower Defense</h1>
-        <div className="mt-4 flex justify-center space-x-4">
+        <div className="mt-4 flex justify-center space-x-4 mb-4">
           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">
             #로그라이크
           </span>
@@ -15,7 +16,6 @@ const GamePortfolio = () => {
             #전략
           </span>
         </div>
-        <p className="text-xl text-gray-600">게임 기획서</p>
       </div>
 
       {/* 개발자 */}
@@ -511,7 +511,7 @@ const GamePortfolio = () => {
 
         <div className="p-4 bg-gray-50 rounded">
           <div className="grid grid-cols-2">
-            <p className="font-semibold mb-2">Demo01</p>
+            <p className="font-semibold mb-2">v0.1.0 : 2024-10-11</p>
             <a
               href="./Demo/TowerDefenseDemo01.7z"
               download
@@ -521,6 +521,17 @@ const GamePortfolio = () => {
             </a>
           </div>
 
+          <h4 className="font-semibold mb-2">업데이트</h4>
+          <ul className="list-disc pl-5 text-sm mb-4">
+            <li>타워 설치 및 정보 표시 기능</li>
+            <li>스킬 사용 기능</li>
+            <li>웨이브 시스템 및 보상</li>
+            <li>웨이브 랜덤 보상</li>
+            <li>기본 UI</li>
+            <li>재생 및 실행 속도 제어</li>
+            <li>타워 업그레이드 기능</li>
+          </ul>
+
           <h4 className="font-semibold mb-2">피드백</h4>
           <ul className="list-disc pl-5 text-sm">
             <li>기능적 문제</li>
@@ -529,9 +540,9 @@ const GamePortfolio = () => {
             <p>- 랜덤보상으로 설치되는 랜덤타워 겹침 현상 발생</p>
             <p className="mb-2">- 특정한 상황에서 몬스터 경로이탈</p>
             <li>밸런스</li>
-            <p>- 화살비스킬 하향필요, DPS감소 또는 SP상향</p>
-            <p>- 레이저스킬 하향필요</p>
-            <p className="mb-2">- 낙뢰스킬 버프 필요</p>
+            <p>- 화살비스킬 하향 필요, DPS감소 또는 SP상향</p>
+            <p>- 레이저스킬 하향 필요</p>
+            <p className="mb-2">- 낙뢰스킬 상향 필요</p>
             <li>개선 필요 사항</li>
             <p>- 아이콘에 마우스 오버를 통한 스킬 설명 필요</p>
           </ul>
@@ -547,33 +558,32 @@ const GamePortfolio = () => {
           <ul className="list-disc pl-5 text-sm">
             <li>문제점 : n번 지점에서 n+1번 지점 이동 시 발생하는 문제</li>
             <p>
-              - n+1번 방향으로 직진 후 if상황 (두번째지점과 인접할 떄) 방향을
-              전환
+              &nbsp;&nbsp;└&nbsp; n+1번 방향으로 직진 후 if상황 (두번째지점과
+              인접할 떄) 방향을 전환
             </p>
             <p>
-              - 패널 등을 열거나 알트탭 등의 지연 발생 시 방향전환하지 못하고
-              기존 방향으로 직진
+              &nbsp;&nbsp;└&nbsp; 패널 등을 열거나 알트탭 등의 지연 발생 시
+              방향전환하지 못하고 기존 방향으로 직진
             </p>
-            <li>개선 :</li>
-            <p>
-              - 현재 위치와 목표 지점 간의 거리와 방향을 계산 하여 목표 지점으로
-              이동 (목표지점 이상으로 이동 X)
-            </p>
+            <li>
+              개선 : 현재 위치와 목표 지점 간의 거리와 방향을 계산 하여 목표
+              지점으로 이동 (목표지점 이상으로 이동 X)
+            </li>
           </ul>
         </div>
 
         <div className="p-4 bg-gray-50 rounded">
           <h4 className="font-semibold mb-2">2. 적 추적 알고리즘 최적화</h4>
           <ul className="list-disc pl-5 text-sm">
-            <li>문제점 : </li>
-            <p>- 타워와 몬스터간의 거리를 최우선하여 공격 우선순위를 설정 함</p>
+            <li>문제점 : 먼저 등장한 적이 우선적으로 처리되지 않는 문제</li>
             <p>
-              - 문제점 : 먼저 등장한 적이 우선적으로 처리되지 않는 문제 발생
+              &nbsp;&nbsp;└&nbsp; 현재 타워와 몬스터간의 거리를 최우선하여 공격
+              우선순위를 설정 함
             </p>
-            <li>개선 :</li>
-            <p>- 먼저 등장한 적을 우선순위를 높게 주어서 해결</p>
+            <li>개선 : 먼저 등장한 적을 우선순위를 높게 주어서 해결</li>
             <p>
-              - 공격거리내 적 탐지 시 생성 순서대로 탐색하고 break문을 통한 해결
+              &nbsp;&nbsp;└&nbsp; 공격거리내 적 탐지 시 생성 순서대로 탐색하고
+              break문을 통한 해결
             </p>
           </ul>
         </div>
@@ -613,38 +623,47 @@ const GamePortfolio = () => {
         </div>
 
         <div className="p-4 bg-gray-50 rounded">
-          <h4 className="font-semibold mb-2">
-            6. 타워 공격 시 HitEffect 비정상적인 출력
-          </h4>
+          <h4 className="font-semibold mb-2">6. HitEffect 이슈</h4>
+          <p style={{ fontSize: '14.5px' }}>[비정상적인 출력]</p>
+          <ul className="list-disc pl-5 text-sm mb-4">
+            <li>
+              문제점 : 공격속도가 빠르면 이펙트가 정상적으로 출력되지 않음
+            </li>
+            <li>
+              개선 : 이펙트를 Instantiate로 clone하여 특정 초 뒤에 destroy 함
+            </li>
+          </ul>
+          <p style={{ fontSize: '14.5px' }}>[판매 시 이펙트 미삭제]</p>
           <ul className="list-disc pl-5 text-sm">
             <li>
-              문제점1 : 공격속도가 빠르면 이펙트가 정상적으로 출력되지 않음
-            </li>
-            <li>
-              개선1 : 이펙트를 Instantiate로 clone하여 특정 초 뒤에 destroy 함
-            </li>
-            <li>
-              문제점2 : 이펙트 발생도중 타워 판매 시 이펙트가 Destroy 되지 않는
+              문제점 : 이펙트 발생도중 타워 판매 시 이펙트가 Destroy 되지 않는
               문제
             </li>
             <li>
-              개선2 : Destroy(clone, time) 을 통해 타워가 Destroy 되면 같이 삭제
+              개선 : Destroy(clone, time) 을 통해 타워가 Destroy 되면 같이 삭제
               되도록 수정
             </li>
           </ul>
         </div>
 
         <div className="p-4 bg-gray-50 rounded">
-          <h4 className="font-semibold mb-2">7. 웨이브 랜덤 보상 오류</h4>
+          <h4 className="font-semibold mb-2">7. 웨이브 랜덤 보상이슈</h4>
+          <p style={{ fontSize: '14.5px' }}>[SP 초과 보상]</p>
+          <ul className="list-disc pl-5 text-sm mb-4">
+            <li>문제점 : SP 초과 보상</li>
+            <li>개선 : 조건문 추가하여 초과되지 않게 수정</li>
+          </ul>
+          <p style={{ fontSize: '14.5px' }}>[랜덤보상 타워 겹침]</p>
           <ul className="list-disc pl-5 text-sm">
-            <li>문제점1 : SP 초과 보상</li>
-            <li>개선1 : 조건문 추가하여 초과되지 않게 수정</li>
-            <li>문제점2 : 랜덤보상으로 설치되는 랜덤타워 겹침 현상 발생</li>
+            <li>문제점 : 랜덤보상으로 설치되는 랜덤타워 겹침 현상 발생</li>
             <li>
-              개선2 : 타워 설치 전 타일의 타워 설치여부 확인 후 비어있는 타일에
+              개선 : 타워 설치 전 타일의 타워 설치여부 확인 후 비어있는 타일에
               설치
             </li>
-            <p>* 모든 타일이 설치된 타워면 에러 발생 확률 있음</p>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* 모든
+              타일이 설치된 타워면 에러 발생 확률 있음
+            </p>
           </ul>
         </div>
       </div>
@@ -696,6 +715,8 @@ const GamePortfolio = () => {
           </div>
         </div>
       </div>
+      
+      <div>Copyright © 2024. WooGeun-Nam All rights reserved.</div>
     </div>
   );
 };
