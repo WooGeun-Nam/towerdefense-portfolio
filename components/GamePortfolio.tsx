@@ -4,21 +4,18 @@ const GamePortfolio = () => {
       {/* 헤더 섹션 */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-4">Roguelike Tower Defense</h1>
-        <p className="text-xl text-gray-600">게임 기획서</p>
         <div className="mt-4 flex justify-center space-x-4">
           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">
-            로그라이크
+            #로그라이크
           </span>
           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">
-            타워 디펜스
+            #타워 디펜스
           </span>
           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">
-            전략
-          </span>
-          <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded">
-            RPG
+            #전략
           </span>
         </div>
+        <p className="text-xl text-gray-600">게임 기획서</p>
       </div>
 
       {/* 개발자 */}
