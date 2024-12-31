@@ -242,7 +242,7 @@ const GamePortfolio = () => {
             <div className="p-4 bg-gray-50 rounded">
               <ul className="list-disc pl-5 text-sm">
                 <li>픽셀 아트 그래픽 스타일</li>
-                <li>직관적인 UI/UX 설계</li>
+                <li>즉시 이해 가능한 UI 설계</li>
               </ul>
             </div>
           </div>
@@ -252,7 +252,7 @@ const GamePortfolio = () => {
               <ul className="list-disc pl-5 text-sm">
                 <li>모듈형 타워 시스템</li>
                 <li>확장 가능한 스킬 시스템</li>
-                <li>유연한 난이도 조정 시스템</li>
+                <li>랜덤 보상 시스템</li>
               </ul>
             </div>
           </div>
