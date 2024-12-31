@@ -21,6 +21,43 @@ const GamePortfolio = () => {
         </div>
       </div>
 
+      {/* 개발자 */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">개발자</h2>
+        <div className="grid gap-6">
+          <div>
+            <h3 className="text-lg font-semibold mb-2">WooGeun Nam</h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>cowzza1@naver.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 도구 */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">개발 도구</h2>
+
+        <ul className="list-disc pl-5 text-sm mb-4">
+          <li>엔진 : unity</li>
+          <li>언어 : C#</li>
+          <li>디자인 도구 : Aseprite</li>
+        </ul>
+
+        <div className="grid grid-cols-3 gap-4 w-1/3">
+          <div className="rounded-lg overflow-hidden">
+            <img src="./icon/unity.png" className="h-full w-full object-fill" />
+          </div>
+          <div className="rounded-lg overflow-hidden">
+            <img src="./icon/csharp.png" className="w-full object-fill" />
+          </div>
+
+          <div className="rounded-lg overflow-hidden">
+            <img src="./icon/ase.png" className="w-full object-fill" />
+          </div>
+        </div>
+      </div>
+      
       {/* 게임 개요 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">게임 개요</h2>
