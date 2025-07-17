@@ -548,6 +548,48 @@ const GamePortfolio = () => {
           </ul>
         </div>
       </div>
+
+      {/* 알파 */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">알파 테스트 파일</h2>
+        <div className="p-4 bg-gray-50 rounded">
+          <div className="grid grid-cols-3 gap-4">
+            <div className="flex flex-col items-center">
+              <p className="font-semibold mb-2">TestAlpha.z01</p>
+              <a
+                href="./Demo/AlphaTestFileDivision/TestAlpha.z01"
+                download
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              >
+                다운로드
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="font-semibold mb-2">TestAlpha.z02</p>
+              <a
+                href="./Demo/AlphaTestFileDivision/TestAlpha.z02"
+                download
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              >
+                다운로드
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="font-semibold mb-2">TestAlpha.zip</p>
+              <a
+                href="./Demo/AlphaTestFileDivision/TestAlpha.zip"
+                download
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              >
+                다운로드
+              </a>
+            </div>
+          </div>
+          <p className="mt-4 text-sm text-gray-600">
+            ※ 모든 파일을 같은 폴더에 다운로드 한 뒤 TestAlpha.zip을 압축 해제하세요.
+          </p>
+        </div>
+      </div>
       
       {/* 문제 해결 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
