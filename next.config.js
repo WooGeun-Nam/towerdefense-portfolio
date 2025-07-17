@@ -1,10 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: '/towerdefense-portfolio'  // 여기에 당신의 레포지토리 이름을 넣으세요
-}
+const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = nextConfig
+module.exports = {
+  basePath: isProd ? '/towerdefense-portfolio' : '',
+  assetPrefix: isProd ? '/towerdefense-portfolio/' : '',
+  trailingSlash: true,
+};
