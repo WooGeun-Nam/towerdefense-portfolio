@@ -54,7 +54,7 @@ const GamePortfolio = () => {
           </div>
         </div>
       </div>
-      
+
       {/* 게임 개요 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">게임 개요</h2>
@@ -64,7 +64,7 @@ const GamePortfolio = () => {
             <ul className="list-disc pl-5 space-y-2">
               <li>로그라이크 요소와 타워 디펜스의 결합</li>
               <li>웨이브별 전략적 선택과 성장</li>
-              <li>다양한 타워 조합과 시너지</li>
+              <li>장비 파밍과 난이도 강화</li>
             </ul>
           </div>
           <div>
@@ -110,37 +110,54 @@ const GamePortfolio = () => {
 
               <div>
                 <h4 className="font-semibold mb-4">타워 종류</h4>
+                <div className="space-y-6">
+                  <div>
+                    <div className="p-4 bg-gray-50 rounded">
+                      <ul className="list-disc pl-5 space-y-2">
+                        <li>
+                          타워 생산 비용 : TC(TowerCost) 단위 / 인게임에서는
+                          이미지로 표기
+                        </li>
+                        <li>타워 공격 타입 : 물리형, 마법형, 복합형</li>
+                        <li>
+                          타워의 업그레이드는 타워의 공격 타입에 따라 영향을
+                          받음 (복합형은 두 종류의 업그레이드를 합계로 받음)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     {
-                      name: '기본 타워',
-                      cost: '50G',
-                      desc: '기본적인 물리 공격 타워',
+                      name: "기본 타워",
+                      cost: "50TC / 복합형",
+                      desc: "기본적인 단일 공격 타워",
                     },
                     {
-                      name: '검사 타워',
-                      cost: '70G',
-                      desc: '높은 공격 속도와 단일 데미지',
+                      name: "검사 타워",
+                      cost: "70TC / 물리형",
+                      desc: "높은 공격 속도와 단일 데미지",
                     },
                     {
-                      name: '창술사 타워',
-                      cost: '150G',
-                      desc: '최대 4개 대상 동시 공격',
+                      name: "창술사 타워",
+                      cost: "150TC / 물리형",
+                      desc: "최대 4개 대상 동시 공격",
                     },
                     {
-                      name: '궁수 타워',
-                      cost: '130G',
-                      desc: '넓은 범위의 다중 공격',
+                      name: "궁수 타워",
+                      cost: "130TC / 물리형",
+                      desc: "넓은 범위의 다중 공격",
                     },
                     {
-                      name: '레이저 타워',
-                      cost: '120G',
-                      desc: '높은 DPS의 단일 타겟 공격',
+                      name: "레이저 타워",
+                      cost: "120TC / 마법형",
+                      desc: "높은 DPS의 단일 타겟 공격",
                     },
                     {
-                      name: '사제 타워',
-                      cost: '100G',
-                      desc: '적 방어력 감소 효과',
+                      name: "사제 타워",
+                      cost: "100TC / 마법형",
+                      desc: "적 방어력 감소 효과",
                     },
                   ].map((tower, idx) => (
                     <div key={idx} className="p-4 bg-gray-50 rounded">
@@ -173,21 +190,21 @@ const GamePortfolio = () => {
           </div>
 
           {/* 웨이브 시스템 */}
-          <div>
+          <div className="p-4 bg-gray-50 rounded">
             <h3 className="text-lg font-semibold mb-4">웨이브 시스템</h3>
             <div className="grid grid-cols-3 gap-4">
               {[
                 {
-                  type: '일반 웨이브',
-                  desc: '30마리 몬스터 출현',
+                  type: "일반 웨이브",
+                  desc: "30마리 몬스터 출현",
                 },
                 {
-                  type: '중간보스',
-                  desc: '5웨이브마다 등장, 강화된 능력치',
+                  type: "네임드",
+                  desc: "특정 웨이브 등장, 강화된 능력치",
                 },
                 {
-                  type: '최종보스',
-                  desc: '10웨이브 클리어 목표, 최고 난이도',
+                  type: "보스",
+                  desc: "최종웨이브 클리어 목표",
                 },
               ].map((wave, idx) => (
                 <div key={idx} className="p-4 bg-gray-50 rounded">
@@ -208,6 +225,13 @@ const GamePortfolio = () => {
               </div>
 
               <div className="p-4 bg-gray-50 rounded">
+                <h4 className="font-semibold mb-2">웨이브 처치 보상</h4>
+                <p className="text-sm">
+                  개별 적 1개체당 골드 보상, 웨이브 진행도에 따라 증가
+                </p>
+              </div>
+
+              <div className="p-4 bg-gray-50 rounded">
                 <h4 className="font-semibold mb-2">선택형 추가 보상</h4>
                 <p className="text-sm mb-2">
                   매 웨이브 종료 시 2개의 보상 중 1개 선택
@@ -217,11 +241,11 @@ const GamePortfolio = () => {
                   개별 보상은 선택지, 수치 2개의 랜덤을 통해 확정된다
                 </p>
                 <ul className="list-disc pl-5 text-sm space-y-1">
-                  <li>HP 회복: 1~4 포인트</li>
+                  <li>HP 회복: 1~4 포인트 (최대 체력 상태에서는 등장 X)</li>
                   <li>SP 추가: 20~60 포인트</li>
                   <li>골드: 10~120</li>
                   <li>랜덤 타워 자동 설치</li>
-                  <li>무료 공격력 업그레이드</li>
+                  <li>무료 물리/마법 업그레이드</li>
                 </ul>
               </div>
             </div>
@@ -233,131 +257,53 @@ const GamePortfolio = () => {
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">기술적 특징</h2>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-6">
           <div>
             <h3 className="font-semibold mb-2">그래픽 & UI</h3>
             <div className="p-4 bg-gray-50 rounded">
-              <ul className="list-disc pl-5 text-sm">
+              <ul className="list-disc pl-5 text-sm space-y-1">
                 <li>픽셀 아트 그래픽 스타일</li>
-                <li>즉시 이해 가능한 UI 설계</li>
+                <li>UI 간소화 설계</li>
+                <li>TAB 키를 통한 UI ON/OFF 기능</li>
               </ul>
             </div>
           </div>
           <div>
             <h3 className="font-semibold mb-2">시스템 설계</h3>
             <div className="p-4 bg-gray-50 rounded">
-              <ul className="list-disc pl-5 text-sm">
-                <li>모듈형 타워 시스템</li>
-                <li>확장 가능한 스킬 시스템</li>
-                <li>랜덤 보상 시스템</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* 게임 UI 이미지 섹션 */}
-        <div className="mb-6">
-          <h3 className="font-semibold mb-2">게임 UI 레이아웃</h3>
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="./game-ui.png"
-              alt="게임 UI 레이아웃"
-              className="w-full object-cover"
-            />
-          </div>
-
-          {/* UI 상세 설명 추가 */}
-          <div className="mt-4 space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 bg-gray-50 rounded">
-                <h5 className="font-semibold mb-2">타워/스킬 선택 패널</h5>
-                <ul className="list-disc pl-5 text-sm space-y-1">
-                  <li>타워 아이콘 및 비용</li>
-                  <li>클릭 및 단축키로 설치</li>
-                  <li>스킬패널 과 버튼 및 단축키로 스왑가능</li>
-                  <li>스킬의 활성화 상태 표시</li>
-                </ul>
-              </div>
-
-              <div className="p-4 bg-gray-50 rounded">
-                <h5 className="font-semibold mb-2">게임 시스템</h5>
-                <ul className="list-disc pl-5 text-sm space-y-1">
-                  <li>설정 메뉴</li>
-                  <li>게임 속도 조절</li>
-                  <li>재시작 기능</li>
-                  <li>적 체력바 표시</li>
-                  <li>이펙트 및 시각 효과</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img src="./user-ui.png" className="h-full w-full object-fill" />
-            </div>
-
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img src="./tower-ui.png" className="w-full object-fill" />
-            </div>
-          </div>
-
-          <div className="mt-4 space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 bg-gray-50 rounded">
-                <h5 className="font-semibold mb-2">상태 표시창</h5>
-                <ul className="list-disc pl-5 text-sm space-y-1">
-                  <li>체력 게이지 (HP)</li>
-                  <li>SP 게이지 (스킬 포인트)</li>
-                  <li>현재 골드량</li>
-                  <li>웨이브 정보 (0/10) 및 남은 몬스터 정보 표시</li>
-                </ul>
-              </div>
-
-              <div className="p-4 bg-gray-50 rounded">
-                <h5 className="font-semibold mb-2">타워 정보 및 추가버튼</h5>
-                <ul className="list-disc pl-5 text-sm space-y-1">
-                  <li>데미지 수치 표시</li>
-                  <li>타워 공격 범위 및 공격 속도</li>
-                  <li>타워 업그레이드 버튼</li>
-                  <li>게임 속도 변경 버튼 x2, x4 배속 가능</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="./skill-ui.png"
-              alt="게임 UI 레이아웃"
-              className="w-full object-cover"
-            />
-          </div>
-
-          <div className="mt-4 space-y-4">
-            <div className="p-4 bg-gray-50 rounded">
-              <h5 className="font-semibold mb-2">스킬 패널</h5>
               <ul className="list-disc pl-5 text-sm space-y-1">
-                <li>버튼 및 단축키를 통해 타워의 특수능력 사용 가능</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="./random-reward.png"
-              alt="게임 UI 레이아웃"
-              className="w-full object-cover"
-            />
-          </div>
-
-          <div className="mt-4 space-y-4">
-            <div className="p-4 bg-gray-50 rounded">
-              <h5 className="font-semibold mb-2">웨이브 랜덤 보상</h5>
-              <ul className="list-disc pl-5 text-sm space-y-1">
-                <li>웨이브 종료 시 2개의 보상 패널이 표시</li>
-                <li>버튼 클릭을 통해 해당 보상 수령가능</li>
-                <li>다음 웨이브 진행까지 카운트를 UI로 상단에 표시</li>
+                <li>
+                  <b>모듈형 타워 시스템 (State 패턴)</b>: `IWeaponState`
+                  인터페이스를 기반으로 타워의 행동(탐색, 공격)을 명확하게
+                  분리하여 확장성을 높였습니다.
+                </li>
+                <li>
+                  <b>이벤트 기반 UI 업데이트</b>: `UIEventManager`를 통해 게임
+                  데이터와 UI를 분리, 데이터 변경 시 UI가 실시간으로 반응하도록
+                  설계하여 유지보수성을 강화했습니다.
+                </li>
+                <li>
+                  <b>오브젝트 풀링</b>: 성능 최적화를 위해 적, 발사체 등 반복
+                  생성되는 오브젝트를 재활용하는 시스템을 구현했습니다.
+                </li>
+                <li>
+                  <b>중앙 집중형 사운드 관리</b>: `SoundManager`를 통해 BGM,
+                  SFX를 관리하며, 여러 개의 지속 사운드를 독립적으로 제어하는
+                  기능을 구현했습니다.
+                </li>
+                <li>
+                  <b>애니메이션 재사용성</b>: `Animator Override Controller`를
+                  활용하여 모든 타워가 하나의 로직을 공유하되, 각 타워의
+                  애니메이션 클립만 교체하도록 설계하여 효율성을 높였습니다.
+                </li>
+                <li>
+                  <b>데이터 기반 설계</b>: `ScriptableObject`를 활용하여 타워
+                  밸런스를 코드 수정 없이 쉽게 조절할 수 있도록 설계했습니다.
+                </li>
+                <li>
+                  <b>랜덤 맵 생성</b>: 매 게임마다 새로운 경로의 맵을 생성하여
+                  리플레이 가치를 증대시켰습니다.
+                </li>
               </ul>
             </div>
           </div>
@@ -374,10 +320,10 @@ const GamePortfolio = () => {
               <div className="p-4 bg-gray-50 rounded">
                 <h4 className="font-semibold mb-2">캐릭터</h4>
                 <ul className="list-disc pl-5 text-sm">
-                  <li>타워형 캐릭터 제작</li>
-                  <li>몬스터형 캐릭터 제작</li>
+                  <li>타워 및 몬스터 캐릭터 픽셀 아트 제작</li>
                   <li>
-                    타워형 캐릭터의 공격 및 대기 모션을 위한 애니메이션 제작
+                    <b>타워 애니메이션</b>: 모든 타워의 대기(Idle) 및
+                    공격(Attack) 애니메이션을 구현
                   </li>
                 </ul>
 
@@ -471,7 +417,7 @@ const GamePortfolio = () => {
               <div className="p-4 bg-gray-50 rounded">
                 <h4 className="font-semibold mb-2">맵(타일셋)</h4>
                 <ul className="list-disc pl-5 text-sm">
-                  <li>타워디펜스에 적합한 다양한 경로를 가진 타일셋 제작</li>
+                  <li>타워디펜스에 최적화된 경로를 가진 타일셋 제작</li>
                   <li>웨이브 시작 및 종료지점 제작</li>
                 </ul>
 
@@ -500,18 +446,118 @@ const GamePortfolio = () => {
       {/* 음악 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">게임 음악</h2>
-        <audio className="mb-4" src="./audio/sample1.mp3" controls id="myAudio"></audio>
-        <audio className="mb-4" src="./audio/sample2.mp3" controls id="myAudio"></audio>
-        <audio className="mb-4" src="./audio/sample6.wav" controls id="myAudio"></audio>
+        <audio
+          className="mb-4"
+          src="./audio/sample1.mp3"
+          controls
+          id="myAudio"
+        ></audio>
+        <audio
+          className="mb-4"
+          src="./audio/sample2.mp3"
+          controls
+          id="myAudio"
+        ></audio>
+        <audio
+          className="mb-4"
+          src="./audio/sample6.wav"
+          controls
+          id="myAudio"
+        ></audio>
       </div>
 
-      {/* 데모 */}
+      {/* 데모 & 테스트 빌드 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
-        <h2 className="text-2xl font-bold mb-4">데모</h2>
+        <h2 className="text-2xl font-bold mb-4">데모 & 테스트 빌드</h2>
+        <p className="text-xs text-gray-600 mb-4">
+          ※ 폴더 내 2DTowerDefense.exe 파일을 통해 게임 실행
+        </p>
 
+        {/* Alpha Test Build */}
+        <div className="p-4 bg-gray-100 rounded mb-6">
+          <div className="grid grid-cols-2 items-center mb-4">
+            <p className="font-semibold text-lg">Alpha Test Build (v0.3.0)</p>
+            <div className="flex justify-end space-x-2">
+              <a
+                href="./Demo/AlphaTestFileDivision/TestAlpha.z01"
+                download
+                className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
+              >
+                Download .z01
+              </a>
+              <a
+                href="./Demo/AlphaTestFileDivision/TestAlpha.z02"
+                download
+                className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
+              >
+                Download .z02
+              </a>
+              <a
+                href="./Demo/AlphaTestFileDivision/TestAlpha.zip"
+                download
+                className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
+              >
+                Download .zip
+              </a>
+            </div>
+          </div>
+          <p className="text-xs text-gray-600 mb-4">
+            ※ 모든 파일을 같은 폴더에 다운로드 한 뒤 TestAlpha.zip을 압축
+            해제하세요.
+          </p>
+
+          <h4 className="font-semibold mb-2">주요 업데이트</h4>
+          <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+            <li>
+              <b>게임 타이틀 및 설정 메뉴</b>: 해상도, 볼륨 조절 등 기본 환경
+              설정 기능 추가
+            </li>
+            <li>
+              <b>타워 공격 애니메이션</b>: 모든 타워의 공격 모션에 애니메이션
+              적용 및 공격 속도와 동기화
+            </li>
+            <li>
+              <b>사운드 시스템</b>: BGM 및 모든 효과음(SFX) 추가, 개별 사운드
+              제어 시스템 구현
+            </li>
+            <li>
+              <b>성능 최적화</b>: 오브젝트 풀링 시스템을 도입하여 게임 내
+              오브젝트 생성/파괴 비용 감소
+            </li>
+            <li>
+              <b>코드 리팩토링</b>: State 패턴 적용, UI 업데이트 로직 개선 등
+              코드 구조 전반 개선
+            </li>
+          </ul>
+        </div>
+        {/* v0.2.0 */}
+        <div className="p-4 bg-gray-50 rounded mb-6">
+          <div className="grid grid-cols-2 items-center mb-4">
+            <p className="font-semibold text-lg">v0.2.0</p>
+          </div>
+          <h4 className="font-semibold mb-2">주요 업데이트</h4>
+          <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+            <li>
+              <b>랜덤 맵 생성</b>: 스테이지 시작 시 맵이 랜덤하게 생성되어
+              다양한 전략적 플레이 유도
+            </li>
+            <li>
+              <b>UI 숨김 기능</b>: TAB 키를 통해 UI를 켜고 끌 수 있는 기능 추가
+            </li>
+            <li>
+              <b>코드 구조 개선</b>: 웨이브, UI 등 내부 시스템 리팩토링 진행
+            </li>
+          </ul>
+          <h4 className="font-semibold mb-2">밸런스 조정</h4>
+          <ul className="list-disc pl-5 text-sm mb-4">
+            <li>화살비 스킬 데미지 하향</li>
+            <li>낙뢰 스킬 데미지 상향 및 방어력 감소 효과 추가</li>
+          </ul>
+        </div>
+        {/* v0.1.0 */}
         <div className="p-4 bg-gray-50 rounded">
-          <div className="grid grid-cols-2">
-            <p className="font-semibold mb-2">v0.1.0 : 2024-10-11</p>
+          <div className="grid grid-cols-2 items-center mb-4">
+            <p className="font-semibold text-lg">v0.1.0 : 2024-10-11</p>
             <a
               href="./Demo/TowerDefenseDemo01.7z"
               download
@@ -521,81 +567,37 @@ const GamePortfolio = () => {
             </a>
           </div>
 
-          <h4 className="font-semibold mb-2">업데이트</h4>
+          <h4 className="font-semibold mb-2">최초 데모 버전</h4>
           <ul className="list-disc pl-5 text-sm mb-4">
             <li>타워 설치 및 정보 표시 기능</li>
             <li>스킬 사용 기능</li>
             <li>웨이브 시스템 및 보상</li>
-            <li>웨이브 랜덤 보상</li>
-            <li>기본 UI</li>
-            <li>재생 및 실행 속도 제어</li>
+            <li>기본 UI 및 게임 속도 제어</li>
             <li>타워 업그레이드 기능</li>
           </ul>
 
           <h4 className="font-semibold mb-2">피드백</h4>
           <ul className="list-disc pl-5 text-sm">
-            <li>기능적 문제</li>
-            <p>- 오디오 크기 조절</p>
-            <p>- 랜덤보상으로 들어오는 SP가 상한선을 초과</p>
-            <p>- 랜덤보상으로 설치되는 랜덤타워 겹침 현상 발생</p>
-            <p className="mb-2">- 특정한 상황에서 몬스터 경로이탈</p>
-            <li>밸런스</li>
-            <p>- 화살비스킬 하향 필요, DPS감소 또는 SP상향</p>
-            <p>- 레이저스킬 하향 필요</p>
-            <p className="mb-2">- 낙뢰스킬 상향 필요</p>
-            <li>개선 필요 사항</li>
-            <p>- 아이콘에 마우스 오버를 통한 스킬 설명 필요</p>
+            <li>
+              <b>기능적 문제</b>: 오디오 크기 조절, SP 상한선 초과, 랜덤 타워
+              겹침, 몬스터 경로 이탈
+            </li>
+            <li>
+              <b>밸런스</b>: 특정 스킬(화살비, 레이저) 하향 및 낙뢰 스킬 상향
+              필요
+            </li>
+            <li>
+              <b>개선 필요</b>: 마우스 오버 시 스킬 설명 UI 필요
+            </li>
           </ul>
         </div>
       </div>
 
-      {/* 알파 */}
+      {/* Debug */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
-        <h2 className="text-2xl font-bold mb-4">알파 테스트 파일</h2>
-        <div className="p-4 bg-gray-50 rounded">
-          <div className="grid grid-cols-3 gap-4">
-            <div className="flex flex-col items-center">
-              <p className="font-semibold mb-2">TestAlpha.z01</p>
-              <a
-                href="./Demo/AlphaTestFileDivision/TestAlpha.z01"
-                download
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                다운로드
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="font-semibold mb-2">TestAlpha.z02</p>
-              <a
-                href="./Demo/AlphaTestFileDivision/TestAlpha.z02"
-                download
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                다운로드
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <p className="font-semibold mb-2">TestAlpha.zip</p>
-              <a
-                href="./Demo/AlphaTestFileDivision/TestAlpha.zip"
-                download
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                다운로드
-              </a>
-            </div>
-          </div>
-          <p className="mt-4 text-sm text-gray-600">
-            ※ 모든 파일을 같은 폴더에 다운로드 한 뒤 TestAlpha.zip을 압축 해제하세요.
-          </p>
-        </div>
-      </div>
-      
-      {/* 문제 해결 */}
-      <div className="mb-8 bg-white rounded-lg shadow p-6">
-        <h2 className="text-2xl font-bold mb-4">문제 해결</h2>
+        <h2 className="text-2xl font-bold mb-4">DEV_LOG</h2>
 
-        <div className="p-4 bg-gray-50 rounded">
+        <div className="p-4 bg-gray-50 rounded mb-4">
           <h4 className="font-semibold mb-2">1. 몬스터 경로이탈</h4>
           <ul className="list-disc pl-5 text-sm">
             <li>문제점 : n번 지점에서 n+1번 지점 이동 시 발생하는 문제</li>
@@ -614,7 +616,7 @@ const GamePortfolio = () => {
           </ul>
         </div>
 
-        <div className="p-4 bg-gray-50 rounded">
+        <div className="p-4 bg-gray-50 rounded mb-4">
           <h4 className="font-semibold mb-2">2. 적 추적 알고리즘 최적화</h4>
           <ul className="list-disc pl-5 text-sm">
             <li>문제점 : 먼저 등장한 적이 우선적으로 처리되지 않는 문제</li>
@@ -630,7 +632,7 @@ const GamePortfolio = () => {
           </ul>
         </div>
 
-        <div className="p-4 bg-gray-50 rounded">
+        <div className="p-4 bg-gray-50 rounded mb-4">
           <h4 className="font-semibold mb-2">
             3. 설치된 타워 선택 불가능 오류
           </h4>
@@ -646,14 +648,14 @@ const GamePortfolio = () => {
           </ul>
         </div>
 
-        <div className="p-4 bg-gray-50 rounded">
+        <div className="p-4 bg-gray-50 rounded mb-4">
           <h4 className="font-semibold mb-2">
             4. 타일맵에 Box Collider 및 태그 부여하여 타워 배치 UI 구현 시
             문제점 해결
           </h4>
         </div>
 
-        <div className="p-4 bg-gray-50 rounded">
+        <div className="p-4 bg-gray-50 rounded mb-4">
           <h4 className="font-semibold mb-2">5. 검사타워 공격 시 에러</h4>
           <ul className="list-disc pl-5 text-sm">
             <li>문제점 : 검사타워 공격 시 NullException 발생</li>
@@ -664,9 +666,9 @@ const GamePortfolio = () => {
           </ul>
         </div>
 
-        <div className="p-4 bg-gray-50 rounded">
+        <div className="p-4 bg-gray-50 rounded mb-4">
           <h4 className="font-semibold mb-2">6. HitEffect 이슈</h4>
-          <p style={{ fontSize: '14.5px' }}>[비정상적인 출력]</p>
+          <p style={{ fontSize: "14.5px" }}>[비정상적인 출력]</p>
           <ul className="list-disc pl-5 text-sm mb-4">
             <li>
               문제점 : 공격속도가 빠르면 이펙트가 정상적으로 출력되지 않음
@@ -675,7 +677,7 @@ const GamePortfolio = () => {
               개선 : 이펙트를 Instantiate로 clone하여 특정 초 뒤에 destroy 함
             </li>
           </ul>
-          <p style={{ fontSize: '14.5px' }}>[판매 시 이펙트 미삭제]</p>
+          <p style={{ fontSize: "14.5px" }}>[판매 시 이펙트 미삭제]</p>
           <ul className="list-disc pl-5 text-sm">
             <li>
               문제점 : 이펙트 발생도중 타워 판매 시 이펙트가 Destroy 되지 않는
@@ -688,14 +690,14 @@ const GamePortfolio = () => {
           </ul>
         </div>
 
-        <div className="p-4 bg-gray-50 rounded">
+        <div className="p-4 bg-gray-50 rounded mb-4">
           <h4 className="font-semibold mb-2">7. 웨이브 랜덤 보상이슈</h4>
-          <p style={{ fontSize: '14.5px' }}>[SP 초과 보상]</p>
+          <p style={{ fontSize: "14.5px" }}>[SP 초과 보상]</p>
           <ul className="list-disc pl-5 text-sm mb-4">
             <li>문제점 : SP 초과 보상</li>
             <li>개선 : 조건문 추가하여 초과되지 않게 수정</li>
           </ul>
-          <p style={{ fontSize: '14.5px' }}>[랜덤보상 타워 겹침]</p>
+          <p style={{ fontSize: "14.5px" }}>[랜덤보상 타워 겹침]</p>
           <ul className="list-disc pl-5 text-sm">
             <li>문제점 : 랜덤보상으로 설치되는 랜덤타워 겹침 현상 발생</li>
             <li>
@@ -708,6 +710,51 @@ const GamePortfolio = () => {
             </p>
           </ul>
         </div>
+
+        <div className="p-4 bg-gray-50 rounded mb-4">
+          <h4 className="font-semibold mb-2">8. UI 실시간 업데이트 문제</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              문제점 : 플레이어의 SP, Gold 값이 변경될 때 UI가 즉각적으로
+              업데이트되지 않는 문제
+            </li>
+            <li>
+              개선 : 데이터 변경 시 이벤트가 발생하도록 프로퍼티(Property)
+              구조로 변경하고, `UIEventManager`를 통해 UI가 이를 구독하여 즉시
+              반영하도록 수정
+            </li>
+          </ul>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded mb-4">
+          <h4 className="font-semibold mb-2">9. 타워 공격력 표기 문제</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              문제점 : 버프 스킬 등으로 인한 추가 공격력이 합산된 값으로만
+              표시되어, 플레이어가 순수 공격력을 파악하기 어려움
+            </li>
+            <li>
+              개선 : 기본, 업그레이드, 버프 공격력을 별도로 계산하고 UI에
+              구분하여 표시 (예: 10 + 2 +{" "}
+              <span className="text-blue-500">3</span>)하도록 개선
+            </li>
+          </ul>
+        </div>
+
+        <div className="p-4 bg-gray-50 rounded mb-4">
+          <h4 className="font-semibold mb-2">10. 스킬 효과 적용 오류</h4>
+          <ul className="list-disc pl-5 text-sm">
+            <li>
+              문제점 : 슬로우(Slow) 스킬 등이 적의 이동 속도를 제대로 제어하지
+              못하는 문제
+            </li>
+            <li>
+              개선 : `StatusEffect` 스크립트가 `Enemy` 컴포넌트에 직접 접근하여
+              이동 속도를 제어하고, 효과 종료 시 원래 속도로 정확히 복원하도록
+              수정
+            </li>
+          </ul>
+        </div>
       </div>
 
       {/* 개발 계획 */}
@@ -715,49 +762,41 @@ const GamePortfolio = () => {
         <h2 className="text-2xl font-bold mb-4">개발 계획</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold mb-2">개발 우선순위</h3>
-            <div className="grid grid-cols-5 gap-4">
-              {[
-                '게임 밸런싱',
-                '랜덤 맵 시스템',
-                'RPG 요소 개발',
-                'NPC 시스템',
-                '신규 던전',
-              ].map((priority, idx) => (
-                <div key={idx} className="p-4 bg-blue-50 rounded text-center">
-                  <span className="font-bold text-2xl text-blue-800">
-                    {idx + 1}
-                  </span>
-                  <p className="text-sm mt-2">{priority}</p>
-                </div>
-              ))}
+            <h3 className="text-lg font-semibold mb-2">주요 로드맵</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 bg-blue-50 rounded">
+                <h4 className="font-semibold mb-2">
+                  1. 로그라이크 장비 시스템
+                </h4>
+                <p className="text-sm">장비 장착, 장비 파밍 시스템 개발</p>
+              </div>
+              <div className="p-4 bg-blue-50 rounded">
+                <h4 className="font-semibold mb-2">2. 게임 준비 단계 추가</h4>
+                <p className="text-sm">
+                  게임 입장 전 장비 장착, 난이도 설정 기능 추가
+                </p>
+              </div>
+              <div className="p-4 bg-blue-50 rounded">
+                <h4 className="font-semibold mb-2">3. 몬스터 시드 시스템</h4>
+                <p className="text-sm">게임마다 랜덤한 몬스터 조합 등장</p>
+              </div>
             </div>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-2">핵심 개발 과제</h3>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-4 bg-gray-50 rounded">
-                <h4 className="font-semibold mb-2">랜덤 경로 생성 시스템</h4>
-                <ul className="list-disc pl-5 text-sm">
-                  <li>타워디펜스에 최적화된 경로 알고리즘 개발</li>
-                  <li>난이도 밸런스 유지</li>
-                  <li>전략적 재미 요소 강화</li>
-                </ul>
-              </div>
-              <div className="p-4 bg-gray-50 rounded">
-                <h4 className="font-semibold mb-2">RPG 시스템 확장</h4>
-                <ul className="list-disc pl-5 text-sm">
-                  <li>장비 시스템 (무기, 방어구)</li>
-                  <li>던전 난이도 시스템</li>
-                  <li>타워 상성 시스템</li>
-                </ul>
-              </div>
+            <h3 className="text-lg font-semibold mb-2">기타 개발 과제</h3>
+            <div className="p-4 bg-gray-50 rounded">
+              <ul className="list-disc pl-5 text-sm space-y-2">
+                <li>맵 난이도에 따라 웨이브 보상 차등 설계</li>
+                <li>신규 유저를 위한 튜토리얼 기능 추가</li>
+                <li>타워 및 스킬 버튼에 마우스 오버 시 설명 UI 추가</li>
+                <li>기타 버그 수정 및 지속적인 개선사항 적용</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div>Copyright © 2024. WooGeun-Nam All rights reserved.</div>
     </div>
   );
