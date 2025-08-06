@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "RogueTower", // 제목 수정
   description: "게임 기획서", // 설명 수정
   icons: {
-    icon: "./Logo.ico",
+    icon: "Logo.ico",
   },
 };
 
