@@ -14,7 +14,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.1.0)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/1CYd8R1KDgb7ohnVHuvzBkSInb_AMeseU/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1_FSAAZ8XK97Lj_3DWX88dmIYohBiB6F4/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -232,3 +232,4 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
