@@ -14,7 +14,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.2.1)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/1cYZQkYoM5fmSHpmEDKNhwYh27ReadkIL/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1bNrE3XJVn4rXnNRR2S-fXrN3vI3Lr0lG/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -96,6 +96,11 @@ const DeployPage = () => {
               <li>플레이어 저장 데이터 암호화</li>
               <li>서버 연동 (순위표 및 데이터 수집)</li>
               <li>로딩화면 개선</li>
+            </ul>
+            <h4 className="font-semibold mb-2">v0.2.2</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>업그레이드 보상 문구 수정</li>
+              <li>TAB키(UI숨김) 기능 점수,시간 패널 과 연동</li>
             </ul>
           </div>
         );
@@ -324,3 +329,4 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
