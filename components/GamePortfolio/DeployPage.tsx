@@ -3,10 +3,112 @@
 import React, { useState } from "react";
 
 const DeployPage = () => {
-  const [selectedVersion, setSelectedVersion] = useState("v0.1.0-beta");
+  const [selectedVersion, setSelectedVersion] = useState("v0.2.1-beta");
 
   const renderPatchNote = () => {
     switch (selectedVersion) {
+      case "v0.2.1-beta":
+        return (
+          <div className="p-4 bg-gray-100 rounded mb-6">
+            <div className="grid grid-cols-2 items-center mb-4">
+              <p className="font-semibold text-lg">Beta Test Build (v0.2.1)</p>
+              <div className="flex justify-end">
+                <a
+                  href="https://drive.google.com/file/d/1cYZQkYoM5fmSHpmEDKNhwYh27ReadkIL/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
+                >
+                  다운로드
+                </a>
+              </div>
+            </div>
+            <p className="text-xs text-gray-600 mb-4">
+              ※ 이전 버전의 저장 데이터와 호환 합니다.
+            </p>
+
+            <h4 className="font-semibold mb-2">무한모드</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>기존모드의 100 난이도 클리어 시 개방</li>
+              <li>최종 웨이브가 존재하지 않는다.</li>
+              <li>웨이브당 제한시간이 존재한다 (2분)</li>
+              <li>
+                '적'이 죽지 않고 최종위치에 도착하면, 시작위치로 순환한다.
+              </li>
+              <li>제한시간 안에 남은 '적'이 '0'이 되면 웨이브 클리어</li>
+              <li>
+                제한시간 안에 남은 '적'이 있다면 '적' 한개당 HP가 1 감소한다.
+              </li>
+              <li>
+                체력이 '0'이하가 되어 게임이 종료되면 최종점수를 정산한다.
+              </li>
+              <li>
+                '무한모드'는 상위표가 존재하며 최종점수를 기준으로 등록가능
+              </li>
+              <li>상위 10명의 점수표를 타이틀 화면에서 확인할 수 있다.</li>
+              <li>우측상단의 버튼을 이용해 '데미지 분석' 사용 가능</li>
+            </ul>
+            <h4 className="font-semibold mb-2">추가</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>'사막' 맵 추가</li>
+              <li>'용암' 맵 추가</li>
+              <li>인게임 실시간 점수 표기 추가</li>
+              <li>게임속도 전환 단축키 추가 : 'Q'</li>
+              <li>인게임 단축키 설명 패널 추가</li>
+              <li>중복장비 보상 RCoin 지급 기능 추가</li>
+              <li>타이틀화면 상점/순위표 추가</li>
+              <li>
+                상점 : RCoin 을 이용하여 장비뽑기를 할 수 있습니다. (고정확률)
+              </li>
+              <li>
+                순위표 : '무한모드' 의 글로벌 순위표를 확인할 수 있습니다.
+              </li>
+            </ul>
+            <h4 className="font-semibold mb-2">밸런스</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>
+                <b>타워 밸런스 조정 : </b>
+                궁수 타워 하향, 창 타워 상향
+              </li>
+              <li>무기 장비 옵션 재설정</li>
+              <li>장비 공격 사거리 옵션 하향</li>
+              <li>
+                웨이브 랜덤 보상 : 물리/마법 업그레이드 상향 (10웨이브 마다
+                수치증가)
+              </li>
+              <li>타워형 스킬 상향 : 복수의 화신, 기본타워스킬</li>
+            </ul>
+            <h4 className="font-semibold mb-2">수정 및 개선</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>
+                <b>툴팁 관련 개선 : </b>일부 장신구 툴팁 개선(관련 효과 실시간
+                표기), 궁수 타워 툴팁 개선
+              </li>
+              <li>
+                <b>소리 관련 개선 : </b>일부 소리 누락문제 개선, 기능별 신규
+                사운드 추가
+              </li>
+              <li>UI 전환속도 개선</li>
+              <li>타워/스킬 전환 버그 수정</li>
+              <li>전설급 장비 이미지 수정</li>
+              <li>해상도에 따른 UI문제 개선</li>
+              <li>랜덤 보상 표기문제 수정</li>
+              <li>낙뢰스킬 잔상 버그 수정</li>
+              <li>인게임 UI 가시성 개선</li>
+              <li>약자 멸시 / 연쇄 폭발 특성 기능 누락 개선</li>
+              <li>튜토리얼 개선 및 신규 내용 추가</li>
+              <li>업그레이드 비용 가시성 개선</li>
+              <li>버전 표기 및 License 표기</li>
+            </ul>
+            <h4 className="font-semibold mb-2">기타 업데이트</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>로그라이크성 강화 : 적 생성 로직 및 스케일링 수정</li>
+              <li>플레이어 저장 데이터 암호화</li>
+              <li>서버 연동 (순위표 및 데이터 수집)</li>
+              <li>로딩화면 개선</li>
+            </ul>
+          </div>
+        );
       case "v0.1.0-beta":
         return (
           <div className="p-4 bg-gray-100 rounded mb-6">
@@ -14,7 +116,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.1.0)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/1_FSAAZ8XK97Lj_3DWX88dmIYohBiB6F4/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1CYd8R1KDgb7ohnVHuvzBkSInb_AMeseU/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -65,7 +167,6 @@ const DeployPage = () => {
             </ul>
           </div>
         );
-
       case "v0.3.0-alpha":
         return (
           <div className="p-4 bg-gray-100 rounded mb-6">
@@ -219,10 +320,11 @@ const DeployPage = () => {
           onChange={(e) => setSelectedVersion(e.target.value)}
           className="px-3 py-1 border rounded"
         >
+          <option value="v0.2.1-beta">Beta Test Build (v0.2.1)</option>
           <option value="v0.1.0-beta">Beta Test Build (v0.1.0)</option>
           <option value="v0.3.0-alpha">Alpha Test Build (v0.3.0)</option>
-          <option value="v0.2.0">v0.2.0</option>
-          <option value="v0.1.0">v0.1.0</option>
+          <option value="v0.2.0">Alpha Test Build (v0.2.0)</option>
+          <option value="v0.1.0">Alpha Test Build (v0.1.0)</option>
         </select>
       </div>
 
@@ -232,4 +334,3 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
-
