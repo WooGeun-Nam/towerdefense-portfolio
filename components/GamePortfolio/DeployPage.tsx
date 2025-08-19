@@ -14,7 +14,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.2.4)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/1pth7GcdUHv2rzQlDDoI2LfnihazpPvPt/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1f3eNnKfts_eKnNyIHo1nAcWxsLohogxM/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -124,6 +124,8 @@ const DeployPage = () => {
               <li>오류 추적 시스템 추가</li>
               <li>신규 적 4종 추가</li>
               <li>투사체 관련 타워 버그 개선 : 투사체가 남아 렉을 유발하는 문제</li>
+              <li>게임종료 후 로비에서 뽑기 시 멈추는 버그 개선</li>
+              <li>다량의 타워 설치시 소리 문제 개선</li>
             </ul>
           </div>
         );
@@ -352,5 +354,6 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
 
 
