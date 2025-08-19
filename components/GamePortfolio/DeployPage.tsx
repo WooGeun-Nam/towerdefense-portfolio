@@ -122,7 +122,7 @@ const DeployPage = () => {
             <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
               <li>파괴신의 석상 버그 수정</li>
               <li>오류 추적 시스템 추가</li>
-              <li>신규 적 4종 추가</li>
+              <li>신규 적 3종 추가</li>
               <li>투사체 관련 타워 버그 개선 : 투사체가 남아 렉을 유발하는 문제</li>
               <li>게임종료 후 로비에서 뽑기 시 멈추는 버그 개선</li>
               <li>다량의 타워 설치시 소리 문제 개선</li>
@@ -354,6 +354,7 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
 
 
 
