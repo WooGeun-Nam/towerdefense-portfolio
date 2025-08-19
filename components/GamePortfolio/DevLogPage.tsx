@@ -17,10 +17,13 @@ const DevLogPage = () => {
             <h4 className="font-semibold mb-1 text-gray-700">주요 버그 수정</h4>
             <ul className="list-disc pl-5 space-y-2 mb-4">
               <li>
-                <b>게임 플레이 중 비정상 종료:</b> `파괴신의 석상` 스킬 발동 시
+                <b>게임 플레이 중 비정상 종료 : </b>`파괴신의 석상` 스킬 발동 시
                 `InvalidOperationException` 오류로 게임이 멈추는 현상 해결.
               </li>
               <li>투사체 Collision Detection을 Continuous 로 변경하여 투사체 터널링 문제 해결</li>
+              <li>로딩에 가비지컬렉터를 통한 리소스 최적화</li>
+              <li><b>게임 종료 후 상점 관련 버그 개선 : </b>게임속도 제어 (Time.timeScale = 1f;) 에 의한 에러 해결</li>
+              <li><b>소리관련 문제 개선 : </b>오디오 소스 풀링 + 사운드 쿨다운(ThrottleTime) 적용</li>
             </ul>
             <h4 className="font-semibold mb-1 text-gray-700">추가</h4>
             <ul className="list-disc pl-5 space-y-1">
@@ -564,5 +567,6 @@ const DevLogPage = () => {
 };
 
 export default DevLogPage;
+
 
 
