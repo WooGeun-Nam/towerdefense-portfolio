@@ -14,7 +14,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.2.1)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/1bNrE3XJVn4rXnNRR2S-fXrN3vI3Lr0lG/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1juE1sd2dKpDCpbofB5oEwnGdNLQdo7kF/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -101,6 +101,19 @@ const DeployPage = () => {
             <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
               <li>업그레이드 보상 문구 수정</li>
               <li>TAB키(UI숨김) 기능 점수,시간 패널 과 연동</li>
+            </ul>
+            <h4 className="font-semibold mb-2">v0.2.3</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>최종점수 0 으로 표기되는 버그 수정</li>
+              <li>데이터 수집관련 버그 수정</li>
+              <li>'복수의 화신' 타워 데미지분석 이미지 오류 개선</li>
+              <li>웨이브 알림이 최우선으로 작용되도록 개선, 주요알림 우선순위 재설정</li>
+              <li>간헐적으로 상점 뽑기모션 오류로 인한 로직 개선</li>
+              <li>간헐적으로 타워버튼 비활성화 되는 버그 방어조치</li>
+              <li>무한모드 점수 등록 시 순위표 최신화 문제 개선</li>
+              <li>희생전략 특성 : 스킬버튼 관련 버그 수정</li>
+              <li>연쇄폭발 특성 : 하향</li>
+              <li>상점 뽑기 종류 추가</li>
             </ul>
           </div>
         );
@@ -329,4 +342,5 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
 
