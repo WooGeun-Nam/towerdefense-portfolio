@@ -139,7 +139,7 @@ const DevLogPage = () => {
                     </p>
                   </li>
                   <li>
-                    <b>스킬 이펙트 잔상:</b> 게임 클리어 직전 "낙뢰" 스킬 사용
+                    <b>스킬 이펙트 잔상:</b> 게임 클리어 직전 `낙뢰` 스킬 사용
                     시 이펙트가 사라지지 않는 버그.
                     <p className="pl-4 text-gray-600">
                       └&nbsp; <b>SkillThunder</b> 스크립트에서 공격 시전 시{" "}
@@ -472,6 +472,7 @@ const DevLogPage = () => {
 };
 
 export default DevLogPage;
+
 
 
 
