@@ -3,15 +3,15 @@
 import React, { useState } from "react";
 
 const DeployPage = () => {
-  const [selectedVersion, setSelectedVersion] = useState("v0.2.1-beta");
+  const [selectedVersion, setSelectedVersion] = useState("v0.2.3-beta");
 
   const renderPatchNote = () => {
     switch (selectedVersion) {
-      case "v0.2.1-beta":
+      case "v0.2.3-beta":
         return (
           <div className="p-4 bg-gray-100 rounded mb-6">
             <div className="grid grid-cols-2 items-center mb-4">
-              <p className="font-semibold text-lg">Beta Test Build (v0.2.1)</p>
+              <p className="font-semibold text-lg">Beta Test Build (v0.2.3)</p>
               <div className="flex justify-end">
                 <a
                   href="https://drive.google.com/file/d/1juE1sd2dKpDCpbofB5oEwnGdNLQdo7kF/view?usp=sharing"
@@ -328,7 +328,7 @@ const DeployPage = () => {
           onChange={(e) => setSelectedVersion(e.target.value)}
           className="px-3 py-1 border rounded"
         >
-          <option value="v0.2.1-beta">Beta Test Build (v0.2.1)</option>
+          <option value="v0.2.3-beta">Beta Test Build (v0.2.3)</option>
           <option value="v0.1.0-beta">Beta Test Build (v0.1.0)</option>
           <option value="v0.3.0-alpha">Alpha Test Build (v0.3.0)</option>
           <option value="v0.2.0">Alpha Test Build (v0.2.0)</option>
@@ -342,6 +342,7 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
 
 
 
