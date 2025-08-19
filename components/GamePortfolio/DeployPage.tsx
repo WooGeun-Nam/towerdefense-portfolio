@@ -14,7 +14,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.2.4)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/1CMtyUml6-HpCuAZrq8g_N1nNFi5lDg1_/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1pth7GcdUHv2rzQlDDoI2LfnihazpPvPt/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -123,6 +123,7 @@ const DeployPage = () => {
               <li>파괴신의 석상 버그 수정</li>
               <li>오류 추적 시스템 추가</li>
               <li>신규 적 4종 추가</li>
+              <li>투사체 관련 타워 버그 개선 : 투사체가 남아 렉을 유발하는 문제</li>
             </ul>
           </div>
         );
@@ -351,4 +352,5 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
 
