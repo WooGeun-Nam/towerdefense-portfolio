@@ -23,6 +23,9 @@ const DevLogPage = () => {
             </ul>
             <h4 className="font-semibold mb-1 text-gray-700">추가</h4>
             <ul className="list-disc pl-5 space-y-1">
+              <li>
+                ExceptionReporter.cs 추가 : 치명적인 오류 PlayFab으로 전송
+              </li>
               <li>신규 스프라이트를 이용한 신규 `적` 3종 추가</li>
             </ul>
           </div>
@@ -560,3 +563,4 @@ const DevLogPage = () => {
 };
 
 export default DevLogPage;
+
