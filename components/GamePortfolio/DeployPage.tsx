@@ -14,7 +14,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.2.3)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/1juE1sd2dKpDCpbofB5oEwnGdNLQdo7kF/view?usp=sharing"
+                  href="https://drive.google.com/file/d/12CmDmQeVADetICFEJHNGokAh3ea9h2dO/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -114,6 +114,11 @@ const DeployPage = () => {
               <li>희생전략 특성 : 스킬버튼 관련 버그 수정</li>
               <li>연쇄폭발 특성 : 하향</li>
               <li>상점 뽑기 종류 추가</li>
+            </ul>
+            <h4 className="font-semibold mb-2">v0.2.4</h4>
+            <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
+              <li>파괴신의 석상 버그 수정</li>
+              <li>신규 적 4종 추가</li>
             </ul>
           </div>
         );
@@ -342,6 +347,7 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
 
 
 
