@@ -11,28 +11,116 @@ const DevLogPage = () => {
         <p className="text-sm text-gray-600 mb-4">Beta_v0.2.x 업데이트 내역</p>
 
         <div className="space-y-8 text-sm">
-          {/* v0.2.3 */}
+          {/* v0.2.2 */}
           <div className="p-4 border-l-4 border-gray-300">
-            <h3 className="font-semibold text-lg mb-2">v0.2.3</h3>
-            <ul className="list-disc pl-5 space-y-1">
-              <li>최종 점수가 0으로 표기되는 버그 수정</li>
-              <li>데이터 수집 관련 버그 수정</li>
-              <li>`복수의 화신` 타워 데미지 분석 이미지 오류 개선</li>
+            <h3 className="font-semibold text-lg mb-2">v0.2.4</h3>
+            <h4 className="font-semibold mb-1 text-gray-700">주요 버그 수정</h4>
+            <ul className="list-disc pl-5 space-y-2 mb-4">
               <li>
-                웨이브 알림이 최우선으로 작용되도록 개선, 주요 알림 우선순위
-                재설정
+                <b>게임 플레이 중 비정상 종료:</b> `파괴신의 석상` 스킬 발동 시
+                `InvalidOperationException` 오류로 게임이 멈추는 현상 해결.
               </li>
-              <li>간헐적으로 상점 뽑기 모션 오류가 발생하는 로직 개선</li>
-              <li>
-                간헐적으로 타워 버튼이 비활성화되는 버그에 대한 방어 로직 추가
-              </li>
-              <li>
-                무한모드 점수 등록 시 순위표가 즉시 최신화되지 않는 문제 개선
-              </li>
-              <li>`희생 전략` 특성의 스킬 버튼 관련 버그 수정</li>
-              <li>`연쇄 폭발` 특성 성능 하향 조정</li>
-              <li>상점에 새로운 뽑기 종류 추가</li>
             </ul>
+            <h4 className="font-semibold mb-1 text-gray-700">추가</h4>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>신규 스프라이트를 이용한 신규 `적` 3종 추가</li>
+            </ul>
+          </div>
+
+          {/* v0.2.3 (업데이트된 내용) */}
+          <div className="p-4 border-l-4 border-green-500 bg-green-50">
+            <h3 className="font-semibold text-lg mb-2 text-green-800">
+              v0.2.3 (주요 안정성 업데이트)
+            </h3>
+            <div className="space-y-4">
+              {/* 주요 버그 수정 */}
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  주요 버그 수정
+                </h4>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>
+                    <b>상점 뽑기 기능 안정화:</b> 뽑기 연출 중
+                    `Resources.Load`의 반복 호출로 인한 성능 저하 및 게임 멈춤
+                    현상 해결. (아이콘 Preloading 적용)
+                  </li>
+                  <li>
+                    <b>`희생 전략` 특성 관련 버그 수정:</b>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>
+                        특성을 선택하지 않아도 타워 버튼이 비활성화되는 현상
+                        (방어 코드 추가)
+                      </li>
+                      <li>
+                        비활성화된 스킬이 다음 웨이브에 다시 활성화되는 문제
+                        해결
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              {/* UI / UX 개선 */}
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  UI / UX 개선
+                </h4>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>
+                    <b>웨이브 알림 우선순위:</b> 다른 주요 알림이 있어도 웨이브
+                    시작 알림이 즉시 최상단에 표시되도록 개선.
+                  </li>
+                  <li>
+                    <b>무한모드 순위표:</b> 점수 등록 시, 서버 응답을 기다린 후
+                    순위표가 새로고침되도록 수정. 또한, 등록 과정 동안 로딩
+                    화면을 표시하여 UX 개선.
+                  </li>
+                  <li>
+                    <b>데미지 미터기:</b> 특수 스킬로 소환된 타워의 아이콘이
+                    정상적으로 표시되도록 조회 로직 개선.
+                  </li>
+                </ul>
+              </div>
+
+              {/* 데이터 및 분석 */}
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  데이터 및 분석
+                </h4>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>
+                    <b>최종 점수 0점 표시:</b> 일반 모드 클리어 시 점수 계산
+                    순서 오류로 최종 점수가 0으로 표시되던 치명적 버그 수정.
+                  </li>
+                  <li>
+                    <b>PlayFab 분석 데이터 누락:</b>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>
+                        `scoreDetails`, `finalWaveEnemyInfo` 등 주요 플레이
+                        로그가 누락되던 문제 해결.
+                      </li>
+                      <li>
+                        데이터 유실 방지를 위해 적 정보 수집 방식을 `실시간
+                        조회`에서 `웨이브 샘플 저장` 방식으로 변경하여 안정성
+                        확보.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              {/* 밸런스 및 기타 */}
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  밸런스 및 기타
+                </h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>`연쇄 폭발` 특성 성능 하향 조정.</li>
+                  <li>상점에 고급, 희귀 등급의 신규 뽑기 상품 추가.</li>
+                  <li>`복수의 화신` 타워 데미지 분석 이미지 오류 개선.</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* v0.2.2 */}
@@ -472,7 +560,3 @@ const DevLogPage = () => {
 };
 
 export default DevLogPage;
-
-
-
-
