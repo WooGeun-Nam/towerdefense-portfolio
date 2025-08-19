@@ -20,6 +20,7 @@ const DevLogPage = () => {
                 <b>게임 플레이 중 비정상 종료:</b> `파괴신의 석상` 스킬 발동 시
                 `InvalidOperationException` 오류로 게임이 멈추는 현상 해결.
               </li>
+              <li>투사체 Collision Detection을 Continuous 로 변경하여 투사체 터널링 문제 해결</li>
             </ul>
             <h4 className="font-semibold mb-1 text-gray-700">추가</h4>
             <ul className="list-disc pl-5 space-y-1">
@@ -563,4 +564,5 @@ const DevLogPage = () => {
 };
 
 export default DevLogPage;
+
 
