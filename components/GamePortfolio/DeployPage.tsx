@@ -14,7 +14,7 @@ const DeployPage = () => {
               <p className="font-semibold text-lg">Beta Test Build (v0.2.4)</p>
               <div className="flex justify-end">
                 <a
-                  href="https://drive.google.com/file/d/12CmDmQeVADetICFEJHNGokAh3ea9h2dO/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1CMtyUml6-HpCuAZrq8g_N1nNFi5lDg1_/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
@@ -121,6 +121,7 @@ const DeployPage = () => {
             <h4 className="font-semibold mb-2">v0.2.4</h4>
             <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
               <li>파괴신의 석상 버그 수정</li>
+              <li>오류 추적 시스템 추가</li>
               <li>신규 적 4종 추가</li>
             </ul>
           </div>
@@ -350,3 +351,4 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
