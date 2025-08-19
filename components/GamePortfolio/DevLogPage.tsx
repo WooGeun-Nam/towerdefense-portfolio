@@ -3,6 +3,172 @@ import React from "react";
 const DevLogPage = () => {
   return (
     <div className="space-y-8">
+      {/* v0.2.x 통합 개발 일지 */}
+      <div className="bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">
+          통합 개발 일지 (Beta_v0.2.x)
+        </h2>
+        <p className="text-sm text-gray-600 mb-4">Beta_v0.2.x 업데이트 내역</p>
+
+        <div className="space-y-8 text-sm">
+          {/* v0.2.3 */}
+          <div className="p-4 border-l-4 border-gray-300">
+            <h3 className="font-semibold text-lg mb-2">v0.2.3</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>최종 점수가 0으로 표기되는 버그 수정</li>
+              <li>데이터 수집 관련 버그 수정</li>
+              <li>"복수의 화신" 타워 데미지 분석 이미지 오류 개선</li>
+              <li>
+                웨이브 알림이 최우선으로 작용되도록 개선, 주요 알림 우선순위
+                재설정
+              </li>
+              <li>간헐적으로 상점 뽑기 모션 오류가 발생하는 로직 개선</li>
+              <li>
+                간헐적으로 타워 버튼이 비활성화되는 버그에 대한 방어 로직 추가
+              </li>
+              <li>
+                무한모드 점수 등록 시 순위표가 즉시 최신화되지 않는 문제 개선
+              </li>
+              <li>"희생 전략" 특성의 스킬 버튼 관련 버그 수정</li>
+              <li>"연쇄 폭발" 특성 성능 하향 조정</li>
+              <li>상점에 새로운 뽑기 종류 추가</li>
+            </ul>
+          </div>
+
+          {/* v0.2.2 */}
+          <div className="p-4 border-l-4 border-gray-300">
+            <h3 className="font-semibold text-lg mb-2">v0.2.2</h3>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>물리/마법 업그레이드 보상 선택 시 문구 수정</li>
+              <li>TAB 키(UI 숨김) 기능이 점수, 시간 패널과 연동되도록 개선</li>
+            </ul>
+          </div>
+
+          {/* beta_v0.2.1 (Highlighted) */}
+          <div className="p-4 border-l-4 border-blue-500 bg-blue-50">
+            <h3 className="font-semibold text-lg mb-2 text-blue-800">
+              Beta_v0.2.1 (주요 업데이트)
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  신규 콘텐츠: 무한모드
+                </h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>
+                    최종 웨이브 없이, 제한 시간 내 적을 모두 처치하는 방식의
+                    신규 모드 추가
+                  </li>
+                  <li>
+                    플레이 점수를 기록하는 "순위표" 기능 및 <b>Azure PlayFab</b>{" "}
+                    서버 연동
+                  </li>
+                  <li>인게임 "데미지 분석" 기능 추가</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  주요 시스템
+                </h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>
+                    <b>상점 및 재화:</b> 중복 장비 획득 시 "RCoin"을 지급하고,
+                    이를 사용해 장비를 뽑는 상점 시스템 추가
+                  </li>
+                  <li>
+                    <b>데이터 수집:</b> 유저 플레이 데이터(클리어 여부, 장비,
+                    타워 통계 등) 수집을 위한 Log 시스템 개발 및 서버 연동
+                  </li>
+                  <li>
+                    <b>데이터 보안:</b> 플레이어 저장 데이터 암호화 적용
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  밸런스 및 콘텐츠
+                </h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>
+                    <b>타워:</b> 궁수 타워 하향, 창 타워 상향, 타워형
+                    스킬("복수의 화신", "기본타워 스킬") 성능 개선
+                  </li>
+                  <li>
+                    <b>장비/특성:</b> 무기 고유 효과 재설정, 전체 장비의 공격
+                    사거리 옵션 효율 50% 감소, "연쇄 폭발", "약자 멸시" 특성
+                    개선
+                  </li>
+                  <li>
+                    <b>적:</b> 난이도에 따라 적 스케일 및 종류가 다양해지도록
+                    수정, 적 랜덤 방어력 생성 기능 추가
+                  </li>
+                  <li>
+                    <b>맵:</b> 신규 테마 맵 2종 추가 및 난이도별 맵 해금 기능
+                    적용
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1 text-gray-700">
+                  기술적 개선 및 버그 수정 상세
+                </h4>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>
+                    <b>성능 최적화:</b> 빌드 환경에서 UI 전환이 느려지는 문제
+                    발생.
+                    <p className="pl-4 text-gray-600">
+                      └ <b>Time.timeScale</b>에 영향받지 않도록 <b>DeltaTime</b>{" "}
+                      기반으로 로직을 변경하여 해결하고,{" "}
+                      <b>animationDuration</b>으로 속도를 제어.
+                    </p>
+                  </li>
+                  <li>
+                    <b>UI 대응성 개선:</b> 특정 해상도에서 버튼 UI가 크기에 맞지
+                    않는 문제.
+                    <p className="pl-4 text-gray-600">
+                      └ <b>RectTransform</b>의 앵커를 <b>Stretch</b>로 적용하여
+                      해결.
+                    </p>
+                  </li>
+                  <li>
+                    <b>UI 렌더링 오류:</b> 스킬 버튼 클릭 후 UI를 숨겼다 다시
+                    표시하면 타워 아이콘이 올라오는 버그.
+                    <p className="pl-4 text-gray-600">
+                      └ <b>UIManager</b>의 <b>ShowUIAnimation</b> 로직 수정으로
+                      해결.
+                    </p>
+                  </li>
+                  <li>
+                    <b>스킬 이펙트 잔상:</b> 게임 클리어 직전 "낙뢰" 스킬 사용
+                    시 이펙트가 사라지지 않는 버그.
+                    <p className="pl-4 text-gray-600">
+                      └ <b>SkillThunder</b> 스크립트에서 공격 시전 시{" "}
+                      <b>Null 체크</b>를 추가하고, 이펙트를 비활성화가 아닌 즉시{" "}
+                      <b>Destroy</b> 하도록 변경.
+                    </p>
+                  </li>
+                  <li>
+                    <b>무한모드 로직 오류:</b>
+                    <ul className="list-disc pl-6 space-y-1">
+                      <li>
+                        적이 남은 상태에서 보상 패널로 넘어가지 않고 즉시 다음
+                        웨이브가 시작되는 버그.
+                        <p className="pl-4 text-gray-600">
+                          └ 체력 감소 로직 이후 보상 패널이 열리도록 순서 수정.
+                        </p>
+                      </li>
+                      <li>
+                        "타워 전문가" 특성 선택 시 타워 코스트 보상이
+                        비정상적으로 적용되는 버그 해결.
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* 오늘 통합 개발 일지 */}
       <div className="bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">
