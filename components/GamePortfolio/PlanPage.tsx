@@ -161,7 +161,7 @@ const PlanPage = () => {
                     },
                     {
                       name: "창술사 타워",
-                      cost: "150TC / 물리형",
+                      cost: "200TC / 물리형",
                       desc: "최대 4개 대상 동시 공격",
                     },
                     {
@@ -305,6 +305,49 @@ const PlanPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        {/* 무한모드 시스템 */}
+        <div className="p-4 bg-gray-50 rounded">
+          <h3 className="text-lg font-semibold mb-4">무한모드 시스템</h3>
+          <ul className="list-disc pl-5 space-y-2 text-sm">
+            <li>
+              <b>개방 조건:</b> 일반 모드 100 난이도 클리어 시 개방
+            </li>
+            <li>
+              <b>규칙:</b>
+              <ul className="list-decimal pl-6 mt-1 space-y-1">
+                <li>
+                  최종 웨이브가 없으며, 웨이브마다 2분의 제한 시간이 주어집니다.
+                </li>
+                <li>
+                  적이 최종 지점에 도달해도 죽지 않고 출발 지점으로 순환합니다.
+                </li>
+                <li>제한 시간 내에 모든 적을 처치하면 웨이브 클리어입니다.</li>
+                <li>
+                  시간 내에 적을 모두 처치하지 못하면 남은 적 하나당 HP가 1씩
+                  감소합니다.
+                </li>
+                <li>HP가 0이 되면 게임이 종료되고 최종 점수가 정산됩니다.</li>
+              </ul>
+            </li>
+            <li>
+              <b>점수 및 순위표:</b>
+              <ul className="list-disc pl-6 mt-1 space-y-1">
+                <li>
+                  클리어 점수, 맵 난이도 배율, 남은 시간을 합산하여 최종 점수가
+                  결정됩니다.
+                </li>
+                <li>
+                  최종 점수를 기준으로 상위 10명의 순위표(리더보드)에 등록할 수
+                  있습니다.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>특수 기능:</b> 데미지 분석 기능을 통해 타워별 데미지 기여도를
+              확인할 수 있습니다.
+            </li>
+          </ul>
         </div>
       </div>
 
