@@ -106,7 +106,7 @@ const DeployPage = () => {
             <ul className="list-disc pl-5 text-sm mb-4 space-y-1">
               <li>최종점수 0 으로 표기되는 버그 수정</li>
               <li>데이터 수집관련 버그 수정</li>
-              <li>'복수의 화신' 타워 데미지분석 이미지 오류 개선</li>
+              <li>복수의 화신 : 타워 데미지분석 이미지 오류 개선</li>
               <li>웨이브 알림이 최우선으로 작용되도록 개선, 주요알림 우선순위 재설정</li>
               <li>간헐적으로 상점 뽑기모션 오류로 인한 로직 개선</li>
               <li>간헐적으로 타워버튼 비활성화 되는 버그 방어조치</li>
@@ -342,5 +342,6 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
+
 
 
