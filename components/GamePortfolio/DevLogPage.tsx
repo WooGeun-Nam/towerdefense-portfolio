@@ -21,7 +21,6 @@ const DevLogPage = () => {
                 `InvalidOperationException` 오류로 게임이 멈추는 현상 해결.
               </li>
               <li>투사체 Collision Detection을 Continuous 로 변경하여 투사체 터널링 문제 해결</li>
-              <li>로딩에 가비지컬렉터를 통한 리소스 최적화</li>
               <li><b>게임 종료 후 상점 관련 버그 개선 : </b>게임속도 제어 (Time.timeScale = 1f;) 에 의한 에러 해결</li>
               <li><b>소리관련 문제 개선 : </b>오디오 소스 풀링 + 사운드 쿨다운(ThrottleTime) 적용</li>
             </ul>
@@ -31,6 +30,7 @@ const DevLogPage = () => {
                 ExceptionReporter.cs 추가 : 치명적인 오류 PlayFab으로 전송
               </li>
               <li>신규 스프라이트를 이용한 신규 `적` 3종 추가</li>
+              <li>로딩에 가비지컬렉터를 통한 리소스 최적화</li>
             </ul>
           </div>
 
@@ -567,6 +567,7 @@ const DevLogPage = () => {
 };
 
 export default DevLogPage;
+
 
 
 
