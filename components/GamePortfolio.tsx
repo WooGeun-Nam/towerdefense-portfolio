@@ -28,7 +28,7 @@ const GamePortfolio = () => {
           {[
             { id: "deploy", label: "배포" },
             { id: "plan", label: "기획서" },
-            { id: "devlog", label: "Dev Log" },
+            { id: "devlog", label: "개발일지" },
           ].map((tab, index) => (
             <button
               key={tab.id}
@@ -49,9 +49,16 @@ const GamePortfolio = () => {
 
         {/* 콘텐츠 카드 (탭 전환 영역) */}
         <div className="w-full bg-white border border-t-0 border-gray-300 rounded-b-lg shadow p-6">
-          {activeTab === "deploy" && <DeployPage />}
-          {activeTab === "plan" && <PlanPage />}
-          {activeTab === "devlog" && <DevLogPage />}
+          {/* ★★★ [핵심 수정] 각 탭의 콘텐츠를 div로 감싸서 명확하게 분리합니다. ★★★ */}
+          <div style={{ display: activeTab === "deploy" ? "block" : "none" }}>
+            <DeployPage onTabChange={setActiveTab} />
+          </div>
+          <div style={{ display: activeTab === "plan" ? "block" : "none" }}>
+            <PlanPage />
+          </div>
+          <div style={{ display: activeTab === "devlog" ? "block" : "none" }}>
+            <DevLogPage />
+          </div>
         </div>
       </div>
 

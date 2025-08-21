@@ -2,7 +2,11 @@
 
 import React, { useState } from "react";
 
-const DeployPage = () => {
+interface DeployPageProps {
+  onTabChange: (tab: "deploy" | "plan" | "devlog") => void;
+}
+
+const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
   const [selectedVersion, setSelectedVersion] = useState("v0.2.4-beta");
 
   const renderPatchNote = () => {
@@ -123,7 +127,9 @@ const DeployPage = () => {
               <li>파괴신의 석상 버그 수정</li>
               <li>오류 추적 시스템 추가</li>
               <li>신규 적 3종 추가</li>
-              <li>투사체 관련 타워 버그 개선 : 투사체가 남아 렉을 유발하는 문제</li>
+              <li>
+                투사체 관련 타워 버그 개선 : 투사체가 남아 렉을 유발하는 문제
+              </li>
               <li>게임종료 후 로비에서 뽑기 시 멈추는 버그 개선</li>
               <li>다량의 타워 설치시 소리 문제 개선</li>
             </ul>
@@ -329,6 +335,49 @@ const DeployPage = () => {
         ※ 폴더 내 2DTowerDefense.exe 또는 RogueTower.exe 파일을 통해 게임 실행
       </p>
 
+      {/* 프로젝트 정보 섹션 */}
+      <div className="mb-6 p-4 border rounded-lg bg-white shadow-sm">
+        <h3 className="text-lg font-bold mb-3">프로젝트 정보 (Project Info)</h3>
+        <div className="space-y-2 text-sm">
+          <p>
+            <span className="font-semibold w-28 inline-block">명칭 :</span>
+            <span>RogueTower</span>
+          </p>
+          <p>
+            <span className="font-semibold w-28 inline-block">개발 환경:</span>
+            <span>Unity, C#, PlayFab, Aseprite</span>
+          </p>
+          <p>
+            <span className="font-semibold w-28 inline-block">소스 코드:</span>
+            <span>Local (비공개, 요청 시 코드 샘플 제공 가능)</span>
+          </p>
+          <p>
+            <span className="font-semibold w-28 inline-block">상세 정보:</span>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                onTabChange("plan"); // 'plan' 탭으로 전환
+              }}
+              className="text-blue-600 hover:underline"
+            >
+              게임 기획서 보기
+            </a>
+            <span className="mx-2">|</span>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                onTabChange("devlog"); // 'devlog' 탭으로 전환
+              }}
+              className="text-blue-600 hover:underline"
+            >
+              개발 일지 보기
+            </a>
+          </p>
+        </div>
+      </div>
+
       {/* 버전 선택 드롭다운 */}
       <div className="mb-4">
         <label htmlFor="versionSelect" className="font-semibold mr-2">
@@ -354,7 +403,3 @@ const DeployPage = () => {
 };
 
 export default DeployPage;
-
-
-
-

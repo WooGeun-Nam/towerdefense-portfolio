@@ -41,37 +41,78 @@ const PlanPage = () => {
           <li>엔진 : unity</li>
           <li>언어 : C#</li>
           <li>디자인 도구 : Aseprite</li>
+          <li>백엔드 서비스 : PlayFab</li>
         </ul>
 
-        <div className="grid grid-cols-3 gap-4 w-1/3">
+        <div className="grid grid-cols-4 gap-4 w-1/2">
           <div className="rounded-lg overflow-hidden">
-            <img src="./icon/unity.png" className="h-full w-full object-fill" />
+            <img
+              src="./icon/unity.png"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="rounded-lg overflow-hidden">
-            <img src="./icon/csharp.png" className="w-full object-fill" />
+            <img
+              src="./icon/csharp.png"
+              className="h-full w-full object-cover"
+            />
           </div>
-
           <div className="rounded-lg overflow-hidden">
-            <img src="./icon/ase.png" className="w-full object-fill" />
+            <img src="./icon/ase.png" className="h-full w-full object-cover" />
+          </div>
+          {/* PlayFab 아이콘을 위한 div */}
+          <div className="rounded-lg overflow-hidden">
+            <img
+              src="./icon/PlayFab.jpg"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </div>
 
+      {/* ★★★ 프로젝트 목표 및 설계 철학 ★★★ */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">프로젝트 목표 및 설계 철학</h2>
+        <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+          <p>
+            이 프로젝트는 Unity와 C#에 대한 깊은 이해를 바탕으로, 단순한 기능
+            구현을 넘어 <b>상용화 수준의 게임 개발 파이프라인 전체를 경험</b>
+            하는 것을 목표로 했습니다. 특히 PlayFab과 같은 외부 BaaS(Backend as
+            a Service)를 연동하여 로그인, 랭킹, 데이터 분석, 원격 오류 수집 등
+            실시간 서비스에 필요한 핵심 백엔드 기능을 직접 구현하고자 했습니다.
+          </p>
+          <p>
+            설계 철학의 핵심은{" "}
+            <b>`확장성`, `데이터 기반 디자인`, `코드 중복성 최소화`</b>
+            입니다. `타워`, `적`, `장비` 등 핵심 요소를 모두 모듈화하고,
+            <b>상속(Inheritance) 구조</b>를 적극적으로 활용했습니다. 예를 들어,
+            모든 타워 무기의 공통 로직을 담은 `TowerWeapon`이라는 기반 클래스를
+            설계하고, `WeaponArrow`, `WeaponDefault` 등이 이를 상속받아 각 무기
+            고유의 공격 방식만 구현하도록 하여 코드의 재사용성과 유지보수성을
+            높였습니다. 또한, 밸런스 데이터는 `ScriptableObject`및 Json 파일로
+            관리하여 코드 수정 없이 유연한 업데이트가 가능한 시스템을
+            구축했습니다.
+          </p>
+        </div>
+      </div>
+
+      {/* 기술 요약 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">기술 요약</h2>
         <p className="text-sm text-gray-700 leading-relaxed">
           이번 프로젝트는 <b>모듈형 구조와 이벤트 기반 설계</b>를 통해
           유지보수성과 확장성을 극대화한 2D 로그라이크 타워 디펜스 게임입니다.
-          타워와 스킬은 <b>State 패턴</b>을 적용한 모듈형 구조로 구현하여
-          행동(탐색·공격)을 명확히 분리하였고, 툴팁·보상·장비 장착 등 주요 UI는{" "}
-          <b>이벤트 기반 갱신</b>으로 처리되어 불필요한 연산을 최소화했습니다.
+          타워와 스킬은 <b>State 패턴</b>을 적용하여 행동(탐색·공격)을 명확히
+          분리하였고, 주요 UI는 <b>이벤트 기반 갱신</b>으로 처리되어 불필요한
+          연산을 최소화했습니다.
         </p>
         <p className="text-sm text-gray-700 leading-relaxed mt-2">
-          또한, <b>웨이브 랜덤 보상과 첫 웨이브 특성 시스템</b>으로 전략적 선택
-          요소를 강화하였으며, 맵·적 스폰·튜토리얼을 <b>데이터 기반 설계</b>로
-          전환하여 리플레이성과 유지보수성을 높였습니다. 마지막으로{" "}
-          <b>사운드 정규화와 해상도 대응 UI</b>,<b>중앙화된 매니저 구조</b>를
-          통해 여러 환경에서 안정적이고 일관된 플레이 경험을 제공합니다.
+          또한, <b>절차적 맵 생성 알고리즘</b>을 직접 설계하여 매번 새로운
+          플레이 경험을 제공하며, <b>데이터 기반 설계</b>로 리플레이성과
+          유지보수성을 높였습니다. 특히, `Time.timeScale` 오염으로 인한 게임
+          멈춤 현상, 다중 오브젝트 환경에서의 사운드 병목 현상 등 복합적인
+          버그들을 <b>정확한 원인 분석과 메모리 관리, 방어 코드 설계</b>를 통해
+          해결하여 프로그램의 안정성을 크게 향상시켰습니다.
         </p>
       </div>
 
@@ -94,6 +135,51 @@ const PlanPage = () => {
               <li>로그라이크 장르 팬층</li>
               <li>낮은 난이도를 추구하는 유저</li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* 게임 흐름 (Game Flow) */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">게임 흐름</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* 대기실 흐름 */}
+          <div className="p-4 bg-gray-50 rounded-lg">
+            <h3 className="font-semibold mb-2 text-lg text-center">
+              대기실 흐름
+            </h3>
+            <p className="text-xs text-center text-gray-600 mb-3">
+              전략 준비 및 성장 단계
+            </p>
+            <ol className="list-decimal list-inside space-y-2 text-sm">
+              <li>획득한 장비를 확인하고 캐릭터에 장착</li>
+              <li>보유한 RCoin을 사용하여 상점에서 새로운 장비 뽑기</li>
+              <li>도전할 난이도 선택</li>
+              <li>준비 완료 후 게임 시작</li>
+            </ol>
+          </div>
+
+          {/* 인게임 흐름 */}
+          <div className="p-4 bg-gray-50 rounded-lg">
+            <h3 className="font-semibold mb-2 text-lg text-center">
+              인게임 흐름
+            </h3>
+            <p className="text-xs text-center text-gray-600 mb-3">
+              전투와 랜덤성을 통한 성장 경험
+            </p>
+            <ol className="list-decimal list-inside space-y-2 text-sm">
+              <li>
+                <b>첫 웨이브 특성</b> 선택 (플레이 컨셉 결정)
+              </li>
+              <li>
+                <b>[</b> 타워 건설 → 적 처치 → 재화 획득 <b>]</b> 전투 루프 반복
+              </li>
+              <li>
+                웨이브 클리어 시 제시되는 <b>랜덤 보상</b> 중 택 1 (전략 강화)
+              </li>
+              <li>최종 웨이브 클리어 또는 패배</li>
+              <li>결과 확인 및 보상(장비) 획득 후 대기실 복귀</li>
+            </ol>
           </div>
         </div>
       </div>
@@ -253,11 +339,11 @@ const PlanPage = () => {
 
               <div className="p-4 bg-gray-50 rounded">
                 <h4 className="font-semibold mb-2">첫 웨이브 특성</h4>
-                <p className="text-sm">
+                <ul className="list-disc pl-5 text-sm space-y-1">
                   <li>게임 시작 시 첫 웨이브에서 10가지 특성 중 2개 제시</li>
                   <li>1개 선택 시 게임 플레이 전반에 큰 영향</li>
                   <li>기존 웨이브 랜덤 보상과 연계</li>
-                </p>
+                </ul>
               </div>
 
               <div className="p-4 bg-gray-50 rounded">
@@ -399,15 +485,32 @@ const PlanPage = () => {
                   밸런스를 코드 수정 없이 쉽게 조절할 수 있도록 설계했습니다.
                 </li>
                 <li>
-                  <b>랜덤 맵 생성</b>: 매 게임마다 새로운 경로의 맵을 생성하여
-                  리플레이 가치를 증대시켰습니다.
+                  <b>절차적 맵 생성 및 난이도 정량화 시스템</b>
+                  <ul className="list-decimal pl-6 mt-1 space-y-1 text-xs">
+                    <li>
+                      <b>경로 생성:</b> `RandomPathGenerator.cs`를 통해 매 게임
+                      시작 시 새로운 적 이동 경로를 동적으로 생성하며, 생성된
+                      경로의 유효성을 검사하여 항상 완주 가능한 맵을 보장합니다.
+                    </li>
+                    <li>
+                      <b>난이도 계산:</b> 생성된 맵의 경로 길이, 꺾이는 횟수,
+                      경로 간 간격 등 세 가지 요소를 가중치에 따라 조합하여
+                      난이도를 객관적인 수치로 평가하는 `MapDifficulty.cs`를
+                      설계했습니다.
+                    </li>
+                    <li>
+                      <b>시각화:</b> 생성된 경로 데이터를 기반으로
+                      `MapGenerator.cs`가 Unity의 `Tilemap`을 이용해 길, 코너,
+                      성 등의 타일을 배치하고, 플레이어의 진행도에 따라 다양한
+                      맵 테마가 무작위로 적용되도록 구현했습니다.
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <b>툴팁 시스템 통합</b>: TooltipManager와 TooltipTrigger를
                   기반으로 장비, 타워, 스킬에 마우스 오버 시 실시간 툴팁을
                   표시하여 UI 일관성과 직관성을 강화했습니다.
                 </li>
-
                 <li>
                   <b>이벤트 기반 UI 갱신</b>: 장비 장착, 보상 선택 등 주요
                   이벤트를 이벤트 리스너 기반으로 처리하여, 불필요한 Update
@@ -437,6 +540,16 @@ const PlanPage = () => {
                   <b>사운드 및 해상도 대응</b>: 사운드 볼륨 정규화 및 1280~1600
                   해상도 대응 UI를 구현하고, 중앙 사운드/해상도 매니저를 통해
                   관리 편의성과 확장성을 높였습니다.
+                </li>
+                <li>
+                  <b>안전한 데이터 관리 시스템 (암호화 및 마이그레이션)</b>
+                  <p className="pl-4 text-xs">
+                    `GameDataManager.cs`를 통해 플레이어의 저장 데이터를 XOR
+                    암호화하여 로컬 파일 변조를 방지했습니다. 또한, 과거
+                    버전(암호화 미적용)의 세이브 파일을 불러올 경우, 자동으로
+                    최신 암호화 버전으로 변환 후 저장하는 데이터 마이그레이션
+                    기능을 구현하여 안정성을 높였습니다.
+                  </p>
                 </li>
               </ul>
             </div>
@@ -604,5 +717,3 @@ const PlanPage = () => {
 };
 
 export default PlanPage;
-
-
