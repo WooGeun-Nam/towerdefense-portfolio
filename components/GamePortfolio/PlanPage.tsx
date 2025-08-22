@@ -182,6 +182,21 @@ const PlanPage = () => {
             </ol>
           </div>
         </div>
+        <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-2 gap-4">
+          <div>
+            <img src="./Desc/Lobby.png" className="w-full object-cover" />
+            <figcaption className="text-center text-sm text-gray-600 mt-2">
+              게임 로비 화면
+            </figcaption>
+          </div>
+
+          <div>
+            <img src="./Desc/IngameUI.png" className="w-full object-cover" />
+            <figcaption className="text-center text-sm text-gray-600 mt-2">
+              인게임 UI
+            </figcaption>
+          </div>
+        </div>
       </div>
 
       {/* 핵심 시스템 */}
@@ -275,6 +290,14 @@ const PlanPage = () => {
                 </div>
               </div>
             </div>
+            <div className="p-4 rounded-lg overflow-hidden shadow-lg">
+              <div>
+                <img
+                  src="./Desc/TowerButton.png"
+                  className="w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
 
           {/* 스킬 시스템 */}
@@ -344,6 +367,14 @@ const PlanPage = () => {
                   <li>1개 선택 시 게임 플레이 전반에 큰 영향</li>
                   <li>기존 웨이브 랜덤 보상과 연계</li>
                 </ul>
+                <div className="p-4 overflow-hidden">
+                  <div>
+                    <img
+                      src="./Desc/Perk.png"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="p-4 bg-gray-50 rounded">
@@ -362,6 +393,14 @@ const PlanPage = () => {
                   <li>랜덤 타워 자동 설치 (경로 주위 우선으로 설치)</li>
                   <li>무료 물리/마법 업그레이드</li>
                 </ul>
+                <div className="p-4 overflow-hidden">
+                  <div>
+                    <img
+                      src="./Desc/RandomReward.png"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -379,7 +418,7 @@ const PlanPage = () => {
 
               <div className="p-4 bg-gray-50 rounded">
                 <h4 className="font-semibold mb-2">장비 시스템</h4>
-                <ul className="list-disc pl-5 text-sm space-y-1">
+                <ul className="list-disc pl-5 text-sm space-y-1 mb-4">
                   <li>장비 획득 및 장착 시스템</li>
                   <li>장신구 장착 시 특수 스킬 발동</li>
                   <li>웨이브 보상 및 난이도와 연계된 파밍</li>
@@ -388,6 +427,15 @@ const PlanPage = () => {
                     보스급 적 처치, 클리어 보상, 랜덤 보상 패널을 통한 획득처
                   </li>
                 </ul>
+                <div>
+                  <img
+                    src="./Desc/WaitingRoom.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    대기실 화면
+                  </figcaption>
+                </div>
               </div>
             </div>
           </div>
@@ -434,6 +482,44 @@ const PlanPage = () => {
               확인할 수 있습니다.
             </li>
           </ul>
+          <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+            <div>
+              <img
+                src="./Desc/InfinityMode.png"
+                className="w-full h-48 object-cover"
+              />
+              <figcaption className="text-center text-sm text-gray-600 mt-2">
+                무한모드 활성화 UI
+              </figcaption>
+            </div>
+            <div>
+              <img
+                src="./Desc/DamageMeter.png"
+                className="w-full h-48 object-cover"
+              />
+              <figcaption className="text-center text-sm text-gray-600 mt-2">
+                데미지 분석 기능
+              </figcaption>
+            </div>
+            <div>
+              <img
+                src="./Desc/IngameReaderBoard.png"
+                className="w-full object-cover"
+              />
+              <figcaption className="text-center text-sm text-gray-600 mt-2">
+                순위표
+              </figcaption>
+            </div>
+            <div>
+              <img
+                src="./Desc/PlayFabReaderBoard.png"
+                className="w-full object-cover"
+              />
+              <figcaption className="text-center text-sm text-gray-600 mt-2">
+                PlayFab내 리더보드 데이터
+              </figcaption>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -469,6 +555,27 @@ const PlanPage = () => {
                 <li>
                   <b>오브젝트 풀링</b>: 성능 최적화를 위해 적, 발사체 등 반복
                   생성되는 오브젝트를 재활용하는 시스템을 구현했습니다.
+                  <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                    <div>
+                      <img
+                        src="./Desc/Pooling1.png"
+                        className="w-full object-cover"
+                      />
+                      <figcaption className="text-center text-sm text-gray-600 mt-2">
+                        풀링 성능 테스트 1 (148.19 FPS)
+                      </figcaption>
+                    </div>
+
+                    <div>
+                      <img
+                        src="./Desc/Pooling2.png"
+                        className="w-full object-cover"
+                      />
+                      <figcaption className="text-center text-sm text-gray-600 mt-2">
+                        풀링 성능 테스트 2 (175.48 FPS)
+                      </figcaption>
+                    </div>
+                  </div>
                 </li>
                 <li>
                   <b>중앙 집중형 사운드 관리</b>: `SoundManager`를 통해 BGM,
@@ -505,6 +612,26 @@ const PlanPage = () => {
                       맵 테마가 무작위로 적용되도록 구현했습니다.
                     </li>
                   </ul>
+                  <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                    <div>
+                      <img
+                        src="./Desc/RandomMap1.png"
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="./Desc/RandomMap2.png"
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="./Desc/RandomMap3.png"
+                        className="w-full object-cover"
+                      />
+                    </div>
+                  </div>
                 </li>
                 <li>
                   <b>툴팁 시스템 통합</b>: TooltipManager와 TooltipTrigger를
