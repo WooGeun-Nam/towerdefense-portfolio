@@ -349,7 +349,7 @@ const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
           </p>
           <p>
             <span className="font-semibold w-28 inline-block">소스 코드:</span>
-            <span>Local (비공개, 요청 시 코드 샘플 제공 가능)</span>
+            <span>https://github.com/WooGeun-Nam/RogueTower-Code</span>
           </p>
           <p>
             <span className="font-semibold w-28 inline-block">상세 정보:</span>
@@ -403,4 +403,5 @@ const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
 };
 
 export default DeployPage;
+
 
