@@ -5,9 +5,9 @@ const nextConfig = {
   basePath: isProd ? "/towerdefense-portfolio" : "",
   assetPrefix: isProd ? "/towerdefense-portfolio/" : "",
   trailingSlash: true,
-  output: "export", // 추가된 부분
+  output: "export",
   images: {
-    unoptimized: true, // ⬅️ 추가
+    unoptimized: true,
   },
 };
 

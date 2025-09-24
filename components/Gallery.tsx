@@ -1,12 +1,20 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
 
+/** 배포 시 __NEXT_DATA__에서 assetPrefix/basePath를 읽어 prefix로 사용, 환경변수도 지원 */
 const getPrefix = () => {
+  // Next.js에서 __NEXT_DATA__에 prefix 정보가 있을 경우 사용
   if (typeof window !== "undefined") {
     const d: any = (window as any).__NEXT_DATA__;
     if (d?.assetPrefix) return d.assetPrefix as string;
     if (d?.basePath) return d.basePath as string;
   }
+  // 환경변수 지원 (NEXT_PUBLIC_BASE_PATH)
+  if (process.env.NEXT_PUBLIC_BASE_PATH)
+    return process.env.NEXT_PUBLIC_BASE_PATH;
+  // 프로덕션에서는 레포지토리명 prefix 적용
+  if (process.env.NODE_ENV === "production") return "/towerdefense-portfolio";
+  // 개발환경에서는 prefix 없음
   return "";
 };
 
@@ -16,12 +24,9 @@ type Props = { images: Img[]; coverOnly?: boolean; title?: string };
 export default function Gallery({ images, coverOnly = false, title }: Props) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
-  const [prefix, setPrefix] = useState(""); // ← 변경점
+  const prefix = useMemo(() => getPrefix(), []);
 
-  useEffect(() => {
-    setPrefix(getPrefix()); // ← 클라이언트에서 재계산
-  }, []);
-
+  /** http는 통과, 나머지는 절대경로화 후 prefix 부착 */
   const withPrefix = (src: string) => {
     if (!src || src.startsWith("http")) return src;
     const abs = src.startsWith("/") ? src : `/${src.replace(/^(\.\/|\/)/, "")}`;
