@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
-import Image from "next/image";
 
+/** 배포 시 __NEXT_DATA__에서 assetPrefix/basePath를 읽어 prefix로 사용 */
 const getPrefix = () => {
   if (typeof window !== "undefined") {
     const d: any = (window as any).__NEXT_DATA__;
@@ -19,6 +19,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
   const [index, setIndex] = useState(0);
   const prefix = useMemo(() => getPrefix(), []);
 
+  /** http는 통과, 나머지는 절대경로화 후 prefix 부착 */
   const withPrefix = (src: string) => {
     if (!src || src.startsWith("http")) return src;
     const abs = src.startsWith("/") ? src : `/${src.replace(/^(\.\/|\/)/, "")}`;
@@ -59,13 +60,10 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
           onClick={() => openAt(0)}
           className="group relative block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
         >
-          <Image
+          <img
             src={img.src}
             alt={img.alt ?? ""}
-            width={1200}
-            height={675}
             className="w-full h-auto object-cover"
-            priority
           />
           <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
           <div className="absolute inset-x-0 bottom-3 mx-auto w-fit rounded-full bg-white/90 px-4 py-1 text-sm font-medium text-gray-900 group-hover:bg-white">
@@ -96,11 +94,9 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
             onClick={() => openAt(i)}
             className="group block rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm transition-colors hover:border-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
           >
-            <Image
+            <img
               src={img.src}
               alt={img.alt ?? ""}
-              width={800}
-              height={450}
               className="w-full h-56 object-cover"
             />
           </button>
@@ -144,11 +140,9 @@ function Lightbox({
         className="relative max-w-5xl w-full px-6"
         onClick={(e) => e.stopPropagation()}
       >
-        <Image
+        <img
           src={images[index].src}
           alt={images[index].alt ?? ""}
-          width={1600}
-          height={900}
           className="mx-auto max-h-[82vh] w-auto rounded-xl shadow-lg"
         />
         <button
