@@ -7,27 +7,18 @@ import DevLogPage from "./GamePortfolio/DevLogPage";
 
 const GamePortfolio = () => {
   const [activeTab, setActiveTab] = useState<"deploy" | "plan" | "devlog">(
-    "deploy"
+    "plan"
   );
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-8 flex flex-col items-center">
-      {/* 로고 */}
-      <div className="w-full max-w-4xl mb-4">
-        <img
-          src="./SiteLogo.png"
-          alt="Game Logo"
-          className="w-full h-auto object-contain max-w-[1500px] mx-auto"
-        />
-      </div>
-
+    <div className="w-full py-8">
       {/* 탭 버튼 + 콘텐츠를 하나의 카드처럼 */}
-      <div className="w-full max-w-4xl">
+      <div className="w-full">
         {/* 탭 버튼 */}
         <div className="flex w-full">
           {[
-            { id: "deploy", label: "배포" },
             { id: "plan", label: "기획서" },
+            { id: "deploy", label: "배포" },
             { id: "devlog", label: "개발일지" },
           ].map((tab, index) => (
             <button
@@ -49,7 +40,6 @@ const GamePortfolio = () => {
 
         {/* 콘텐츠 카드 (탭 전환 영역) */}
         <div className="w-full bg-white border border-t-0 border-gray-300 rounded-b-lg shadow p-6">
-          {/* ★★★ [핵심 수정] 각 탭의 콘텐츠를 div로 감싸서 명확하게 분리합니다. ★★★ */}
           <div style={{ display: activeTab === "deploy" ? "block" : "none" }}>
             <DeployPage onTabChange={setActiveTab} />
           </div>
@@ -60,10 +50,6 @@ const GamePortfolio = () => {
             <DevLogPage />
           </div>
         </div>
-      </div>
-
-      <div className="w-full max-w-4xl mx-auto bg-white p-8">
-        Copyright © 2024. WooGeun-Nam All rights reserved.
       </div>
     </div>
   );

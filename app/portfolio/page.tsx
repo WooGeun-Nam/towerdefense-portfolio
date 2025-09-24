@@ -1,0 +1,498 @@
+import Gallery from "../../components/Gallery";
+
+export default function PortfolioHome() {
+  return (
+    <main className="mx-auto max-w-6xl px-4">
+      {/* Home */}
+      <section
+        id="home"
+        className="min-h-[70vh] flex flex-col items-center justify-center text-center scroll-mt-20"
+      >
+        {/* 배경색 제거, 파란 밑줄 유지 */}
+        <h1 className="relative inline-block text-6xl font-extrabold tracking-tight">
+          <span>Game Client Developer</span>
+          <span className="block h-1 w-full bg-blue-500 mt-3 rounded"></span>
+        </h1>
+        <p className="mt-6 text-lg text-gray-600">
+          새로운 기술과 개발 방식을 배우는 것을 즐기며, 실제 프로젝트에 빠르게
+          적용해 왔습니다.
+        </p>
+        <p className="mt-1 text-lg text-gray-600 mb-10">
+          개인 프로젝트를 통해 기획과 프로그래밍을 함께 경험하며, 문제 해결
+          역량을 키워왔습니다.
+        </p>
+
+        <Gallery
+          coverOnly
+          title="Project Images"
+          images={[
+            { src: "./../desc/Lobby.png", alt: "RogueTower-Lobby" },
+            { src: "./../desc/WaitingRoom.png", alt: "RogueTower-WaitingRoom" },
+            {
+              src: "./../desc/InfinityMode.png",
+              alt: "RogueTower-InfinityMode",
+            },
+            { src: "./../desc/IngameUI.png", alt: "RogueTower-IngameUI" },
+            { src: "./../desc/DamageMeter.png", alt: "RogueTower-DamageMeter" },
+            { src: "./../desc/Perk.png", alt: "RogueTower-Perk" },
+            {
+              src: "./../desc/RandomReward.png",
+              alt: "RogueTower-RandomReward",
+            },
+            {
+              src: "./../PortPolio/2DShooterCloneThum.png",
+              alt: "2DShooterClone-Thumnail",
+            },
+            {
+              src: "./../PortPolio/ProjectileEnemy.png",
+              alt: "2DShooterClone-Projectile",
+            },
+            {
+              src: "./../PortPolio/BotAI.png",
+              alt: "2DShooterClone-BotAI",
+            },
+          ]}
+        />
+      </section>
+
+      {/* Projects 섹션 */}
+      <section id="projects" className="py-20 scroll-mt-20">
+        {/* 풀블리드 배경 */}
+        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white">
+          {/* 실제 내용은 중앙 정렬된 컨테이너 안에 배치 */}
+          <div className="mx-auto max-w-6xl px-6 py-12">
+            <h2 className="text-center text-4xl sm:text-5xl font-extrabold mb-12">
+              Projects
+            </h2>
+
+            {/* 게임 클라이언트 프로젝트 */}
+            <h3 className="text-2xl font-bold mb-6">Game Client</h3>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+              {/* RogueTower */}
+              <a
+                href="/projects/roguetower"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+                 hover:border-blue-500 hover:shadow-md
+                 focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+                 active:border-blue-700"
+                aria-label="RogueTower 상세 페이지로 이동"
+              >
+                <img
+                  src="./../SiteLogo.png"
+                  alt="RogueTower 썸네일"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+
+                <h3 className="text-xl font-semibold text-center">
+                  RogueTower
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  로그라이크 타워 디펜스
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  타워디펜스의 전략적 배치와 장비 파밍 기반 성장을 결합하고,
+                  랜덤 맵과 웨이브별 보상을 통해 로그라이크적 변주와 전략성을
+                  강화한 게임
+                </p>
+              </a>
+
+              {/* 2D Shooter Clone */}
+              <a
+                href="/projects/2dshooterclone"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+                 hover:border-blue-500 hover:shadow-md
+                 focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+                 active:border-blue-700"
+                aria-label="Archer Of God Clone 상세 페이지로 이동"
+              >
+                <img
+                  src="./../PortPolio/2DShooterCloneThum.png"
+                  alt="2DShooterClone 썸네일"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  2D Shooter Clone
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  모바일 기반 2D 슈터 액션
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  FSM 기반 상태 제어와 모바일 UI/UX 경험 설계를 중심으로 학습한
+                  클론 프로젝트
+                </p>
+              </a>
+            </div>
+
+            {/* 기타 프로젝트 */}
+            <h3 className="text-2xl font-bold mt-12 mb-6">Others</h3>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {/* 음식 객체 인식 */}
+              <a
+                href="/projects/detectfood"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="음식 객체 인식 프로젝트 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/AI1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  음식 객체 인식
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  학부 연구 프로젝트
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  CNN 기반 머신러닝으로 음식 객체 인식 모델 구현
+                </p>
+              </a>
+
+              {/* 스마트 IoT 센서 시스템 */}
+              <a
+                href="/projects/iot-sensor"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="스마트 IoT 센서 시스템 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/IOT1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  스마트 온습도 제어
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  Raspberry Pi 기반 팀 프로젝트
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  온습도 센서를 활용한 IoT 모니터링 시스템 구현
+                </p>
+              </a>
+
+              {/* Portable Electronic Instrumental */}
+              <a
+                href="/projects/pei"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="EveryTimeClone 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/PEI1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">PEI</h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  휴대용 가상악기
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  Raspberry Pi를 활용한 휴대용 가상악기 제작
+                </p>
+              </a>
+
+              {/* 항공 예약 관리 시스템 */}
+              <a
+                href="/projects/airreserve"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="항공 예약 관리 시스템 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/AirReserve1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  항공 예약 관리 시스템
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  C / Pro*C / OracleSQL
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  DB 설계 및 DB 연동 예약 관리 로직 구현
+                </p>
+              </a>
+
+              {/* EveryTimeClone */}
+              <a
+                href="/projects/everytimeclone"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="EveryTimeClone 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/etc1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  EveryTimeClone
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  Java 팀 프로젝트
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  MySql 기반의 DB 서버 구축 및 관리
+                </p>
+              </a>
+
+              {/* 키오스크 프로그램 */}
+              <a
+                href="/projects/kiosk"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="키오스크 프로그램 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/Kiosk1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  키오스크 프로그램
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  운영체제 학습 프로젝트
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  Linux 환경에서 코딩 및 컴파일 숙련
+                </p>
+              </a>
+
+              {/* 대학 정보 시스템 */}
+              <a
+                href="/projects/uis"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="대학 정보 시스템 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/UIS1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  대학 정보 시스템
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  Java 팀 프로젝트
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  학사 정보 관리 및 GUI 기반 CRUD 기능 구현
+                </p>
+              </a>
+
+              {/* 내 맘대로 연주 */}
+              <a
+                href="/projects/mfc-music"
+                className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
+              hover:border-blue-500 hover:shadow-md
+              focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+              active:border-blue-700"
+                aria-label="내 맘대로 연주 상세 페이지로 이동"
+              >
+                <img
+                  src="./../Others/MFC1.png"
+                  className="aspect-video rounded-md mb-4 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-center">
+                  내 맘대로 연주
+                </h3>
+                <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
+                  C++ 팀 프로젝트
+                </p>
+                <p className="text-sm text-gray-700 text-left">
+                  MFC 기반으로 입력 처리 및 음원 출력 기능 구현
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resume */}
+      <section id="resume" className="py-20 scroll-mt-20">
+        <h2 className="text-center text-4xl sm:text-5xl font-extrabold mb-10">
+          Resume
+        </h2>
+
+        {/* 블록 형태로 전체 감싸기 */}
+        <div className="mx-auto max-w-6xl bg-white shadow-md rounded-lg p-8 space-y-10 text-left">
+          {/* 자기소개 */}
+          <section>
+            <h3 className="text-2xl font-bold mb-4">자기소개</h3>
+            <p className="text-sm text-gray-800">
+              게임 플레이 경험을 정량화하고 안정적인 전투 루프를 설계하는 과정에
+              흥미를 가지고 있습니다.
+            </p>
+            <p className="text-sm text-gray-800">
+              Unity 기반 개인 프로젝트 RogueTower를 10개월간 개발하며 구조
+              설계와 성능 최적화 경험을 쌓았고, 로그라이크·타워디펜스 요소를
+              결합해 다양한 전략 변수를 구현했습니다.
+            </p>
+            <p className="text-sm text-gray-800">
+              데이터 로깅과 오류 수집을 통해 밸런스 문제를 추적하고 개선했으며,
+              UI와 전투 로직을 이벤트 기반으로 분리해 유지보수성과 확장성을
+              확보했습니다.
+            </p>
+            <p className="text-sm text-gray-800">
+              아트와 사운드까지 직접 다루며 여러 영역을 이해했고, 이를 통해
+              완성도 높은 사용자 경험을 설계하는 방법을 배웠습니다.
+            </p>
+          </section>
+
+          {/* 기술 키워드 */}
+          <section>
+            <h3 className="text-2xl font-bold mb-4">기술 키워드</h3>
+            <div className="flex flex-wrap gap-2 text-sm">
+              <span className="px-2 py-1 rounded bg-blue-100">C#</span>
+              <span className="px-2 py-1 rounded bg-gray-100">C++</span>
+              <span className="px-2 py-1 rounded bg-gray-100">Java</span>
+              <span className="px-2 py-1 rounded bg-gray-100">Python</span>
+              <span className="w-full"></span>
+              <span className="px-2 py-1 rounded bg-blue-100">Unity</span>
+              <span className="px-2 py-1 rounded bg-gray-100">Spring</span>
+              <span className="px-2 py-1 rounded bg-gray-100">MySql</span>
+              <span className="w-full"></span>
+              <span className="px-2 py-1 rounded bg-gray-100">Git</span>
+              <span className="px-2 py-1 rounded bg-gray-100">PlayFab</span>
+              <span className="px-2 py-1 rounded bg-gray-100">Aseprite</span>
+              <span className="px-2 py-1 rounded bg-gray-100">FLStudio</span>
+            </div>
+          </section>
+
+          {/* 이력 요약 */}
+          <section>
+            <h3 className="text-2xl font-bold mb-4">이력 요약</h3>
+            <div className="space-y-4 text-sm text-gray-800">
+              <div>
+                <p className="font-semibold">학력</p>
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>동의대학교 컴퓨터소프트웨어학과 졸업 (2023.02)</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold">수상</p>
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>우수 논문 발표상 – 한국멀티미디어학회 (2022.05)</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* 프로젝트 경험 */}
+          <section>
+            {/* 게임 클라이언트 프로젝트 */}
+            <div className="mb-10">
+              <h4 className="text-2xl font-semibold mb-4">
+                게임 클라이언트 프로젝트
+              </h4>
+
+              {/* RogueTower */}
+              <div className="mb-6">
+                <h5 className="text-lg font-semibold">
+                  RogueTower (로그라이크 타워 디펜스, Unity, 개인 프로젝트)
+                </h5>
+                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                  <li>개발 기간 : 2024.10 ~ 2025.08 (약 10개월)</li>
+                  <li>기획부터 베타까지 1인 개발</li>
+                  <li>
+                    오브젝트 풀링, 절차적 맵/경로 생성, PlayFab 연동, 데이터
+                    지향 설계
+                  </li>
+                </ul>
+              </div>
+
+              {/* 2DShooterClone */}
+              <div className="mb-6">
+                <h5 className="text-lg font-semibold">
+                  2D Shooter Clone (2D 슈터 액션, Unity, 개인 프로젝트)
+                </h5>
+                <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                  <li>개발 기간 : 2025.07 ~ 2025.08</li>
+                  <li>모바일 UI/UX 학습을 목표로 전투 시스템을 분석·재현</li>
+                  <li>
+                    FSM 기반으로 플레이어·봇의 이동, 공격, 스킬 캐스팅 상태를
+                    일관성 있게 관리
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* 기타 프로젝트 */}
+            <div>
+              <h4 className="text-2xl font-semibold mb-4">기타 프로젝트</h4>
+
+              <ul className="list-disc list-inside text-sm text-gray-700 space-y-1">
+                <li>
+                  음식 객체 인식 (학부 연구 프로젝트) : CNN 모델 적용, Python
+                  기반 머신러닝
+                </li>
+                <li>
+                  스마트 IoT 센서 시스템 (팀 프로젝트) : Raspberry Pi 기반
+                  온습도 모니터링
+                </li>
+                <li>PEI : Raspberry Pi 를 활용한 휴대용 가상악기 제작</li>
+                <li>
+                  항공 예약 관리 시스템 : C, Pro*C, OracleSQL 기반 예약 관리
+                  로직 및 DB 연동
+                </li>
+                <li>
+                  EveryTimeClone (Java 팀 프로젝트) : MySql 기반의 DB 서버 구축
+                  및 관리
+                </li>
+                <li>키오스크 프로그램 : Linux 환경에서 코딩 및 컴파일 숙련</li>
+                <li>
+                  대학 정보 시스템 (Java 팀 프로젝트) : 학사 정보 관리, Java
+                  기반 GUI 및 CRUD 기능
+                </li>
+                <li>
+                  내 맘대로 연주 (C++ 팀 프로젝트) : MFC 활용, 키보드 입력 처리
+                  및 음원 출력
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Contact */}
+          <section>
+            <h3 className="text-2xl font-bold mb-4">Contact</h3>
+            <p className="text-sm text-gray-800">Email : cowzza1@naver.com</p>
+            <p className="text-sm text-gray-700">
+              GitHub :
+              <a
+                href="https://github.com/WooGeun-Nam"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 text-blue-600 underline hover:text-blue-800"
+              >
+                https://github.com/WooGeun-Nam
+              </a>
+            </p>
+            <p className="text-sm text-gray-700">
+              SoundCloud :
+              <a
+                href="https://soundcloud.com/gamto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2 text-blue-600 underline hover:text-blue-800"
+              >
+                https://soundcloud.com/gamto
+              </a>
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+  );
+}

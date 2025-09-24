@@ -1,15 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import React from "react"; // React import 추가
+import React from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "RogueTower", // 제목 수정
-  description: "게임 기획서", // 설명 수정
+  title: "WooGeunNam",
+  description: "웹 포트폴리오",
   icons: {
-    icon: "Logo.ico",
+    icon: "./Logo.ico",
   },
 };
 

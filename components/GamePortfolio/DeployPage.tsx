@@ -198,33 +198,10 @@ const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
           <div className="p-4 bg-gray-100 rounded mb-6">
             <div className="grid grid-cols-2 items-center mb-4">
               <p className="font-semibold text-lg">Alpha Test Build (v0.3.0)</p>
-              <div className="flex justify-end space-x-2">
-                <a
-                  href="./Demo/AlphaTestFileDivision/TestAlpha.z01"
-                  download
-                  className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
-                >
-                  Download .z01
-                </a>
-                <a
-                  href="./Demo/AlphaTestFileDivision/TestAlpha.z02"
-                  download
-                  className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
-                >
-                  Download .z02
-                </a>
-                <a
-                  href="./Demo/AlphaTestFileDivision/TestAlpha.zip"
-                  download
-                  className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
-                >
-                  Download .zip
-                </a>
-              </div>
+              <div className="flex justify-end space-x-2"></div>
             </div>
             <p className="text-xs text-gray-600 mb-4">
-              ※ 모든 파일을 같은 폴더에 다운로드 한 뒤 TestAlpha.zip을 압축
-              해제하세요.
+              ※ AlphaVersion 까지의 배포파일은 제거 되었습니다.
             </p>
 
             <h4 className="font-semibold mb-2">주요 업데이트</h4>
@@ -288,13 +265,6 @@ const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
           <div className="p-4 bg-gray-50 rounded">
             <div className="grid grid-cols-2 items-center mb-4">
               <p className="font-semibold text-lg">v0.1.0 : 2024-10-11</p>
-              <a
-                href="./Demo/TowerDefenseDemo01.7z"
-                download
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                다운로드
-              </a>
             </div>
 
             <h4 className="font-semibold mb-2">최초 데모 버전</h4>
@@ -403,5 +373,3 @@ const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
 };
 
 export default DeployPage;
-
-
