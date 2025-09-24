@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const SECTIONS = ["home", "projects", "resume"];
 
@@ -42,9 +43,9 @@ export default function TopNav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b">
       <nav className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
-        <a href="/portfolio" className="font-semibold">
+        <Link href="/portfolio" className="font-semibold">
           WooGeun Nam
-        </a>
+        </Link>
         <div className="flex gap-5 text-sm">
           {link("home", "Home")}
           {link("projects", "Projects")}

@@ -27,35 +27,35 @@ export default function PortfolioHome() {
           coverOnly
           title="Project Images"
           images={[
-            { src: "./../../desc/Lobby.png", alt: "RogueTower-Lobby" },
+            { src: "./desc/Lobby.png", alt: "RogueTower-Lobby" },
             {
-              src: "./../../desc/WaitingRoom.png",
+              src: "./desc/WaitingRoom.png",
               alt: "RogueTower-WaitingRoom",
             },
             {
-              src: "./../../desc/InfinityMode.png",
+              src: "./desc/InfinityMode.png",
               alt: "RogueTower-InfinityMode",
             },
-            { src: "./../../desc/IngameUI.png", alt: "RogueTower-IngameUI" },
+            { src: "./desc/IngameUI.png", alt: "RogueTower-IngameUI" },
             {
-              src: "./../../desc/DamageMeter.png",
+              src: "./desc/DamageMeter.png",
               alt: "RogueTower-DamageMeter",
             },
-            { src: "./../../desc/Perk.png", alt: "RogueTower-Perk" },
+            { src: "./desc/Perk.png", alt: "RogueTower-Perk" },
             {
-              src: "./../../desc/RandomReward.png",
+              src: "./desc/RandomReward.png",
               alt: "RogueTower-RandomReward",
             },
             {
-              src: "./../../PortPolio/2DShooterCloneThum.png",
+              src: "./PortPolio/2DShooterCloneThum.png",
               alt: "2DShooterClone-Thumnail",
             },
             {
-              src: "./../../PortPolio/ProjectileEnemy.png",
+              src: "./PortPolio/ProjectileEnemy.png",
               alt: "2DShooterClone-Projectile",
             },
             {
-              src: "./../../PortPolio/BotAI.png",
+              src: "./PortPolio/BotAI.png",
               alt: "2DShooterClone-BotAI",
             },
           ]}
@@ -104,13 +104,13 @@ export default function PortfolioHome() {
               </Link>
 
               {/* 2D Shooter Clone */}
-              <a
+              <Link
                 href="/projects/2dshooterclone"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
                  hover:border-blue-500 hover:shadow-md
                  focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
                  active:border-blue-700"
-                aria-label="Archer Of God Clone 상세 페이지로 이동"
+                aria-label="2D Shooter Clone 상세 페이지로 이동"
               >
                 <img
                   src="./../PortPolio/2DShooterCloneThum.png"
@@ -127,14 +127,14 @@ export default function PortfolioHome() {
                   FSM 기반 상태 제어와 모바일 UI/UX 경험 설계를 중심으로 학습한
                   클론 프로젝트
                 </p>
-              </a>
+              </Link>
             </div>
 
             {/* 기타 프로젝트 */}
             <h3 className="text-2xl font-bold mt-12 mb-6">Others</h3>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {/* 음식 객체 인식 */}
-              <a
+              <Link
                 href="/projects/detectfood"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -155,10 +155,10 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   CNN 기반 머신러닝으로 음식 객체 인식 모델 구현
                 </p>
-              </a>
+              </Link>
 
               {/* 스마트 IoT 센서 시스템 */}
-              <a
+              <Link
                 href="/projects/iot-sensor"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -179,10 +179,10 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   온습도 센서를 활용한 IoT 모니터링 시스템 구현
                 </p>
-              </a>
+              </Link>
 
               {/* Portable Electronic Instrumental */}
-              <a
+              <Link
                 href="/projects/pei"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -201,10 +201,10 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   Raspberry Pi를 활용한 휴대용 가상악기 제작
                 </p>
-              </a>
+              </Link>
 
               {/* 항공 예약 관리 시스템 */}
-              <a
+              <Link
                 href="/projects/airreserve"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -225,10 +225,10 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   DB 설계 및 DB 연동 예약 관리 로직 구현
                 </p>
-              </a>
+              </Link>
 
               {/* EveryTimeClone */}
-              <a
+              <Link
                 href="/projects/everytimeclone"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -249,10 +249,10 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   MySql 기반의 DB 서버 구축 및 관리
                 </p>
-              </a>
+              </Link>
 
               {/* 키오스크 프로그램 */}
-              <a
+              <Link
                 href="/projects/kiosk"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -273,10 +273,10 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   Linux 환경에서 코딩 및 컴파일 숙련
                 </p>
-              </a>
+              </Link>
 
               {/* 대학 정보 시스템 */}
-              <a
+              <Link
                 href="/projects/uis"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -297,10 +297,10 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   학사 정보 관리 및 GUI 기반 CRUD 기능 구현
                 </p>
-              </a>
+              </Link>
 
               {/* 내 맘대로 연주 */}
-              <a
+              <Link
                 href="/projects/mfc-music"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
               hover:border-blue-500 hover:shadow-md
@@ -321,7 +321,7 @@ export default function PortfolioHome() {
                 <p className="text-sm text-gray-700 text-left">
                   MFC 기반으로 입력 처리 및 음원 출력 기능 구현
                 </p>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
