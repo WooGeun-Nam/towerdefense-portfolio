@@ -1,6 +1,6 @@
 1:HL["/towerdefense-portfolio/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/towerdefense-portfolio/_next/static/css/5f75de58c5d508af.css","style"]
-0:["-mnpgZj7EP_QFGxoh6Gae",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/5f75de58c5d508af.css","precedence":"next"}]],"$L4"]]]]
+0:["UPXJnNBsbQqOgot04lTxF",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/5f75de58c5d508af.css","precedence":"next"}]],"$L4"]]]]
 5:I{"id":1443,"chunks":["272:static/chunks/webpack-771e4332a8b3d624.js","971:static/chunks/fd9d1056-5d1d8d9b060fce4c.js","864:static/chunks/864-081f4312567cf90d.js"],"name":"","async":false}
 6:I{"id":8639,"chunks":["272:static/chunks/webpack-771e4332a8b3d624.js","971:static/chunks/fd9d1056-5d1d8d9b060fce4c.js","864:static/chunks/864-081f4312567cf90d.js"],"name":"","async":false}
 4:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"WooGeunNam"}],["$","meta","2",{"name":"description","content":"웹 포트폴리오"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","link","4",{"rel":"icon","href":"./Logo.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
