@@ -1,5 +1,8 @@
 import TopNav from "../../components/TopNav";
+import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "WooGeunNam",
@@ -16,7 +19,7 @@ export default function PortfolioLayout({
 }) {
   return (
     <html lang="ko" className="scroll-smooth">
-      <body>
+      <body className={`${inter.className} min-h-screen bg-gray-100`}>
         {/* 상단 고정 배너 */}
         <TopNav />
         {/* 헤더 높이만큼 오프셋 */}

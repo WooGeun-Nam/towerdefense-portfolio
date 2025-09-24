@@ -1,24 +1,43 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 type Img = { src: string; alt?: string };
 type Props = {
   images: Img[];
-  coverOnly?: boolean; // true면 대표 1장만 노출
-  title?: string; // 오버레이 텍스트
+  coverOnly?: boolean;
+  title?: string;
 };
 
 export default function Gallery({ images, coverOnly = false, title }: Props) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
+  // ★ basePath 보정 함수
+  const prefix =
+    process.env.NODE_ENV === "production" ? "/towerdefense-portfolio" : "";
+
+  const fixSrc = (src: string) => {
+    if (!src) return src;
+    if (src.startsWith("http")) return src; // 외부 URL
+    if (src.startsWith("/")) return `${prefix}${src}`; // 절대경로
+    // 상대경로 → basePath + 깔끔한 경로
+    return `${prefix}/${src.replace(/^(\.\/|\/)/, "")}`;
+  };
+
+  // 필요하면 미리 보정된 배열 사용
+  const fixedImages = useMemo(
+    () => images.map((i) => ({ ...i, src: fixSrc(i.src) })),
+    [images]
+  );
+
   const openAt = (i: number) => {
     setIndex(i);
     setOpen(true);
   };
   const close = () => setOpen(false);
-  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length);
-  const next = () => setIndex((i) => (i + 1) % images.length);
+  const prev = () =>
+    setIndex((i) => (i - 1 + fixedImages.length) % fixedImages.length);
+  const next = () => setIndex((i) => (i + 1) % fixedImages.length);
 
   useEffect(() => {
     if (!open) return;
@@ -33,7 +52,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
 
   // 대표 1장만
   if (coverOnly) {
-    const img = images[0];
+    const img = fixedImages[0];
     return (
       <>
         <button
@@ -46,7 +65,6 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
             alt={img.alt ?? ""}
             className="w-full h-auto object-cover"
           />
-          {/* 오버레이 */}
           <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
           <div className="absolute inset-x-0 bottom-3 mx-auto w-fit rounded-full bg-white/90 px-4 py-1 text-sm font-medium text-gray-900 group-hover:bg-white">
             {title ? `${title} • Click to view` : "Click to view"}
@@ -55,7 +73,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
 
         {open && (
           <Lightbox
-            images={images}
+            images={fixedImages}
             index={index}
             onClose={close}
             onPrev={prev}
@@ -66,11 +84,11 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
     );
   }
 
-  // 썸네일 그리드(필요 시)
+  // 썸네일 그리드
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {images.map((img, i) => (
+        {fixedImages.map((img, i) => (
           <button
             key={i}
             type="button"
@@ -88,7 +106,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
 
       {open && (
         <Lightbox
-          images={images}
+          images={fixedImages}
           index={index}
           onClose={close}
           onPrev={prev}
