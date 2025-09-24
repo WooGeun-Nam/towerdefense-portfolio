@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
+import Image from "next/image";
 
 type Img = { src: string; alt?: string };
 type Props = {
@@ -53,9 +54,11 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
           onClick={() => openAt(0)}
           className="group relative block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
         >
-          <img
+          <Image
             src={img.src}
             alt={img.alt ?? ""}
+            width={800} // 반드시 width, height 지정 필요
+            height={600}
             className="w-full h-auto object-cover"
           />
           <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -87,9 +90,11 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
             onClick={() => openAt(i)}
             className="group block rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm transition-colors hover:border-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
           >
-            <img
+            <Image
               src={img.src}
               alt={img.alt ?? ""}
+              width={400}
+              height={300}
               className="w-full h-56 object-cover"
             />
           </button>
@@ -133,9 +138,11 @@ function Lightbox({
         className="relative max-w-5xl w-full px-6"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
+        <Image
           src={images[index].src}
           alt={images[index].alt ?? ""}
+          width={1200}
+          height={800}
           className="mx-auto max-h-[82vh] w-auto rounded-xl shadow-lg"
         />
         <button
