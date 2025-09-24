@@ -2,10 +2,13 @@ const isProd = process.env.NODE_ENV === "production";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: isProd ? "/towerdefense-portfolio" : "",
-  assetPrefix: isProd ? "/towerdefense-portfolio" : "",
+  output: "export",
   trailingSlash: true,
-  output: "export", // 추가된 부분
+  images: { unoptimized: true },
+
+  // GitHub Pages 프로젝트 사이트 대응
+  basePath: isProd ? "/towerdefense-portfolio" : "",
+  assetPrefix: isProd ? "/towerdefense-portfolio/" : "",
 };
 
 module.exports = nextConfig;
