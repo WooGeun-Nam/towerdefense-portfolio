@@ -2,27 +2,32 @@
 import { useEffect, useState, useMemo } from "react";
 import Image from "next/image";
 
-type Img = { src: string; alt?: string };
-type Props = {
-  images: Img[];
-  coverOnly?: boolean;
-  title?: string;
+const getPrefix = () => {
+  if (typeof window !== "undefined") {
+    const d: any = (window as any).__NEXT_DATA__;
+    if (d?.assetPrefix) return d.assetPrefix as string;
+    if (d?.basePath) return d.basePath as string;
+  }
+  return "";
 };
+
+type Img = { src: string; alt?: string };
+type Props = { images: Img[]; coverOnly?: boolean; title?: string };
 
 export default function Gallery({ images, coverOnly = false, title }: Props) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
+  const prefix = useMemo(() => getPrefix(), []);
 
-  // 경로 정규화: http 그대로, 절대경로 그대로, 상대경로는 절대경로로 변환
-  const fixSrc = (src: string) => {
-    if (!src) return src;
-    if (src.startsWith("http")) return src;
-    return src.startsWith("/") ? src : `/${src.replace(/^(\.\/|\/)/, "")}`;
+  const withPrefix = (src: string) => {
+    if (!src || src.startsWith("http")) return src;
+    const abs = src.startsWith("/") ? src : `/${src.replace(/^(\.\/|\/)/, "")}`;
+    return `${prefix}${abs}`;
   };
 
   const fixedImages = useMemo(
-    () => images.map((i) => ({ ...i, src: fixSrc(i.src) })),
-    [images]
+    () => images.map((i) => ({ ...i, src: withPrefix(i.src) })),
+    [images, prefix]
   );
 
   const openAt = (i: number) => {
@@ -57,9 +62,10 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
           <Image
             src={img.src}
             alt={img.alt ?? ""}
-            width={800} // 반드시 width, height 지정 필요
-            height={600}
+            width={1200}
+            height={675}
             className="w-full h-auto object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity" />
           <div className="absolute inset-x-0 bottom-3 mx-auto w-fit rounded-full bg-white/90 px-4 py-1 text-sm font-medium text-gray-900 group-hover:bg-white">
@@ -93,8 +99,8 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
             <Image
               src={img.src}
               alt={img.alt ?? ""}
-              width={400}
-              height={300}
+              width={800}
+              height={450}
               className="w-full h-56 object-cover"
             />
           </button>
@@ -141,8 +147,8 @@ function Lightbox({
         <Image
           src={images[index].src}
           alt={images[index].alt ?? ""}
-          width={1200}
-          height={800}
+          width={1600}
+          height={900}
           className="mx-auto max-h-[82vh] w-auto rounded-xl shadow-lg"
         />
         <button
