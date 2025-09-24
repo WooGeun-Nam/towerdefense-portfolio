@@ -23,17 +23,18 @@ export default function PortfolioHome() {
           역량을 키워왔습니다.
         </p>
 
+        {/* 갤러리 컴포넌트 */}
         <Gallery
           coverOnly
           title="Project Images"
           images={[
-            { src: "/desc/Lobby.png", alt: "RogueTower-Lobby" },
-            { src: "/desc/WaitingRoom.png", alt: "RogueTower-WaitingRoom" },
-            { src: "/desc/InfinityMode.png", alt: "RogueTower-InfinityMode" },
-            { src: "/desc/IngameUI.png", alt: "RogueTower-IngameUI" },
-            { src: "/desc/DamageMeter.png", alt: "RogueTower-DamageMeter" },
-            { src: "/desc/Perk.png", alt: "RogueTower-Perk" },
-            { src: "/desc/RandomReward.png", alt: "RogueTower-RandomReward" },
+            { src: "/Desc/Lobby.png", alt: "RogueTower-Lobby" },
+            { src: "/Desc/WaitingRoom.png", alt: "RogueTower-WaitingRoom" },
+            { src: "/Desc/InfinityMode.png", alt: "RogueTower-InfinityMode" },
+            { src: "/Desc/IngameUI.png", alt: "RogueTower-IngameUI" },
+            { src: "/Desc/DamageMeter.png", alt: "RogueTower-DamageMeter" },
+            { src: "/Desc/Perk.png", alt: "RogueTower-Perk" },
+            { src: "/Desc/RandomReward.png", alt: "RogueTower-RandomReward" },
             {
               src: "/PortPolio/2DShooterCloneThum.png",
               alt: "2DShooterClone-Thumnail",
