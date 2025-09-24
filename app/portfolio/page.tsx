@@ -28,24 +28,12 @@ export default function PortfolioHome() {
           title="Project Images"
           images={[
             { src: "/desc/Lobby.png", alt: "RogueTower-Lobby" },
-            {
-              src: "/desc/WaitingRoom.png",
-              alt: "RogueTower-WaitingRoom",
-            },
-            {
-              src: "/desc/InfinityMode.png",
-              alt: "RogueTower-InfinityMode",
-            },
+            { src: "/desc/WaitingRoom.png", alt: "RogueTower-WaitingRoom" },
+            { src: "/desc/InfinityMode.png", alt: "RogueTower-InfinityMode" },
             { src: "/desc/IngameUI.png", alt: "RogueTower-IngameUI" },
-            {
-              src: "/desc/DamageMeter.png",
-              alt: "RogueTower-DamageMeter",
-            },
+            { src: "/desc/DamageMeter.png", alt: "RogueTower-DamageMeter" },
             { src: "/desc/Perk.png", alt: "RogueTower-Perk" },
-            {
-              src: "/desc/RandomReward.png",
-              alt: "RogueTower-RandomReward",
-            },
+            { src: "/desc/RandomReward.png", alt: "RogueTower-RandomReward" },
             {
               src: "/PortPolio/2DShooterCloneThum.png",
               alt: "2DShooterClone-Thumnail",
@@ -54,10 +42,7 @@ export default function PortfolioHome() {
               src: "/PortPolio/ProjectileEnemy.png",
               alt: "2DShooterClone-Projectile",
             },
-            {
-              src: "/PortPolio/BotAI.png",
-              alt: "2DShooterClone-BotAI",
-            },
+            { src: "/PortPolio/BotAI.png", alt: "2DShooterClone-BotAI" },
           ]}
         />
       </section>

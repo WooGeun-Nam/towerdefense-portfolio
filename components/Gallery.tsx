@@ -12,19 +12,13 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
-  // ★ basePath 보정 함수
-  const prefix =
-    process.env.NODE_ENV === "production" ? "/towerdefense-portfolio" : "";
-
+  // 경로 정규화: http 그대로, 절대경로 그대로, 상대경로는 절대경로로 변환
   const fixSrc = (src: string) => {
     if (!src) return src;
-    if (src.startsWith("http")) return src; // 외부 URL
-    if (src.startsWith("/")) return `${prefix}${src}`; // 절대경로
-    // 상대경로 → basePath + 깔끔한 경로
-    return `${prefix}/${src.replace(/^(\.\/|\/)/, "")}`;
+    if (src.startsWith("http")) return src;
+    return src.startsWith("/") ? src : `/${src.replace(/^(\.\/|\/)/, "")}`;
   };
 
-  // 필요하면 미리 보정된 배열 사용
   const fixedImages = useMemo(
     () => images.map((i) => ({ ...i, src: fixSrc(i.src) })),
     [images]
@@ -50,7 +44,6 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  // 대표 1장만
   if (coverOnly) {
     const img = fixedImages[0];
     return (
@@ -84,7 +77,6 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
     );
   }
 
-  // 썸네일 그리드
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
