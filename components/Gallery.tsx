@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
 
-/** 배포 시 __NEXT_DATA__에서 assetPrefix/basePath를 읽어 prefix로 사용 */
 const getPrefix = () => {
   if (typeof window !== "undefined") {
     const d: any = (window as any).__NEXT_DATA__;
@@ -17,9 +16,12 @@ type Props = { images: Img[]; coverOnly?: boolean; title?: string };
 export default function Gallery({ images, coverOnly = false, title }: Props) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
-  const prefix = useMemo(() => getPrefix(), []);
+  const [prefix, setPrefix] = useState(""); // ← 변경점
 
-  /** http는 통과, 나머지는 절대경로화 후 prefix 부착 */
+  useEffect(() => {
+    setPrefix(getPrefix()); // ← 클라이언트에서 재계산
+  }, []);
+
   const withPrefix = (src: string) => {
     if (!src || src.startsWith("http")) return src;
     const abs = src.startsWith("/") ? src : `/${src.replace(/^(\.\/|\/)/, "")}`;
