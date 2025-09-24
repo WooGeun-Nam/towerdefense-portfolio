@@ -1,4 +1,5 @@
 import Gallery from "../../components/Gallery";
+import Link from "next/link";
 
 export default function PortfolioHome() {
   return (
@@ -26,29 +27,35 @@ export default function PortfolioHome() {
           coverOnly
           title="Project Images"
           images={[
-            { src: "./../desc/Lobby.png", alt: "RogueTower-Lobby" },
-            { src: "./../desc/WaitingRoom.png", alt: "RogueTower-WaitingRoom" },
+            { src: "./../../desc/Lobby.png", alt: "RogueTower-Lobby" },
             {
-              src: "./../desc/InfinityMode.png",
+              src: "./../../desc/WaitingRoom.png",
+              alt: "RogueTower-WaitingRoom",
+            },
+            {
+              src: "./../../desc/InfinityMode.png",
               alt: "RogueTower-InfinityMode",
             },
-            { src: "./../desc/IngameUI.png", alt: "RogueTower-IngameUI" },
-            { src: "./../desc/DamageMeter.png", alt: "RogueTower-DamageMeter" },
-            { src: "./../desc/Perk.png", alt: "RogueTower-Perk" },
+            { src: "./../../desc/IngameUI.png", alt: "RogueTower-IngameUI" },
             {
-              src: "./../desc/RandomReward.png",
+              src: "./../../desc/DamageMeter.png",
+              alt: "RogueTower-DamageMeter",
+            },
+            { src: "./../../desc/Perk.png", alt: "RogueTower-Perk" },
+            {
+              src: "./../../desc/RandomReward.png",
               alt: "RogueTower-RandomReward",
             },
             {
-              src: "./../PortPolio/2DShooterCloneThum.png",
+              src: "./../../PortPolio/2DShooterCloneThum.png",
               alt: "2DShooterClone-Thumnail",
             },
             {
-              src: "./../PortPolio/ProjectileEnemy.png",
+              src: "./../../PortPolio/ProjectileEnemy.png",
               alt: "2DShooterClone-Projectile",
             },
             {
-              src: "./../PortPolio/BotAI.png",
+              src: "./../../PortPolio/BotAI.png",
               alt: "2DShooterClone-BotAI",
             },
           ]}
@@ -69,12 +76,12 @@ export default function PortfolioHome() {
             <h3 className="text-2xl font-bold mb-6">Game Client</h3>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
               {/* RogueTower */}
-              <a
+              <Link
                 href="/projects/roguetower"
                 className="group block rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all
-                 hover:border-blue-500 hover:shadow-md
-                 focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
-                 active:border-blue-700"
+   hover:border-blue-500 hover:shadow-md
+   focus:outline-none focus-visible:border-blue-600 focus-visible:ring-2 focus-visible:ring-blue-300
+   active:border-blue-700"
                 aria-label="RogueTower 상세 페이지로 이동"
               >
                 <img
@@ -94,7 +101,7 @@ export default function PortfolioHome() {
                   랜덤 맵과 웨이브별 보상을 통해 로그라이크적 변주와 전략성을
                   강화한 게임
                 </p>
-              </a>
+              </Link>
 
               {/* 2D Shooter Clone */}
               <a
