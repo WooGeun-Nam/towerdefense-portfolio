@@ -71,7 +71,7 @@ export default function PortfolioHome() {
                 aria-label="RogueTower 상세 페이지로 이동"
               >
                 <img
-                  src="./../SiteLogo.png"
+                  src="/SiteLogo.png"
                   alt="RogueTower 썸네일"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -99,7 +99,7 @@ export default function PortfolioHome() {
                 aria-label="2D Shooter Clone 상세 페이지로 이동"
               >
                 <img
-                  src="./../PortPolio/2DShooterCloneThum.png"
+                  src="/PortPolio/2DShooterCloneThum.png"
                   alt="2DShooterClone 썸네일"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
