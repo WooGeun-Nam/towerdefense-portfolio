@@ -1,6 +1,6 @@
 import Gallery from "../../components/Gallery";
 import Link from "next/link";
-import Image from "next/image";
+import ImgPrefixed from "../../components/ImgPrefixed"; // 경로는 실제 위치에 맞게 조정
 
 export default function PortfolioHome() {
   return (
@@ -71,11 +71,9 @@ export default function PortfolioHome() {
    active:border-blue-700"
                 aria-label="RogueTower 상세 페이지로 이동"
               >
-                <Image
+                <ImgPrefixed
                   src="/SiteLogo.png"
                   alt="RogueTower 썸네일"
-                  width={1600} // 원하는 이미지 실제 너비(px)로 지정
-                  height={900} // 원하는 이미지 실제 높이(px)로 지정
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
 
@@ -101,11 +99,9 @@ export default function PortfolioHome() {
                  active:border-blue-700"
                 aria-label="2D Shooter Clone 상세 페이지로 이동"
               >
-                <Image
+                <ImgPrefixed
                   src="/PortPolio/2DShooterCloneThum.png"
                   alt="2DShooterClone 썸네일"
-                  width={1600} // 원하는 이미지 실제 너비(px)로 지정
-                  height={900} // 원하는 이미지 실제 높이(px)로 지정
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">

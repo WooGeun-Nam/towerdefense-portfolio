@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "WooGeunNam",
   description: "웹 포트폴리오",
   icons: {
-    icon: "./Logo.ico",
+    icon: "./../Logo.ico",
   },
 };
 

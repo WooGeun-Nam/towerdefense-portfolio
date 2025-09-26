@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "WooGeunNam",
   description: "웹 포트폴리오",
-  icons: { icon: "./../../Logo.ico" },
+  icons: { icon: "./../Logo.ico" },
 };
 
 export default function ProjectsLayout({
