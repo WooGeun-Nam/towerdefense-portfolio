@@ -1,10 +1,12 @@
+import ImgPrefixed from "../../../components/ImgPrefixed";
+
 export default function MfcMusicPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16 space-y-6">
       {/* 상단: 좌 이미지 / 우 정보 */}
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
-          <img
+          <ImgPrefixed
             src="./../../Others/MFC1.png"
             className="w-full h-full object-cover"
           />
@@ -113,7 +115,7 @@ export default function MfcMusicPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
-                <img
+                <ImgPrefixed
                   src="./../../Others/MFC1.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
@@ -124,7 +126,7 @@ export default function MfcMusicPage() {
 
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
-                <img
+                <ImgPrefixed
                   src="./../../Others/MFC2.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />

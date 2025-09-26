@@ -1,3 +1,4 @@
+import ImgPrefixed from "./../ImgPrefixed"; // 경로 조정
 import React from "react";
 
 const PlanPage = () => {
@@ -33,26 +34,26 @@ const PlanPage = () => {
 
         <div className="grid grid-cols-4 gap-4 w-1/2">
           <div className="rounded-lg overflow-hidden">
-            <img
+            <ImgPrefixed
               src="./../../icon/unity.png"
               className="h-full w-full object-cover"
             />
           </div>
           <div className="rounded-lg overflow-hidden">
-            <img
+            <ImgPrefixed
               src="./../../icon/csharp.png"
               className="h-full w-full object-cover"
             />
           </div>
           <div className="rounded-lg overflow-hidden">
-            <img
+            <ImgPrefixed
               src="./../../icon/ase.png"
               className="h-full w-full object-cover"
             />
           </div>
           {/* PlayFab 아이콘을 위한 div */}
           <div className="rounded-lg overflow-hidden">
-            <img
+            <ImgPrefixed
               src="./../../icon/PlayFab.jpg"
               className="h-full w-full object-cover"
             />
@@ -195,14 +196,17 @@ const PlanPage = () => {
         </div>
         <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-2 gap-4">
           <div>
-            <img src="./../../Desc/Lobby.png" className="w-full object-cover" />
+            <ImgPrefixed
+              src="./../../Desc/Lobby.png"
+              className="w-full object-cover"
+            />
             <figcaption className="text-center text-sm text-gray-600 mt-2">
               게임 로비 화면
             </figcaption>
           </div>
 
           <div>
-            <img
+            <ImgPrefixed
               src="./../../Desc/IngameUI.png"
               className="w-full object-cover"
             />
@@ -306,7 +310,7 @@ const PlanPage = () => {
             </div>
             <div className="p-4 rounded-lg overflow-hidden shadow-lg">
               <div>
-                <img
+                <ImgPrefixed
                   src="./../../Desc/TowerButton.png"
                   className="w-full object-cover"
                 />
@@ -383,7 +387,7 @@ const PlanPage = () => {
                 </ul>
                 <div className="p-4 overflow-hidden">
                   <div>
-                    <img
+                    <ImgPrefixed
                       src="./../../Desc/Perk.png"
                       className="w-full object-cover"
                     />
@@ -409,7 +413,7 @@ const PlanPage = () => {
                 </ul>
                 <div className="p-4 overflow-hidden">
                   <div>
-                    <img
+                    <ImgPrefixed
                       src="./../../Desc/RandomReward.png"
                       className="w-full object-cover"
                     />
@@ -442,7 +446,7 @@ const PlanPage = () => {
                   </li>
                 </ul>
                 <div>
-                  <img
+                  <ImgPrefixed
                     src="./../../Desc/WaitingRoom.png"
                     className="w-full object-cover"
                   />
@@ -498,7 +502,7 @@ const PlanPage = () => {
           </ul>
           <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
             <div>
-              <img
+              <ImgPrefixed
                 src="./../../Desc/InfinityMode.png"
                 className="w-full h-48 object-cover"
               />
@@ -507,7 +511,7 @@ const PlanPage = () => {
               </figcaption>
             </div>
             <div>
-              <img
+              <ImgPrefixed
                 src="./../../Desc/DamageMeter.png"
                 className="w-full h-48 object-cover"
               />
@@ -516,7 +520,7 @@ const PlanPage = () => {
               </figcaption>
             </div>
             <div>
-              <img
+              <ImgPrefixed
                 src="./../../Desc/IngameReaderBoard.png"
                 className="w-full object-cover"
               />
@@ -525,7 +529,7 @@ const PlanPage = () => {
               </figcaption>
             </div>
             <div>
-              <img
+              <ImgPrefixed
                 src="./../../Desc/PlayFabReaderBoard.png"
                 className="w-full object-cover"
               />
@@ -571,7 +575,7 @@ const PlanPage = () => {
                   생성되는 오브젝트를 재활용하는 시스템을 구현했습니다.
                   <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
                     <div>
-                      <img
+                      <ImgPrefixed
                         src="./../../Desc/Pooling1.png"
                         className="w-full object-cover"
                       />
@@ -581,7 +585,7 @@ const PlanPage = () => {
                     </div>
 
                     <div>
-                      <img
+                      <ImgPrefixed
                         src="./../../Desc/Pooling2.png"
                         className="w-full object-cover"
                       />
@@ -628,19 +632,19 @@ const PlanPage = () => {
                   </ul>
                   <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
                     <div>
-                      <img
+                      <ImgPrefixed
                         src="./../../Desc/RandomMap1.png"
                         className="w-full object-cover"
                       />
                     </div>
                     <div>
-                      <img
+                      <ImgPrefixed
                         src="./../../Desc/RandomMap2.png"
                         className="w-full object-cover"
                       />
                     </div>
                     <div>
-                      <img
+                      <ImgPrefixed
                         src="./../../Desc/RandomMap3.png"
                         className="w-full object-cover"
                       />
@@ -697,7 +701,7 @@ const PlanPage = () => {
                   수집
                   <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
                     <div>
-                      <img
+                      <ImgPrefixed
                         src="./../../Desc/PlayFabCombatData.png"
                         className="w-full object-cover"
                       />
@@ -707,7 +711,7 @@ const PlanPage = () => {
                     </div>
 
                     <div>
-                      <img
+                      <ImgPrefixed
                         src="./../../Desc/PlayFabError.png"
                         className="w-full object-cover"
                       />
@@ -741,54 +745,54 @@ const PlanPage = () => {
                 </ul>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
-                  <img
+                  <ImgPrefixed
                     src="./../../character/CharacterBase01.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../character/WarriorTower01.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../character/SpearTower01.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../character/ArcherTower01.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../character/LaserTower01.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../character/BuffTower01.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../character/WarriorTower02.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../character/WarriorTower03.png"
                     className="w-full object-cover"
                   />
                 </div>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
-                  <img
+                  <ImgPrefixed
                     src="./../../character/CharacterBaseAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
-                  <img
+                  <ImgPrefixed
                     src="./../../character/ArcherTowerAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
-                  <img
+                  <ImgPrefixed
                     src="./../../character/BuffTowerAnim.png"
                     className="w-full object-cover"
                   />
@@ -806,30 +810,30 @@ const PlanPage = () => {
                 </ul>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
-                  <img
+                  <ImgPrefixed
                     src="./../../SkillFist.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../SkillDamageUp.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../SkillSlow.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../SkillThunder.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../ArrowRain.png"
                     className="w-full object-cover"
                   />
                 </div>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
-                  <img
+                  <ImgPrefixed
                     src="./../../SkillSpearLanding.png"
                     className="w-full object-cover"
                   />
@@ -844,7 +848,7 @@ const PlanPage = () => {
                 </ul>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
-                  <img
+                  <ImgPrefixed
                     src="./../../Tileset.png"
                     className="w-full object-cover"
                   />
@@ -859,11 +863,11 @@ const PlanPage = () => {
                 </ul>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
-                  <img
+                  <ImgPrefixed
                     src="./../../Arrow.png"
                     className="w-full object-cover"
                   />
-                  <img
+                  <ImgPrefixed
                     src="./../../Stone.png"
                     className="w-full object-cover"
                   />

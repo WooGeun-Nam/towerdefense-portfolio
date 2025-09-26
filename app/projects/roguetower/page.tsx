@@ -1,4 +1,5 @@
 import GamePortfolio from "../../../components/GamePortfolio";
+import ImgPrefixed from "../../../components/ImgPrefixed";
 
 export default function RogueTowerPage() {
   return (
@@ -7,7 +8,7 @@ export default function RogueTowerPage() {
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         {/* 메인 이미지 */}
         <div className="rounded-xl overflow-hidden shadow-sm">
-          <img
+          <ImgPrefixed
             src="./../../SiteLogo.png"
             alt="RogueTower 메인"
             className="w-full h-full object-cover"

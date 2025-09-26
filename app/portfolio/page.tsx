@@ -129,7 +129,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="음식 객체 인식 프로젝트 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/AI1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -153,7 +153,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="스마트 IoT 센서 시스템 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/IOT1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -177,7 +177,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="EveryTimeClone 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/PEI1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -199,7 +199,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="항공 예약 관리 시스템 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/AirReserve1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -223,7 +223,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="EveryTimeClone 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/etc1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -247,7 +247,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="키오스크 프로그램 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/Kiosk1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -271,7 +271,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="대학 정보 시스템 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/UIS1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
@@ -295,7 +295,7 @@ export default function PortfolioHome() {
               active:border-blue-700"
                 aria-label="내 맘대로 연주 상세 페이지로 이동"
               >
-                <img
+                <ImgPrefixed
                   src="./../Others/MFC1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />

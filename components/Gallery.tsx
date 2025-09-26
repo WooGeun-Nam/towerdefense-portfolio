@@ -1,22 +1,6 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
-
-/** 배포 시 __NEXT_DATA__에서 assetPrefix/basePath를 읽어 prefix로 사용, 환경변수도 지원 */
-const getPrefix = () => {
-  // Next.js에서 __NEXT_DATA__에 prefix 정보가 있을 경우 사용
-  if (typeof window !== "undefined") {
-    const d: any = (window as any).__NEXT_DATA__;
-    if (d?.assetPrefix) return d.assetPrefix as string;
-    if (d?.basePath) return d.basePath as string;
-  }
-  // 환경변수 지원 (NEXT_PUBLIC_BASE_PATH)
-  if (process.env.NEXT_PUBLIC_BASE_PATH)
-    return process.env.NEXT_PUBLIC_BASE_PATH;
-  // 프로덕션에서는 레포지토리명 prefix 적용
-  if (process.env.NODE_ENV === "production") return "/towerdefense-portfolio";
-  // 개발환경에서는 prefix 없음
-  return "";
-};
+import ImgPrefixed from "./ImgPrefixed"; // 경로 조정
 
 type Img = { src: string; alt?: string };
 type Props = { images: Img[]; coverOnly?: boolean; title?: string };
@@ -24,19 +8,9 @@ type Props = { images: Img[]; coverOnly?: boolean; title?: string };
 export default function Gallery({ images, coverOnly = false, title }: Props) {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
-  const prefix = useMemo(() => getPrefix(), []);
 
-  /** http는 통과, 나머지는 절대경로화 후 prefix 부착 */
-  const withPrefix = (src: string) => {
-    if (!src || src.startsWith("http")) return src;
-    const abs = src.startsWith("/") ? src : `/${src.replace(/^(\.\/|\/)/, "")}`;
-    return `${prefix}${abs}`;
-  };
-
-  const fixedImages = useMemo(
-    () => images.map((i) => ({ ...i, src: withPrefix(i.src) })),
-    [images, prefix]
-  );
+  // src 보정은 ImgPrefixed가 담당. 여기선 그대로 전달.
+  const fixedImages = useMemo(() => images, [images]);
 
   const openAt = (i: number) => {
     setIndex(i);
@@ -58,6 +32,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
+  // 대표 1장만
   if (coverOnly) {
     const img = fixedImages[0];
     return (
@@ -67,7 +42,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
           onClick={() => openAt(0)}
           className="group relative block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
         >
-          <img
+          <ImgPrefixed
             src={img.src}
             alt={img.alt ?? ""}
             className="w-full h-auto object-cover"
@@ -91,6 +66,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
     );
   }
 
+  // 썸네일 그리드
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -101,7 +77,7 @@ export default function Gallery({ images, coverOnly = false, title }: Props) {
             onClick={() => openAt(i)}
             className="group block rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm transition-colors hover:border-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300"
           >
-            <img
+            <ImgPrefixed
               src={img.src}
               alt={img.alt ?? ""}
               className="w-full h-56 object-cover"
@@ -147,7 +123,7 @@ function Lightbox({
         className="relative max-w-5xl w-full px-6"
         onClick={(e) => e.stopPropagation()}
       >
-        <img
+        <ImgPrefixed
           src={images[index].src}
           alt={images[index].alt ?? ""}
           className="mx-auto max-h-[82vh] w-auto rounded-xl shadow-lg"

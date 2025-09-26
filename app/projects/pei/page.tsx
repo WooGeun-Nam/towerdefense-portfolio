@@ -1,10 +1,12 @@
+import ImgPrefixed from "../../../components/ImgPrefixed";
+
 export default function PEIPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16 space-y-6">
       {/* 상단: 좌 이미지 / 우 정보 */}
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
-          <img
+          <ImgPrefixed
             src="./../../Others/PEI1.png"
             className="w-full h-full object-cover"
           />
@@ -41,7 +43,7 @@ export default function PEIPage() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">아이디어 스케치</h2>
               <div className="flex flex-col items-center">
-                <img
+                <ImgPrefixed
                   src="./../../Others/PEI4.png"
                   className="rounded-lg shadow-md h-auto object-cover"
                 />
@@ -110,7 +112,7 @@ export default function PEIPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
-                <img
+                <ImgPrefixed
                   src="./../../Others/PEI2.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
@@ -121,7 +123,7 @@ export default function PEIPage() {
 
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
-                <img
+                <ImgPrefixed
                   src="./../../Others/PEI3.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
