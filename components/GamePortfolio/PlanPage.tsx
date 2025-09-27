@@ -1,5 +1,4 @@
 import ImgPrefixed from "./../ImgPrefixed"; // 경로 조정
-import AudioPrefixed from "./../AudioPrefixed";
 import React from "react";
 
 const PlanPage = () => {
@@ -1135,6 +1134,9 @@ const PlanPage = () => {
       {/* 음악 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">게임 음악</h2>
+        <p className="text-xs text-gray-600 mb-4">
+          ※ 크롬 환경에서 재생을 권장합니다.
+        </p>
         <ul className="list-disc pl-5 grid grid-cols-2 items-start gap-x-8 gap-y-5 text-sm">
           <li>
             타이틀
