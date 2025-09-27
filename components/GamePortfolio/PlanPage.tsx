@@ -1005,11 +1005,11 @@ const PlanPage = () => {
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
                   <ImgPrefixed
-                    src="/Arrow.png"
+                    src="/UI/Arrow.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="/Stone.png"
+                    src="/UI/Stone.png"
                     className="w-full object-cover"
                   />
                 </div>
