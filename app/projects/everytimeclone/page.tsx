@@ -7,7 +7,7 @@ export default function EveryTimeClonePage() {
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
-            src="./../../Others/etc1.png"
+            src="/Others/etc1.png"
             className="w-full h-full object-cover"
           />
         </div>
@@ -105,7 +105,7 @@ export default function EveryTimeClonePage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/etc1.png"
+                  src="/Others/etc1.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -116,7 +116,7 @@ export default function EveryTimeClonePage() {
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/etc2.png"
+                  src="/Others/etc2.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -127,7 +127,7 @@ export default function EveryTimeClonePage() {
               {/* 아이템 3 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/etc3.png"
+                  src="/Others/etc3.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">

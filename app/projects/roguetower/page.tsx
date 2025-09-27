@@ -9,7 +9,7 @@ export default function RogueTowerPage() {
         {/* 메인 이미지 */}
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
-            src="./../../SiteLogo.png"
+            src="/SiteLogo.png"
             alt="RogueTower 메인"
             className="w-full h-full object-cover"
           />

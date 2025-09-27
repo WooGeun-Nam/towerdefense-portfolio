@@ -7,7 +7,7 @@ export default function IOTSensorPage() {
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
-            src="./../../Others/IOT1.png"
+            src="/Others/IOT1.png"
             className="w-full h-full object-cover"
           />
         </div>
@@ -44,7 +44,7 @@ export default function IOTSensorPage() {
               <h2 className="text-2xl font-semibold mb-4">회로 구성</h2>
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/IOT2.png"
+                  src="/Others/IOT2.png"
                   className="rounded-lg shadow-md h-auto object-cover"
                 />
               </div>
@@ -106,7 +106,7 @@ export default function IOTSensorPage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/IOT1.png"
+                  src="/Others/IOT1.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -117,7 +117,7 @@ export default function IOTSensorPage() {
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/IOT3.png"
+                  src="/Others/IOT3.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -128,7 +128,7 @@ export default function IOTSensorPage() {
               {/* 아이템 3 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/IOT4.png"
+                  src="/Others/IOT4.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">

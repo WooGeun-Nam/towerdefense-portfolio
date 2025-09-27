@@ -7,7 +7,7 @@ export default function KioskPage() {
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
-            src="./../../Others/Kiosk1.png"
+            src="/Others/Kiosk1.png"
             className="w-full h-full object-cover"
           />
         </div>
@@ -105,7 +105,7 @@ export default function KioskPage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/Kiosk1.png"
+                  src="/Others/Kiosk1.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -116,7 +116,7 @@ export default function KioskPage() {
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/Kiosk2.png"
+                  src="/Others/Kiosk2.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -127,7 +127,7 @@ export default function KioskPage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/Kiosk3.png"
+                  src="/Others/Kiosk3.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -138,7 +138,7 @@ export default function KioskPage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/Kiosk4.png"
+                  src="/Others/Kiosk4.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">

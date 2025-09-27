@@ -7,7 +7,7 @@ export default function PEIPage() {
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
-            src="./../../Others/PEI1.png"
+            src="/Others/PEI1.png"
             className="w-full h-full object-cover"
           />
         </div>
@@ -44,7 +44,7 @@ export default function PEIPage() {
               <h2 className="text-2xl font-semibold mb-4">아이디어 스케치</h2>
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/PEI4.png"
+                  src="/Others/PEI4.png"
                   className="rounded-lg shadow-md h-auto object-cover"
                 />
               </div>
@@ -113,7 +113,7 @@ export default function PEIPage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/PEI2.png"
+                  src="/Others/PEI2.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -124,7 +124,7 @@ export default function PEIPage() {
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/PEI3.png"
+                  src="/Others/PEI3.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">

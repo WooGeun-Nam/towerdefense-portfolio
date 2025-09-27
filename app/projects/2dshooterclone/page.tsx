@@ -7,7 +7,7 @@ export default function ShooterClonePage() {
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
-            src="./../../PortPolio/2DShooterCloneThum.png"
+            src="/PortPolio/2DShooterCloneThum.png"
             alt="2D Shooter Clone 메인"
             className="w-full h-full object-cover"
           />
@@ -130,7 +130,7 @@ export default function ShooterClonePage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../PortPolio/2DShooterCloneThum.png"
+                  src="/PortPolio/2DShooterCloneThum.png"
                   alt="전투 UI 스크린샷"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
@@ -142,7 +142,7 @@ export default function ShooterClonePage() {
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../PortPolio/BotAI.png"
+                  src="/PortPolio/BotAI.png"
                   alt="RogueTower 맵 생성"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
@@ -154,7 +154,7 @@ export default function ShooterClonePage() {
               {/* 아이템 3 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../PortPolio/ProjectileFloor.png"
+                  src="/PortPolio/ProjectileFloor.png"
                   alt="스킬 효과 예시"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
@@ -166,7 +166,7 @@ export default function ShooterClonePage() {
               {/* 아이템 4 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../PortPolio/ProjectileEnemy.png"
+                  src="/PortPolio/ProjectileEnemy.png"
                   alt="플레이어 이동 시스템"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
@@ -178,7 +178,7 @@ export default function ShooterClonePage() {
               {/* 아이템 5 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../PortPolio/DamageFont.png"
+                  src="/PortPolio/DamageFont.png"
                   alt="플레이어 이동 시스템"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
@@ -190,7 +190,7 @@ export default function ShooterClonePage() {
               {/* 아이템 6 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../PortPolio/2DShooterSO.png"
+                  src="/PortPolio/2DShooterSO.png"
                   alt="플레이어 이동 시스템"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />

@@ -130,7 +130,7 @@ export default function PortfolioHome() {
                 aria-label="음식 객체 인식 프로젝트 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/AI1.png"
+                  src="/Others/AI1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">
@@ -154,7 +154,7 @@ export default function PortfolioHome() {
                 aria-label="스마트 IoT 센서 시스템 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/IOT1.png"
+                  src="/Others/IOT1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">
@@ -178,7 +178,7 @@ export default function PortfolioHome() {
                 aria-label="EveryTimeClone 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/PEI1.png"
+                  src="/Others/PEI1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">PEI</h3>
@@ -200,7 +200,7 @@ export default function PortfolioHome() {
                 aria-label="항공 예약 관리 시스템 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/AirReserve1.png"
+                  src="/Others/AirReserve1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">
@@ -224,7 +224,7 @@ export default function PortfolioHome() {
                 aria-label="EveryTimeClone 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/etc1.png"
+                  src="/Others/etc1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">
@@ -248,7 +248,7 @@ export default function PortfolioHome() {
                 aria-label="키오스크 프로그램 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/Kiosk1.png"
+                  src="/Others/Kiosk1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">
@@ -272,7 +272,7 @@ export default function PortfolioHome() {
                 aria-label="대학 정보 시스템 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/UIS1.png"
+                  src="/Others/UIS1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">
@@ -296,7 +296,7 @@ export default function PortfolioHome() {
                 aria-label="내 맘대로 연주 상세 페이지로 이동"
               >
                 <ImgPrefixed
-                  src="./../Others/MFC1.png"
+                  src="/Others/MFC1.png"
                   className="aspect-video rounded-md mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold text-center">
@@ -484,6 +484,13 @@ export default function PortfolioHome() {
                 https://soundcloud.com/gamto
               </a>
             </p>
+            <a href="https://myhits.vercel.app">
+              <img
+                src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fwoogeun-nam.github.io%2Ftowerdefense-portfolio%2F?color=purple&label=Visitors&size=small"
+                alt="Visitors"
+                style={{ display: "none" }}
+              />
+            </a>
           </section>
         </div>
       </section>

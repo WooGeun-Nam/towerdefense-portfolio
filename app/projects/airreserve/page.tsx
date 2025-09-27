@@ -7,7 +7,7 @@ export default function AirReservePage() {
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
-            src="./../../Others/AirReserve1.png"
+            src="/Others/AirReserve1.png"
             className="w-full h-full object-cover"
           />
         </div>
@@ -59,7 +59,7 @@ export default function AirReservePage() {
               </h2>
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/AirReserve4.png"
+                  src="/Others/AirReserve4.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
               </div>
@@ -70,7 +70,7 @@ export default function AirReservePage() {
               <h2 className="text-2xl font-semibold mb-4">설계 (테이블)</h2>
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/AirReserve5.png"
+                  src="/Others/AirReserve5.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
               </div>
@@ -127,7 +127,7 @@ export default function AirReservePage() {
               {/* 아이템 1 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/AirReserve1.png"
+                  src="/Others/AirReserve1.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -138,7 +138,7 @@ export default function AirReservePage() {
               {/* 아이템 2 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/AirReserve2.png"
+                  src="/Others/AirReserve2.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">
@@ -149,7 +149,7 @@ export default function AirReservePage() {
               {/* 아이템 3 */}
               <div className="flex flex-col items-center">
                 <ImgPrefixed
-                  src="./../../Others/AirReserve3.png"
+                  src="/Others/AirReserve3.png"
                   className="rounded-lg shadow-md w-full h-auto object-cover"
                 />
                 <p className="mt-3 text-sm text-gray-700 text-center">

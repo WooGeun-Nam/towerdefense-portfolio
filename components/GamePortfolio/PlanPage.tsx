@@ -35,26 +35,26 @@ const PlanPage = () => {
         <div className="grid grid-cols-4 gap-4 w-1/2">
           <div className="rounded-lg overflow-hidden">
             <ImgPrefixed
-              src="./../../icon/unity.png"
+              src="/icon/unity.png"
               className="h-full w-full object-cover"
             />
           </div>
           <div className="rounded-lg overflow-hidden">
             <ImgPrefixed
-              src="./../../icon/csharp.png"
+              src="/icon/csharp.png"
               className="h-full w-full object-cover"
             />
           </div>
           <div className="rounded-lg overflow-hidden">
             <ImgPrefixed
-              src="./../../icon/ase.png"
+              src="/icon/ase.png"
               className="h-full w-full object-cover"
             />
           </div>
           {/* PlayFab 아이콘을 위한 div */}
           <div className="rounded-lg overflow-hidden">
             <ImgPrefixed
-              src="./../../icon/PlayFab.jpg"
+              src="/icon/PlayFab.jpg"
               className="h-full w-full object-cover"
             />
           </div>
@@ -197,7 +197,7 @@ const PlanPage = () => {
         <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-2 gap-4">
           <div>
             <ImgPrefixed
-              src="./../../Desc/Lobby.png"
+              src="/Desc/Lobby.png"
               className="w-full object-cover"
             />
             <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -207,7 +207,7 @@ const PlanPage = () => {
 
           <div>
             <ImgPrefixed
-              src="./../../Desc/IngameUI.png"
+              src="/Desc/IngameUI.png"
               className="w-full object-cover"
             />
             <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -311,7 +311,7 @@ const PlanPage = () => {
             <div className="p-4 rounded-lg overflow-hidden shadow-lg">
               <div>
                 <ImgPrefixed
-                  src="./../../Desc/TowerButton.png"
+                  src="/Desc/TowerButton.png"
                   className="w-full object-cover"
                 />
               </div>
@@ -388,7 +388,7 @@ const PlanPage = () => {
                 <div className="p-4 overflow-hidden">
                   <div>
                     <ImgPrefixed
-                      src="./../../Desc/Perk.png"
+                      src="/Desc/Perk.png"
                       className="w-full object-cover"
                     />
                   </div>
@@ -414,7 +414,7 @@ const PlanPage = () => {
                 <div className="p-4 overflow-hidden">
                   <div>
                     <ImgPrefixed
-                      src="./../../Desc/RandomReward.png"
+                      src="/Desc/RandomReward.png"
                       className="w-full object-cover"
                     />
                   </div>
@@ -438,6 +438,7 @@ const PlanPage = () => {
                 <h4 className="font-semibold mb-2">장비 시스템</h4>
                 <ul className="list-disc pl-5 text-sm space-y-1 mb-4">
                   <li>장비 획득 및 장착 시스템</li>
+                  <li>도감을 통한 장비 수집의 재미 제공</li>
                   <li>장신구 장착 시 특수 스킬 발동</li>
                   <li>웨이브 보상 및 난이도와 연계된 파밍</li>
                   <li>장비 파밍을 통한 높은 난이도를 도전</li>
@@ -447,12 +448,68 @@ const PlanPage = () => {
                 </ul>
                 <div>
                   <ImgPrefixed
-                    src="./../../Desc/WaitingRoom.png"
+                    src="/Desc/WaitingRoom.png"
                     className="w-full object-cover"
                   />
                   <figcaption className="text-center text-sm text-gray-600 mt-2">
                     대기실 화면
                   </figcaption>
+                </div>
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/Collect.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    장비 도감
+                  </figcaption>
+                </div>
+              </div>
+              <div className="p-4 bg-gray-50 rounded">
+                <h4 className="font-semibold mb-2">상점 시스템</h4>
+                <ul className="list-disc pl-5 text-sm space-y-1 mb-4">
+                  <li>장비 수집의 완화제</li>
+                  <li>슬롯머신 애니메이션을 통한 뽑기효과</li>
+                  <li>중복 장비 획득시 재화로 전환 (등급별 상이)</li>
+                  <li>중복획득의 불쾌감 감소 및 뽑기의 재미 요소</li>
+                </ul>
+                <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                  <div>
+                    <ImgPrefixed
+                      src="/Desc/Store1.png"
+                      className="w-full object-cover"
+                    />
+                    <figcaption className="text-center text-sm text-gray-600 mt-2">
+                      상점 UI
+                    </figcaption>
+                  </div>
+                  <div>
+                    <ImgPrefixed
+                      src="/Desc/Store3.png"
+                      className="w-full object-cover"
+                    />
+                    <figcaption className="text-center text-sm text-gray-600 mt-2">
+                      뽑기 애니메이션1
+                    </figcaption>
+                  </div>
+                  <div>
+                    <ImgPrefixed
+                      src="/Desc/StoreAnimation.gif"
+                      className="w-full object-cover"
+                    />
+                    <figcaption className="text-center text-sm text-gray-600 mt-2">
+                      뽑기 애니메이션2
+                    </figcaption>
+                  </div>
+                  <div>
+                    <ImgPrefixed
+                      src="/Desc/Store4.png"
+                      className="w-full object-cover"
+                    />
+                    <figcaption className="text-center text-sm text-gray-600 mt-2">
+                      최종 획득 결과
+                    </figcaption>
+                  </div>
                 </div>
               </div>
             </div>
@@ -503,8 +560,8 @@ const PlanPage = () => {
           <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
             <div>
               <ImgPrefixed
-                src="./../../Desc/InfinityMode.png"
-                className="w-full h-48 object-cover"
+                src="/Desc/InfinityMode.png"
+                className="w-full object-cover"
               />
               <figcaption className="text-center text-sm text-gray-600 mt-2">
                 무한모드 활성화 UI
@@ -512,16 +569,16 @@ const PlanPage = () => {
             </div>
             <div>
               <ImgPrefixed
-                src="./../../Desc/DamageMeter.png"
-                className="w-full h-48 object-cover"
+                src="/Desc/DamageMeter.png"
+                className="w-full object-cover"
               />
               <figcaption className="text-center text-sm text-gray-600 mt-2">
-                데미지 분석 기능
+                무한모드 데미지 분석 기능
               </figcaption>
             </div>
             <div>
               <ImgPrefixed
-                src="./../../Desc/IngameReaderBoard.png"
+                src="/Desc/IngameReaderBoard.png"
                 className="w-full object-cover"
               />
               <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -530,7 +587,7 @@ const PlanPage = () => {
             </div>
             <div>
               <ImgPrefixed
-                src="./../../Desc/PlayFabReaderBoard.png"
+                src="/Desc/PlayFabReaderBoard.png"
                 className="w-full object-cover"
               />
               <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -576,7 +633,7 @@ const PlanPage = () => {
                   <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
                     <div>
                       <ImgPrefixed
-                        src="./../../Desc/Pooling1.png"
+                        src="/Desc/Pooling1.png"
                         className="w-full object-cover"
                       />
                       <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -586,7 +643,7 @@ const PlanPage = () => {
 
                     <div>
                       <ImgPrefixed
-                        src="./../../Desc/Pooling2.png"
+                        src="/Desc/Pooling2.png"
                         className="w-full object-cover"
                       />
                       <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -633,19 +690,19 @@ const PlanPage = () => {
                   <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
                     <div>
                       <ImgPrefixed
-                        src="./../../Desc/RandomMap1.png"
+                        src="/Desc/RandomMap1.png"
                         className="w-full object-cover"
                       />
                     </div>
                     <div>
                       <ImgPrefixed
-                        src="./../../Desc/RandomMap2.png"
+                        src="/Desc/RandomMap2.png"
                         className="w-full object-cover"
                       />
                     </div>
                     <div>
                       <ImgPrefixed
-                        src="./../../Desc/RandomMap3.png"
+                        src="/Desc/RandomMap3.png"
                         className="w-full object-cover"
                       />
                     </div>
@@ -702,7 +759,7 @@ const PlanPage = () => {
                   <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
                     <div>
                       <ImgPrefixed
-                        src="./../../Desc/PlayFabCombatData.png"
+                        src="/Desc/PlayFabCombatData.png"
                         className="w-full object-cover"
                       />
                       <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -712,7 +769,7 @@ const PlanPage = () => {
 
                     <div>
                       <ImgPrefixed
-                        src="./../../Desc/PlayFabError.png"
+                        src="/Desc/PlayFabError.png"
                         className="w-full object-cover"
                       />
                       <figcaption className="text-center text-sm text-gray-600 mt-2">
@@ -746,54 +803,54 @@ const PlanPage = () => {
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
                   <ImgPrefixed
-                    src="./../../character/CharacterBase01.png"
+                    src="/character/CharacterBase01.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../character/WarriorTower01.png"
+                    src="/character/WarriorTower01.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../character/SpearTower01.png"
+                    src="/character/SpearTower01.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../character/ArcherTower01.png"
+                    src="/character/ArcherTower01.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../character/LaserTower01.png"
+                    src="/character/LaserTower01.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../character/BuffTower01.png"
+                    src="/character/BuffTower01.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../character/WarriorTower02.png"
+                    src="/character/WarriorTower02.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../character/WarriorTower03.png"
+                    src="/character/WarriorTower03.png"
                     className="w-full object-cover"
                   />
                 </div>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <ImgPrefixed
-                    src="./../../character/CharacterBaseAnim.png"
+                    src="/character/CharacterBaseAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <ImgPrefixed
-                    src="./../../character/ArcherTowerAnim.png"
+                    src="/character/ArcherTowerAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <ImgPrefixed
-                    src="./../../character/BuffTowerAnim.png"
+                    src="/character/BuffTowerAnim.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -811,30 +868,30 @@ const PlanPage = () => {
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
                   <ImgPrefixed
-                    src="./../../SkillFist.png"
+                    src="/SkillFist.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../SkillDamageUp.png"
+                    src="/SkillDamageUp.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../SkillSlow.png"
+                    src="/SkillSlow.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../SkillThunder.png"
+                    src="/SkillThunder.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../ArrowRain.png"
+                    src="/ArrowRain.png"
                     className="w-full object-cover"
                   />
                 </div>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <ImgPrefixed
-                    src="./../../SkillSpearLanding.png"
+                    src="/SkillSpearLanding.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -849,7 +906,7 @@ const PlanPage = () => {
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <ImgPrefixed
-                    src="./../../Tileset.png"
+                    src="/Tileset.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -864,11 +921,11 @@ const PlanPage = () => {
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
                   <ImgPrefixed
-                    src="./../../Arrow.png"
+                    src="/Arrow.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="./../../Stone.png"
+                    src="/Stone.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -883,19 +940,19 @@ const PlanPage = () => {
         <h2 className="text-2xl font-bold mb-4">게임 음악</h2>
         <audio
           className="mb-4"
-          src="./../../audio/sample1.mp3"
+          src="/audio/sample1.mp3"
           controls
           id="myAudio"
         ></audio>
         <audio
           className="mb-4"
-          src="./../../audio/sample2.mp3"
+          src="/audio/sample2.mp3"
           controls
           id="myAudio"
         ></audio>
         <audio
           className="mb-4"
-          src="./../../audio/sample6.wav"
+          src="/audio/sample6.wav"
           controls
           id="myAudio"
         ></audio>
