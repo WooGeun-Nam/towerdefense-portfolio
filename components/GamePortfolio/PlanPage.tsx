@@ -334,11 +334,19 @@ const PlanPage = () => {
                 </div>
               </div>
             </div>
+            <div className="p-4 rounded-lg overflow-hidden shadow-lg">
+              <div>
+                <ImgPrefixed
+                  src="/Desc/SkillButton.png"
+                  className="w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
 
           {/* 웨이브 시스템 */}
+          <h3 className="text-lg font-semibold mb-4">웨이브 시스템</h3>
           <div className="p-4 bg-gray-50 rounded">
-            <h3 className="text-lg font-semibold mb-4">웨이브 시스템</h3>
             <div className="grid grid-cols-3 gap-4">
               {[
                 {
@@ -754,6 +762,52 @@ const PlanPage = () => {
                   </p>
                 </li>
                 <li>
+                  <b>툴팁 시스템 : 툴팁을 통한 유저 편의적인 UI 제공</b>
+                  <p className="pl-4 text-xs">
+                    툴팁이 필요한 객체에 `TooltipTrigger.cs` 컴포넌트를 이용하여
+                    정보제공
+                  </p>
+                  <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                    <div>
+                      <ImgPrefixed
+                        src="/Desc/Tooltip1.png"
+                        className="w-full object-cover"
+                      />
+                      <figcaption className="text-center text-sm text-gray-600 mt-2">
+                        툴팁 예시1 (타워 정보)
+                      </figcaption>
+                    </div>
+
+                    <div>
+                      <ImgPrefixed
+                        src="/Desc/Tooltip3.png"
+                        className="w-full object-cover"
+                      />
+                      <figcaption className="text-center text-sm text-gray-600 mt-2">
+                        툴팁 예시2 (특수 장비 인게임 정보 실시간 표기)
+                      </figcaption>
+                    </div>
+                    <div>
+                      <ImgPrefixed
+                        src="/Desc/Tooltip2.png"
+                        className="w-full object-cover"
+                      />
+                      <figcaption className="text-center text-sm text-gray-600 mt-2">
+                        툴팁 예시3 (장비 옵션)
+                      </figcaption>
+                    </div>
+                    <div>
+                      <ImgPrefixed
+                        src="/Desc/Tooltip4.png"
+                        className="w-full object-cover"
+                      />
+                      <figcaption className="text-center text-sm text-gray-600 mt-2">
+                        툴팁 예시4 (도감에서 장비 옵션)
+                      </figcaption>
+                    </div>
+                  </div>
+                </li>
+                <li>
                   <b>PlayFab을 통한 데이터 수집</b>: 전투 데이터 및 에러 데이터
                   수집
                   <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
@@ -789,7 +843,6 @@ const PlanPage = () => {
         <h2 className="text-2xl font-bold mb-4">게임 디자인</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold mb-2">디자인 방향성</h3>
             <div className="grid gap-4">
               <div className="p-4 bg-gray-50 rounded">
                 <h4 className="font-semibold mb-2">캐릭터</h4>
@@ -836,21 +889,37 @@ const PlanPage = () => {
                   />
                 </div>
 
-                <div className="p-4 rounded-lg overflow-hidden shadow-lg">
+                <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-3">
                   <ImgPrefixed
                     src="/character/CharacterBaseAnim.png"
                     className="w-full object-cover"
                   />
-                </div>
-                <div className="p-4 rounded-lg overflow-hidden shadow-lg">
+                  <ImgPrefixed
+                    src="/character/WarriorTowerAnim.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/character/SpearTowerAnim.png"
+                    className="w-full object-cover"
+                  />
                   <ImgPrefixed
                     src="/character/ArcherTowerAnim.png"
                     className="w-full object-cover"
                   />
-                </div>
-                <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <ImgPrefixed
                     src="/character/BuffTowerAnim.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/character/LaserTowerAnim.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/character/AvatarOfVengeance.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/character/CommanderFlag.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -868,30 +937,32 @@ const PlanPage = () => {
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-8">
                   <ImgPrefixed
-                    src="/SkillFist.png"
+                    src="/UI/SkillFist.png"
+                    className="w-full object-cover"
+                  />
+
+                  <ImgPrefixed
+                    src="/UI/SkillSlow.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="/SkillDamageUp.png"
+                    src="/UI/ArrowRain.png"
                     className="w-full object-cover"
                   />
                   <ImgPrefixed
-                    src="/SkillSlow.png"
+                    src="/UI/SkillThunder.png"
                     className="w-full object-cover"
                   />
+
                   <ImgPrefixed
-                    src="/SkillThunder.png"
-                    className="w-full object-cover"
-                  />
-                  <ImgPrefixed
-                    src="/ArrowRain.png"
+                    src="/UI/SkillDamageUp.png"
                     className="w-full object-cover"
                   />
                 </div>
 
                 <div className="p-4 rounded-lg overflow-hidden shadow-lg">
                   <ImgPrefixed
-                    src="/SkillSpearLanding.png"
+                    src="/UI/SkillSpearLanding.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -902,11 +973,24 @@ const PlanPage = () => {
                 <ul className="list-disc pl-5 text-sm">
                   <li>타워디펜스에 최적화된 경로를 가진 타일셋 제작</li>
                   <li>웨이브 시작 및 종료지점 제작</li>
+                  <li>시각적인 요소를 추가해줄 꾸밈타일 제작</li>
                 </ul>
 
-                <div className="p-4 rounded-lg overflow-hidden shadow-lg">
+                <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-4 gap-x-4">
                   <ImgPrefixed
-                    src="/Tileset.png"
+                    src="UI/Tileset.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="UI/Tileset_Snow.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="UI/Tileset_Desert.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="UI/Tileset_Magma.png"
                     className="w-full object-cover"
                   />
                 </div>
@@ -930,6 +1014,118 @@ const PlanPage = () => {
                   />
                 </div>
               </div>
+
+              <div className="p-4 bg-gray-50 rounded">
+                <h4 className="font-semibold mb-2">장비</h4>
+                <ul className="list-disc pl-5 text-sm">
+                  <li>수집용 장비 이미지 (일부)</li>
+                </ul>
+
+                <div className="p-4 rounded-lg overflow-hidden shadow-lg grid grid-cols-12">
+                  {/* 장신구 */}
+                  <ImgPrefixed
+                    src="/Equipment/accessory_avatar_of_vengeance.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/accessory_drum_of_battle.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/accessory_heart_of_life_reversal.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/accessory_vitality_doll.png"
+                    className="w-full object-cover"
+                  />
+                  {/* 방어구 */}
+                  <ImgPrefixed
+                    src="/Equipment/armor_berserker_cuirass.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/armor_immortal_cuirass.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/armor_shadow_lord_armor.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/armor_starlight_robe.png"
+                    className="w-full object-cover"
+                  />
+                  {/* 신발 */}
+                  <ImgPrefixed
+                    src="/Equipment/boot_atlas_steps.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/boot_dragon_roar.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/boot_ghost_boots.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/boot_stormwing_boots.png"
+                    className="w-full object-cover"
+                  />
+                  {/* 장갑 */}
+                  <ImgPrefixed
+                    src="/Equipment/glove_meteor_gloves.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/glove_shadow_woven_gloves.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/glove_time_warp_gloves.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/glove_titan_gauntlets.png"
+                    className="w-full object-cover"
+                  />
+                  {/* 투구 */}
+                  <ImgPrefixed
+                    src="/Equipment/helmet_ancient_dragon_skull.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/helmet_crown_of_dominion.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/helmet_shadow_tracker_helmet.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/helmet_silver_helmet.png"
+                    className="w-full object-cover"
+                  />
+                  {/* 무기 */}
+                  <ImgPrefixed
+                    src="/Equipment/weapon_bloodlust.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/weapon_divine_punishment_bow.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/weapon_rune_blade.png"
+                    className="w-full object-cover"
+                  />
+                  <ImgPrefixed
+                    src="/Equipment/weapon_world_tree_staff.png"
+                    className="w-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -938,24 +1134,40 @@ const PlanPage = () => {
       {/* 음악 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
         <h2 className="text-2xl font-bold mb-4">게임 음악</h2>
-        <audio
-          className="mb-4"
-          src="/audio/sample1.mp3"
-          controls
-          id="myAudio"
-        ></audio>
-        <audio
-          className="mb-4"
-          src="/audio/sample2.mp3"
-          controls
-          id="myAudio"
-        ></audio>
-        <audio
-          className="mb-4"
-          src="/audio/sample6.wav"
-          controls
-          id="myAudio"
-        ></audio>
+        <ul className="list-disc pl-5 grid grid-cols-2 items-start gap-x-8 gap-y-5 text-sm">
+          <li>
+            타이틀
+            <audio
+              className="mt-2"
+              src="/audio/SFX_BGM_MainTitle.mp3"
+              controls
+            />
+          </li>
+          <li>
+            초원 맵
+            <audio
+              className="mt-2"
+              src="/audio/BGM_Game_Default.wav"
+              controls
+            />
+          </li>
+          <li>
+            눈 맵
+            <audio className="mt-2" src="/audio/BGM_Game_Snow.wav" controls />
+          </li>
+          <li>
+            사막 맵
+            <audio className="mt-2" src="/audio/BGM_Game_Desert.mp3" controls />
+          </li>
+          <li>
+            마그마 맵
+            <audio className="mt-2" src="/audio/BGM_Game_Magma.mp3" controls />
+          </li>
+          <li>
+            클리어
+            <audio className="mt-2" src="/audio/BGM_ClearScene.mp3" controls />
+          </li>
+        </ul>
       </div>
     </div>
   );
