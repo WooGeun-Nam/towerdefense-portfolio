@@ -1,4 +1,5 @@
 import ImgPrefixed from "./../ImgPrefixed"; // 경로 조정
+import AudioPrefixed from "./../AudioPrefixed";
 import React from "react";
 
 const PlanPage = () => {
@@ -1137,7 +1138,7 @@ const PlanPage = () => {
         <ul className="list-disc pl-5 grid grid-cols-2 items-start gap-x-8 gap-y-5 text-sm">
           <li>
             타이틀
-            <audio
+            <AudioPrefixed
               className="mt-2"
               src="/audio/SFX_BGM_MainTitle.mp3"
               controls
@@ -1145,7 +1146,7 @@ const PlanPage = () => {
           </li>
           <li>
             초원 맵
-            <audio
+            <AudioPrefixed
               className="mt-2"
               src="/audio/BGM_Game_Default.wav"
               controls
@@ -1153,19 +1154,35 @@ const PlanPage = () => {
           </li>
           <li>
             눈 맵
-            <audio className="mt-2" src="/audio/BGM_Game_Snow.wav" controls />
+            <AudioPrefixed
+              className="mt-2"
+              src="/audio/BGM_Game_Snow.wav"
+              controls
+            />
           </li>
           <li>
             사막 맵
-            <audio className="mt-2" src="/audio/BGM_Game_Desert.mp3" controls />
+            <AudioPrefixed
+              className="mt-2"
+              src="/audio/BGM_Game_Desert.mp3"
+              controls
+            />
           </li>
           <li>
             마그마 맵
-            <audio className="mt-2" src="/audio/BGM_Game_Magma.mp3" controls />
+            <AudioPrefixed
+              className="mt-2"
+              src="/audio/BGM_Game_Magma.mp3"
+              controls
+            />
           </li>
           <li>
             클리어
-            <audio className="mt-2" src="/audio/BGM_ClearScene.mp3" controls />
+            <AudioPrefixed
+              className="mt-2"
+              src="/audio/BGM_ClearScene.mp3"
+              controls
+            />
           </li>
         </ul>
       </div>
