@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 
 const getPrefix = () => {
   if (process.env.NODE_ENV === "production") return "/towerdefense-portfolio";
@@ -11,21 +10,22 @@ const getPrefix = () => {
   return "";
 };
 
-const fix = (prefix: string, src?: string) =>
-  !src
-    ? undefined
-    : src.startsWith("http")
+const normalize = (src: string) =>
+  src.startsWith("http")
     ? src
-    : `${prefix}/${src.replace(/^(\.\/+|\.\.\/+)+/, "").replace(/^\/+/, "")}`;
+    : `/${src.replace(/^(\.\/+|\.\.\/+)+/, "").replace(/^\/+/, "")}`;
 
 type Props = Omit<React.AudioHTMLAttributes<HTMLAudioElement>, "src"> & {
   src?: string;
 };
 
 export default function AudioPrefixed({ src, ...rest }: Props) {
-  const [prefix, setPrefix] = useState("");
-  useEffect(() => setPrefix(getPrefix()), []);
+  const prefix = getPrefix(); // ← 동기 계산
+  const finalSrc = !src
+    ? undefined
+    : src.startsWith("http")
+    ? src
+    : `${prefix}${normalize(src)}`;
 
-  const fixed = fix(prefix, src);
-  return <audio {...rest} src={fixed} preload="metadata" />;
+  return <audio src={finalSrc} preload="metadata" {...rest} />;
 }
