@@ -15,13 +15,16 @@ export default function PortfolioHome() {
           <span>Game Client Developer</span>
           <span className="block h-1 w-full bg-blue-500 mt-3 rounded"></span>
         </h1>
-        <p className="mt-6 text-lg text-gray-600">
+        <p className="mt-6 text-lg text-gray-800">
           새로운 기술과 개발 방식을 배우는 것을 즐기며, 실제 프로젝트에 빠르게
           적용해 왔습니다.
         </p>
-        <p className="mt-1 text-lg text-gray-600 mb-10">
+        <p className="mt-1 text-lg text-gray-800 mb-2">
           개인 프로젝트를 통해 기획과 프로그래밍을 함께 경험하며, 문제 해결
           역량을 키워왔습니다.
+        </p>
+        <p className="text-xs text-gray-600 mb-10">
+          ※ 이 사이트는 Chrome 브라우저에서 가장 안정적으로 작동합니다.
         </p>
 
         {/* 갤러리 컴포넌트 */}
@@ -473,7 +476,7 @@ export default function PortfolioHome() {
                 https://github.com/WooGeun-Nam
               </a>
             </p>
-            <p className="text-sm text-gray-700">
+            <p className="text-sm text-gray-700 mb-4">
               SoundCloud :
               <a
                 href="https://soundcloud.com/gamto"
@@ -488,7 +491,7 @@ export default function PortfolioHome() {
               <img
                 src="https://myhits.vercel.app/api/hit/https%3A%2F%2Fwoogeun-nam.github.io%2Ftowerdefense-portfolio%2F?color=purple&label=Visitors&size=small"
                 alt="Visitors"
-                style={{ display: "none" }}
+                // style={{ display: "none" }}
               />
             </a>
           </section>
