@@ -318,7 +318,7 @@ export default function PortfolioHome() {
       </section>
 
       {/* Resume */}
-      <section id="resume" className="py-20 scroll-mt-18">
+      <section id="resume" className="py-10 scroll-mt-20">
         <h2 className="text-center text-4xl sm:text-5xl font-extrabold mb-10">
           Resume
         </h2>
