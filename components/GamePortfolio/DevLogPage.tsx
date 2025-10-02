@@ -1,6 +1,27 @@
-import React from "react";
+"use client";
 
-const DevLogPage = () => {
+import React, { useEffect } from "react";
+import CodeSnippetToggle from "../CodeSnippetToggle";
+
+declare global {
+  interface Window {
+    Prism?: { highlightAll: () => void };
+  }
+}
+
+type CodeAssets = Record<string, string>;
+
+type Props = {
+  codeAssets: CodeAssets;
+};
+
+const DevLogPage = ({ codeAssets }: Props) => {
+  useEffect(() => {
+    window.Prism?.highlightAll();
+  }, [codeAssets]);
+
+  const SoundManager = codeAssets.SoundManager ?? "";
+
   return (
     <div className="space-y-8">
       {/* Beta v0.2.x 통합 개발 일지 */}
@@ -41,9 +62,19 @@ const DevLogPage = () => {
                     <p className="pl-4 text-xs">
                       문제: 다수의 타워가 동시에 공격 시 효과음(SFX)이 끊기거나
                       작아지는 현상 발생. → 해결: 오디오 소스 풀링(Pooling) 및
-                      재생 조절(Throttling) 기법을 도입하여 시스템 안정성과
-                      사운드 품질을 동시에 개선.
+                      재생 조절 기법을 도입하여 시스템 안정성과 사운드 품질을
+                      동시에 개선.
                     </p>
+                    <div className="mt-3 space-y-4">
+                      <CodeSnippetToggle
+                        title="/System/SoundManager.cs – 초기화 & 풀링"
+                        code={SoundManager}
+                        ranges={[
+                          { start: 16, end: 30 },
+                          { start: 132, end: 158 },
+                        ]}
+                      />
+                    </div>
                   </li>
                   <li>
                     <b>

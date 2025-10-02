@@ -15,6 +15,12 @@ export default function ProjectNav() {
           >
             Home
           </Link>
+          <Link
+            href="/portfolio/#resume"
+            className="px-1 transition-colors text-gray-600 hover:text-gray-900"
+          >
+            Resume
+          </Link>
         </div>
       </nav>
     </header>

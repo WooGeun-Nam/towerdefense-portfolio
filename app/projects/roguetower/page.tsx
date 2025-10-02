@@ -1,12 +1,34 @@
 import GamePortfolio from "../../../components/GamePortfolio";
 import ImgPrefixed from "../../../components/ImgPrefixed";
 
-export default function RogueTowerPage() {
+const SOURCES = [
+  {
+    key: "SoundManager",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/main/System/SoundManager.cs",
+  },
+] as const;
+
+async function fetchRaw(url: string) {
+  const res = await fetch(url, { cache: "no-store" }); // 필요 시 next: { revalidate: 3600 }
+  if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
+  return res.text();
+}
+
+export default async function RogueTowerPage() {
+  const entries = await Promise.all(
+    SOURCES.map(async ({ key, url }) => {
+      const full = await fetchRaw(url);
+      return [key, full] as const;
+    })
+  );
+
+  const codeAssets = Object.fromEntries(entries) as Record<string, string>;
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-16 space-y-12">
-      {/* 상단: 좌 이미지 / 우 정보 */}
+      {/* 상단: 소개 이미지 / 기본 정보 */}
       <section className="grid gap-8 md:grid-cols-2 items-stretch">
-        {/* 메인 이미지 */}
+        {/* 메인 미리보기 */}
         <div className="rounded-xl overflow-hidden shadow-sm">
           <ImgPrefixed
             src="/SiteLogo.png"
@@ -17,7 +39,6 @@ export default function RogueTowerPage() {
 
         {/* 정보 + 버튼 */}
         <div className="flex flex-col justify-between">
-          {/* 위쪽 텍스트 */}
           <div>
             <h1 className="text-4xl font-bold underline decoration-blue-500 underline-offset-8">
               RogueTower
@@ -38,7 +59,6 @@ export default function RogueTowerPage() {
             </dl>
           </div>
 
-          {/* 아래쪽 버튼 */}
           <div className="mt-6 flex gap-4">
             <a
               href="https://github.com/WooGeun-Nam/RogueTower-Code"
@@ -54,9 +74,9 @@ export default function RogueTowerPage() {
         </div>
       </section>
 
-      {/* 이하 상세 섹션 추가 */}
+      {/* 하단 상세 섹션 */}
       <section className="pt-8">
-        <GamePortfolio />
+        <GamePortfolio codeAssets={codeAssets} />
       </section>
     </main>
   );
