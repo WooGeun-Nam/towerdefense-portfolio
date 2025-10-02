@@ -21,6 +21,10 @@ const DevLogPage = ({ codeAssets }: Props) => {
   }, [codeAssets]);
 
   const SoundManager = codeAssets.SoundManager ?? "";
+  const ExceptionReporter = codeAssets.ExceptionReporter ?? "";
+  const LoadingSceneController = codeAssets.LoadingSceneController ?? "";
+  const ShopManager = codeAssets.ShopManager ?? "";
+  const StatueOfDestructionGod = codeAssets.StatueOfDestructionGod ?? "";
 
   return (
     <div className="space-y-8">
@@ -106,12 +110,26 @@ const DevLogPage = ({ codeAssets }: Props) => {
                     <b>오류 추적 시스템:</b> `ExceptionReporter.cs`를 추가하여,
                     게임 플레이 중 발생하는 치명적인 오류(Exception)를
                     PlayFab으로 자동 전송하는 기능 구현.
+                    <div className="mt-3 space-y-4">
+                      <CodeSnippetToggle
+                        title="/Network/ExceptionReporter.cs"
+                        code={ExceptionReporter}
+                        ranges={[{ start: 42, end: 93 }]}
+                      />
+                    </div>
                   </li>
                   <li>신규 스프라이트를 이용한 신규 `적` 3종 추가.</li>
                   <li>
                     <b>리소스 최적화:</b> 로딩 씬에
                     `Resources.UnloadUnusedAssets` 및 `GC.Collect`를 호출하는
                     로직을 추가하여, 게임 세션 종료 후 메모리를 정리하도록 개선.
+                    <div className="mt-3 space-y-4">
+                      <CodeSnippetToggle
+                        title="/System/LoadingSceneController.cs - 메모리 정리"
+                        code={LoadingSceneController}
+                        ranges={[{ start: 50, end: 65 }]}
+                      />
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -135,6 +153,13 @@ const DevLogPage = ({ codeAssets }: Props) => {
                       전 필요한 모든 아이콘을 미리 불러오는 `Preloading` 방식을
                       적용하고, `try-finally` 구문을 추가하여 안정성 강화.
                     </p>
+                    <div className="mt-3 space-y-4">
+                      <CodeSnippetToggle
+                        title="/UI/ShopManager.cs - 아이콘 프리로딩"
+                        code={ShopManager}
+                        ranges={[{ start: 121, end: 187 }]}
+                      />
+                    </div>
                   </li>
                   <li>
                     <b>`희생 전략` 특성 관련 버그 수정:</b>

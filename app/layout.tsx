@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import PrismHydrator from "../components/PrismHydrator";
 
 const inter = Inter({ subsets: ["latin"] }); // 기존 그대로
 
@@ -44,6 +45,7 @@ export default function RootLayout({
       </head>
 
       <body className={`${inter.className} min-h-dvh bg-gray-100 antialiased`}>
+        <PrismHydrator />
         {children}
       </body>
     </html>

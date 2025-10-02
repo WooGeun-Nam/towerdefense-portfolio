@@ -18,12 +18,14 @@ const GamePortfolio = ({ codeAssets }: Props) => {
 
   return (
     <div className="w-full py-8">
+      {/* 탭 버튼 + 콘텐츠를 하나의 카드처럼 */}
       <div className="w-full">
+        {/* 탭 버튼 */}
         <div className="flex w-full">
           {[
-            { id: "plan", label: "기획" },
+            { id: "plan", label: "기획서" },
             { id: "deploy", label: "배포" },
-            { id: "devlog", label: "개발 로그" },
+            { id: "devlog", label: "개발일지" },
           ].map((tab, index) => (
             <button
               key={tab.id}

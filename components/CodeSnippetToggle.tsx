@@ -13,7 +13,7 @@ type Range = { start: number; end: number };
 type CodeSnippetToggleProps = {
   title: string;
   code: string;
-  ranges: ReadonlyArray<Range>;
+  ranges?: ReadonlyArray<Range>; // ← 선택값으로 변경
   language?: string;
   highlight?: string;
 };
@@ -29,6 +29,15 @@ const CodeSnippetToggle: React.FC<CodeSnippetToggleProps> = ({
 
   const blocks = useMemo(() => {
     const lines = code.split(/\r?\n/);
+
+    if (!ranges || ranges.length === 0) {
+      return [
+        {
+          start: 1,
+          content: lines.join("\n"),
+        },
+      ];
+    }
     return ranges.map(({ start, end }) => ({
       start,
       content: lines.slice(start - 1, end).join("\n"),

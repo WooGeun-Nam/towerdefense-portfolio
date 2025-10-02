@@ -6,6 +6,22 @@ const SOURCES = [
     key: "SoundManager",
     url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/main/System/SoundManager.cs",
   },
+  {
+    key: "ExceptionReporter",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Network/ExceptionReporter.cs",
+  },
+  {
+    key: "LoadingSceneController",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/System/LoadingSceneController.cs",
+  },
+  {
+    key: "ShopManager",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/UI/ShopManager.cs",
+  },
+  {
+    key: "StatueOfDestructionGod",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Data/SpecialSkills/Skill_StatueOfDestructionGod.cs",
+  },
 ] as const;
 
 async function fetchRaw(url: string) {
