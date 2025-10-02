@@ -53,7 +53,7 @@ export default function PortfolioHome() {
       </section>
 
       {/* Projects 섹션 */}
-      <section id="projects" className="py-20 scroll-mt-20">
+      <section id="projects" className="py-10 scroll-mt-18">
         {/* 풀블리드 배경 */}
         <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white">
           {/* 실제 내용은 중앙 정렬된 컨테이너 안에 배치 */}
@@ -318,7 +318,7 @@ export default function PortfolioHome() {
       </section>
 
       {/* Resume */}
-      <section id="resume" className="py-20 scroll-mt-20">
+      <section id="resume" className="py-20 scroll-mt-18">
         <h2 className="text-center text-4xl sm:text-5xl font-extrabold mb-10">
           Resume
         </h2>
