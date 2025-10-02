@@ -1,17 +1,18 @@
 1:HL["/towerdefense-portfolio/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/towerdefense-portfolio/_next/static/css/a2d730245c00c31d.css","style"]
-0:["s0SxpPlmJ-zFzee4yu_r9",[[["",{"children":["projects",{"children":["roguetower",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/a2d730245c00c31d.css","precedence":"next"}]],"$L4"]]]]
+0:["CUYEUkn7BP9F3Usp6IYiX",[[["",{"children":["projects",{"children":["roguetower",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/a2d730245c00c31d.css","precedence":"next"}]],"$L4"]]]]
 5:HL["/towerdefense-portfolio/_next/static/css/986f079464c860c4.css","style"]
-6:I{"id":4244,"chunks":["185:static/chunks/app/layout-f0f01fbae866464d.js"],"name":"","async":false}
-7:I{"id":1443,"chunks":["272:static/chunks/webpack-502300a954e5d59c.js","971:static/chunks/fd9d1056-102022806532a78e.js","864:static/chunks/864-434aad9338f96954.js"],"name":"","async":false}
-8:I{"id":8639,"chunks":["272:static/chunks/webpack-502300a954e5d59c.js","971:static/chunks/fd9d1056-102022806532a78e.js","864:static/chunks/864-434aad9338f96954.js"],"name":"","async":false}
-9:I{"id":3891,"chunks":["616:static/chunks/616-281c6358976a3d84.js","570:static/chunks/app/projects/layout-61601cf7bf20290d.js"],"name":"","async":false}
+6:I{"id":4244,"chunks":["185:static/chunks/app/layout-98f9b8b17decd81b.js"],"name":"","async":false}
+7:I{"id":7885,"chunks":["185:static/chunks/app/layout-98f9b8b17decd81b.js"],"name":"","async":false}
+8:I{"id":1443,"chunks":["272:static/chunks/webpack-502300a954e5d59c.js","971:static/chunks/fd9d1056-102022806532a78e.js","864:static/chunks/864-434aad9338f96954.js"],"name":"","async":false}
+9:I{"id":8639,"chunks":["272:static/chunks/webpack-502300a954e5d59c.js","971:static/chunks/fd9d1056-102022806532a78e.js","864:static/chunks/864-434aad9338f96954.js"],"name":"","async":false}
+a:I{"id":3891,"chunks":["616:static/chunks/616-281c6358976a3d84.js","570:static/chunks/app/projects/layout-61601cf7bf20290d.js"],"name":"","async":false}
 4:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"WooGeun Nam"}],["$","meta","2",{"name":"description","content":"웹 포트폴리오"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","link","4",{"rel":"icon","href":"./../Logo.ico"}],["$","meta","5",{"name":"next-size-adjust"}]]
-3:[null,["$","html",null,{"lang":"ko","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","$L6",null,{"src":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js","strategy":"afterInteractive"}],["$","$L6",null,{"src":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js","strategy":"afterInteractive"}],["$","$L6",null,{"src":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js","strategy":"afterInteractive"}],["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"}]]}],["$","body",null,{"className":"__className_94e1b1 min-h-dvh bg-gray-100 antialiased","children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":[null,["$","section",null,{"children":[["$","$L9",null,{}],["$","main",null,{"className":"mx-auto w-full max-w-6xl pt-16","children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","roguetower","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$La","$Lb",null],"segment":"__PAGE__"},"styles":[]}],"segment":"roguetower"},"styles":[]}]}],["$","footer",null,{"className":"py-6 pr-6 text-right text-sm text-gray-500","children":"Copyright © 2025. WooGeun-Nam All rights reserved."}]]}],null],"segment":"projects"},"styles":[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/986f079464c860c4.css","precedence":"next"}]]}]}]]}],null]
-a:null
-c:I{"id":2148,"chunks":["899:static/chunks/app/projects/roguetower/page-56c3dcb6325720dd.js"],"name":"","async":false}
-d:I{"id":8016,"chunks":["899:static/chunks/app/projects/roguetower/page-56c3dcb6325720dd.js"],"name":"","async":false}
-e:T34c3,using UnityEngine;
+3:[null,["$","html",null,{"lang":"ko","className":"scroll-smooth","suppressHydrationWarning":true,"children":[["$","$L6",null,{"src":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js","strategy":"afterInteractive"}],["$","$L6",null,{"src":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js","strategy":"afterInteractive"}],["$","$L6",null,{"src":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js","strategy":"afterInteractive"}],["$","head",null,{"children":[["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"}],["$","link",null,{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"}]]}],["$","body",null,{"className":"__className_94e1b1 min-h-dvh bg-gray-100 antialiased","children":[["$","$L7",null,{}],["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"childProp":{"current":[null,["$","section",null,{"children":[["$","$La",null,{}],["$","main",null,{"className":"mx-auto w-full max-w-6xl pt-16","children":["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$","$L8",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","roguetower","children"],"loading":"$undefined","loadingStyles":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","template":["$","$L9",null,{}],"templateStyles":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined","childProp":{"current":["$Lb","$Lc",null],"segment":"__PAGE__"},"styles":[]}],"segment":"roguetower"},"styles":[]}]}],["$","footer",null,{"className":"py-6 pr-6 text-right text-sm text-gray-500","children":"Copyright © 2025. WooGeun-Nam All rights reserved."}]]}],null],"segment":"projects"},"styles":[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/986f079464c860c4.css","precedence":"next"}]]}]]}]]}],null]
+b:null
+d:I{"id":2148,"chunks":["899:static/chunks/app/projects/roguetower/page-fe21832f41f7c33a.js"],"name":"","async":false}
+e:I{"id":8016,"chunks":["899:static/chunks/app/projects/roguetower/page-fe21832f41f7c33a.js"],"name":"","async":false}
+f:T34c3,using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections.Generic;
 using System.Linq;
@@ -374,4 +375,487 @@ public class SoundManager : MonoBehaviour
         // 모든 소스가 사용 중이라면(위의 반복문에서 반환되지 않았다면), null을 반환합니다.
         return null;
     }
-}b:["$","main",null,{"className":"mx-auto max-w-6xl px-4 py-16 space-y-12","children":[["$","section",null,{"className":"grid gap-8 md:grid-cols-2 items-stretch","children":[["$","div",null,{"className":"rounded-xl overflow-hidden shadow-sm","children":["$","$Lc",null,{"src":"/SiteLogo.png","alt":"RogueTower 메인","className":"w-full h-full object-cover"}]}],["$","div",null,{"className":"flex flex-col justify-between","children":[["$","div",null,{"children":[["$","h1",null,{"className":"text-4xl font-bold underline decoration-blue-500 underline-offset-8","children":"RogueTower"}],["$","dl",null,{"className":"grid grid-cols-[120px_1fr] gap-x-4 gap-y-6 text-gray-800 mt-8","children":[["$","dt",null,{"className":"font-semibold text-gray-600","children":"ROLE"}],["$","dd",null,{"children":"Programmer, Game Designer, Artist"}],["$","dt",null,{"className":"font-semibold text-gray-600","children":"DURATION"}],["$","dd",null,{"children":"2024.10 ~ 2025.08"}],["$","dt",null,{"className":"font-semibold text-gray-600","children":"TEAM"}],["$","dd",null,{"children":"1인 개발"}],["$","dt",null,{"className":"font-semibold text-gray-600","children":"PLATFORM"}],["$","dd",null,{"children":"PC"}]]}]]}],["$","div",null,{"className":"mt-6 flex gap-4","children":["$","a",null,{"href":"https://github.com/WooGeun-Nam/RogueTower-Code","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold bg-gray-200 text-gray-900 hover:bg-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300","children":"GitHub Source"}]}]]}]]}],["$","section",null,{"className":"pt-8","children":["$","$Ld",null,{"codeAssets":{"SoundManager":"$e"}}]}]]}]
+}10:Te7c,using UnityEngine;
+using PlayFab;
+using PlayFab.ClientModels;
+using System.Collections.Generic;
+
+/// <summary>
+/// 게임 중 발생하는 치명적인 예외(Exception)를 감지하여 PlayFab으로 전송하는 클래스.
+/// 이 스크립트를 가진 빈 게임 오브젝트를 만들어 첫 씬에 배치하세요.
+/// </summary>
+public class ExceptionReporter : MonoBehaviour
+{
+    public static ExceptionReporter Instance { get; private set; }
+    
+    // 한 세션에서 동일한 오류가 반복적으로 전송되는 것을 막기 위한 Set
+    private HashSet<string> _sentExceptionsThisSession = new HashSet<string>();
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnEnable()
+    {
+        // Unity의 로그 메시지 이벤트를 구독합니다.
+        Application.logMessageReceived += HandleLog;
+    }
+
+    private void OnDisable()
+    {
+        // 구독을 해제합니다.
+        Application.logMessageReceived -= HandleLog;
+    }
+
+    /// <summary>
+    /// Unity의 모든 로그 메시지가 호출될 때 실행되는 핸들러 메서드입니다.
+    /// </summary>
+    /// <param name="logString">오류 메시지</param>
+    /// <param name="stackTrace">호출 스택</param>
+    /// <param name="type">로그 타입 (Log, Warning, Error, Exception 등)</param>
+    private void HandleLog(string logString, string stackTrace, LogType type)
+    {
+        // 로그 타입이 Exception일 경우에만 처리합니다.
+        // (Warning이나 Error까지 보내면 너무 많은 데이터가 쌓일 수 있습니다.)
+        if (type == LogType.Exception)
+        {
+            // 이 세션에서 이미 보낸적 있는 오류 메시지라면 건너뜁니다. (서버 과부하 방지)
+            if (_sentExceptionsThisSession.Contains(logString))
+            {
+                return;
+            }
+            
+            // PlayFab 클라이언트가 로그인 상태인지 확인합니다.
+            if (!PlayFabClientAPI.IsClientLoggedIn())
+            {
+                return;
+            }
+            
+            // 전송할 데이터를 구성합니다.
+            var request = new WriteClientPlayerEventRequest
+            {
+                EventName = "client_exception", // 이벤트 이름
+                Body = new Dictionary<string, object>
+                {
+                    { "error_message", logString }, // 실제 오류 메시지
+                    { "stack_trace", stackTrace },   // 호출 스택 (가장 중요!)
+                    { "game_version", Application.version }, // 게임 버전
+                    { "scene_name", UnityEngine.SceneManagement.SceneManager.GetActiveScene().name } // 오류 발생 씬
+                    // 필요하다면 다른 유용한 정보 (예: 플레이어 레벨, 현재 웨이브 등)를 추가할 수 있습니다.
+                }
+            };
+            
+            // PlayFab으로 이벤트 전송
+            PlayFabClientAPI.WritePlayerEvent(request, 
+                result => {
+                    Debug.Log("<color=orange>[ExceptionReporter] 치명적 오류 정보를 PlayFab으로 전송했습니다.</color>");
+                },
+                error => {
+                    Debug.LogError("[ExceptionReporter] 오류 정보 전송 실패: " + error.GenerateErrorReport());
+                }
+            );
+            
+            // 보낸 오류 목록에 추가하여 중복 전송을 방지합니다.
+            _sentExceptionsThisSession.Add(logString);
+        }
+    }
+}11:Te78,using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
+
+/// <summary>
+/// 로딩 씬을 관리하고 비동기적으로 씬을 로드하는 클래스
+/// </summary>
+public class LoadingSceneController : MonoBehaviour
+{
+    private static string nextScene; // 다음으로 로드할 씬의 이름
+
+    [Tooltip("로딩 진행률을 표시하는 슬라이더 UI")]
+    public Slider progressBar;
+    [Tooltip("로딩 상태 텍스트를 표시하는 UI")]
+    public TextMeshProUGUI loadText;
+    
+    private void Start()
+    {
+        // ProgressBar의 값을 항상 0으로 초기화합니다.
+        progressBar.value = 0f;
+        
+        // 모든 사운드 중지
+        if (SoundManager.Instance != null)
+        {
+            SoundManager.Instance.StopAllSounds();
+        }
+
+        StartCoroutine(LoadSceneWithCleanup());
+    }
+
+    /// <summary>
+    /// 지정된 씬으로 로딩 씬을 통해 전환합니다.
+    /// </summary>
+    /// <param name="sceneName">로드할 씬의 이름</param>
+    public static void LoadScene(string sceneName)
+    {
+        nextScene = sceneName;
+        SceneManager.LoadScene("LoadingScene");
+    }
+
+    /// <summary>
+    /// [수정] 리소스 정리와 씬 로딩을 함께 처리하는 최종 코루틴입니다.
+    /// </summary>
+    private IEnumerator LoadSceneWithCleanup()
+    {
+        yield return null; // 한 프레임 대기하여 UI가 제대로 표시될 시간을 줌
+
+        // --- 1단계: 리소스 정리 (프로그레스 바 0% -> 50%) ---
+        if (loadText != null) loadText.text = "Cleaning up resources...";
+        
+        // 사용되지 않는 에셋을 메모리에서 강제로 해제합니다.
+        AsyncOperation unloadOperation = Resources.UnloadUnusedAssets();
+        while (!unloadOperation.isDone)
+        {
+            // 정리 과정 동안 프로그레스 바를 0%에서 50%까지 채웁니다.
+            if (progressBar != null) progressBar.value = unloadOperation.progress * 0.5f;
+            if (loadText != null) loadText.text = $"Cleaning up... {progressBar.value * 100:F0}%";
+            yield return null;
+        }
+
+        // 가비지 컬렉터를 수동으로 호출하여 메모리를 정리합니다.
+        System.GC.Collect();
+        // Debug.Log("리소스 정리 및 가비지 컬렉션 완료.");
+
+        // --- 2단계: 다음 씬 비동기 로드 (프로그레스 바 50% -> 100%) ---
+        if (loadText != null) loadText.text = "Loading scene...";
+        
+        AsyncOperation operation = SceneManager.LoadSceneAsync(nextScene);
+        operation.allowSceneActivation = false;
+
+        float timer = 0f;
+        while (!operation.isDone)
+        {
+            yield return null;
+
+            if (operation.progress < 0.9f)
+            {
+                // 씬 로딩 과정을 프로그레스 바의 50%에서 95%까지 채웁니다. (0.5f + progress * 0.45f)
+                progressBar.value = 0.5f + (operation.progress * 0.45f);
+                if (loadText != null) loadText.text = $"Loading... {progressBar.value * 100:F0}%";
+            }
+            else
+            {
+                // 씬 로딩이 거의 끝나면 95%에서 100%까지 부드럽게 채웁니다.
+                timer += Time.unscaledDeltaTime;
+                progressBar.value = Mathf.Lerp(0.95f, 1f, timer);
+                if (loadText != null) loadText.text = $"Loading... {progressBar.value * 100:F0}%";
+
+                if (progressBar.value >= 1f)
+                {
+                    operation.allowSceneActivation = true; // 씬 활성화
+                    yield break;
+                }
+            }
+        }
+    }
+}
+12:T1feb,using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
+public enum GachaType
+{
+    Normal,
+    Advanced,
+    Rare
+}
+
+public class ShopManager : MonoBehaviour
+{
+    public static ShopManager Instance { get; private set; }
+
+    [Header("Gacha Settings")]
+    [Tooltip("일반 뽑기 비용")]
+    [SerializeField] private int normalGachaCost = 50000;
+    [Tooltip("고급 뽑기 비용")]
+    [SerializeField] private int advancedGachaCost = 100000;
+    [Tooltip("희귀 뽑기 비용")]
+    [SerializeField] private int rareGachaCost = 200000;
+    [SerializeField] private float gachaAnimationDuration = 2f;
+
+    [Header("UI References")]
+    [SerializeField] private TextMeshProUGUI rCoinText;
+    [SerializeField] private Button normalDrawButton;
+    [SerializeField] private Button advancedDrawButton;
+    [SerializeField] private Button rareDrawButton;
+    
+    [Header("Animation Panel")]
+    [SerializeField] private GameObject gachaAnimationPanel;
+    [SerializeField] private Image rewardImage;
+    [SerializeField] private TextMeshProUGUI rewardNameText;
+    [SerializeField] private TextMeshProUGUI rewardDescriptionText;
+    [SerializeField] private Slider gachaSlider;
+    [SerializeField] private GameObject gachaCloseButton; // [추가] 닫기 버튼의 GameObject를 연결할 변수
+
+    private bool isGachaInProgress = false;
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
+
+    private void OnEnable()
+    {
+        UpdateRCoinDisplay();
+        if (gachaAnimationPanel != null)
+        {
+            gachaAnimationPanel.SetActive(false);
+        }
+    }
+
+    public void UpdateRCoinDisplay()
+    {
+        if (EquipmentManager.Instance != null && EquipmentManager.Instance.currentPlayerData != null)
+        {
+            int currentRCoin = EquipmentManager.Instance.currentPlayerData.rCoin;
+            rCoinText.text = currentRCoin.ToString("N0");
+            
+            if (!isGachaInProgress)
+            {
+                normalDrawButton.interactable = currentRCoin >= normalGachaCost;
+                advancedDrawButton.interactable = currentRCoin >= advancedGachaCost;
+                rareDrawButton.interactable = currentRCoin >= rareGachaCost;
+            }
+        }
+    }
+
+    public void OnClickDraw(int gachaTypeIndex)
+    {
+        if (isGachaInProgress) return;
+
+        // 숫자로 받은 타입을 Enum으로 변환
+        GachaType type = (GachaType)gachaTypeIndex;
+        int cost = 0;
+
+        // 타입에 맞는 비용 설정
+        switch (type)
+        {
+            case GachaType.Normal:
+                cost = normalGachaCost;
+                break;
+            case GachaType.Advanced:
+                cost = advancedGachaCost;
+                break;
+            case GachaType.Rare:
+                cost = rareGachaCost;
+                break;
+        }
+
+        // 재화 확인 및 차감
+        PlayerData playerData = EquipmentManager.Instance.currentPlayerData;
+        if (playerData.rCoin < cost)
+        {
+            // Debug.Log("RCoin이 부족합니다.");
+            return;
+        }
+        
+        SoundManager.Instance.PlaySFX("SFX_UI_UseCoin");
+        
+        playerData.rCoin -= cost;
+        GameDataManager.Instance.SavePlayerData(playerData);
+        UpdateRCoinDisplay();
+        
+        // 애니메이션 코루틴 시작
+        StartCoroutine(StartGachaAnimation(type));
+    }
+
+    private IEnumerator StartGachaAnimation(GachaType type)
+    {
+        isGachaInProgress = true;
+        normalDrawButton.interactable = false;
+        advancedDrawButton.interactable = false;
+        rareDrawButton.interactable = false;
+
+        try
+        {
+            gachaAnimationPanel.SetActive(true);
+            SoundManager.Instance.PlaySFX("SFX_UI_Gacha");
+            
+            gachaSlider.value = 0;
+            if (rewardDescriptionText != null) rewardDescriptionText.text = "";
+            if (gachaCloseButton != null) gachaCloseButton.SetActive(false);
+            
+            EquipmentDataModel finalRewardData = LootManager.Instance.GetRandomEquipmentFromGacha(type);
+            if (finalRewardData == null)
+            {
+                Debug.LogError("가챠에서 장비를 뽑지 못했습니다. LootManager를 확인하세요.");
+                yield break;
+            }
+
+            // 아이콘 프리로딩 시작
+            List<Sprite> droppableSprites = new List<Sprite>();
+            List<EquipmentDataModel> allEquipment = LootManager.Instance.AllDroppableEquipment;
+            
+            if (allEquipment != null)
+            {
+                foreach (var item in allEquipment)
+                {
+                    Sprite loadedSprite = Resources.Load<Sprite>(item.iconPath);
+                    if (loadedSprite != null) droppableSprites.Add(loadedSprite);
+                }
+            }
+            
+            float elapsedTime = 0f;
+            float slotChangeTimer = 0f;
+            while (elapsedTime < gachaAnimationDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                gachaSlider.value = elapsedTime / gachaAnimationDuration;
+                slotChangeTimer -= Time.deltaTime;
+                if (slotChangeTimer <= 0f)
+                {
+                    slotChangeTimer = Random.Range(0.02f, 0.1f);
+                    if (droppableSprites.Count > 0)
+                    {
+                        rewardImage.sprite = droppableSprites[Random.Range(0, droppableSprites.Count)];
+                        EquipmentDataModel randomItem = allEquipment[Random.Range(0, allEquipment.Count)];
+                        string rarityColor = GetColorForRarity(randomItem.rarity);
+                        rewardNameText.text = $"<color={rarityColor}>{randomItem.equipmentName}</color>";
+                    }
+                }
+                yield return null;
+            }
+
+            // 최종 결과 표시
+            gachaSlider.value = 1;
+            rewardImage.sprite = Resources.Load<Sprite>(finalRewardData.iconPath);
+            string finalRarityColor = GetColorForRarity(finalRewardData.rarity);
+            rewardNameText.text = $"<color={finalRarityColor}>{finalRewardData.equipmentName}</color>";
+            if (rewardDescriptionText != null) rewardDescriptionText.text = finalRewardData.description;
+            SoundManager.Instance.PlaySFX("SFX_System_WaveClear");
+
+            PlayerEquipmentInstance newInstance = EquipmentManager.Instance.CreateRandomizedEquipmentInstance(finalRewardData);
+            EquipmentManager.Instance.AddEquipmentToPlayer(newInstance, false);
+        }
+        finally
+        {
+            if (gachaCloseButton != null) gachaCloseButton.SetActive(true);
+            isGachaInProgress = false;
+            UpdateRCoinDisplay();
+        }
+    }
+    
+    /// <summary>
+    /// 뽑기 '결과' 패널만 닫는 메소드입니다.
+    /// </summary>
+    public void CloseGachaPanel()
+    {
+        // 뽑기 애니메이션 중에는 닫히지 않도록 방지
+        if (gachaAnimationPanel != null && !isGachaInProgress)
+        {
+            gachaAnimationPanel.SetActive(false);
+        }
+    }
+    
+    /// <summary>
+    /// 상점 패널 전체를 닫는 메소드입니다.
+    /// </summary>
+    // 상점 패널을 닫는 기능을 하는 메소드
+    public void CloseShopPanel()
+    {
+        // 뽑기 애니메이션 중에는 닫히지 않도록 방지
+        if (isGachaInProgress) return;
+
+        // this.gameObject는 ShopManager.cs 스크립트가 붙어있는 'ShopPanel' 프리팹 전체를 의미합니다.
+        this.gameObject.SetActive(false);
+        SoundManager.Instance.PlaySFX("SFX_UI_ButtonClick");
+    }
+    
+    private string GetColorForRarity(Rarity rarity)
+    {
+        switch (rarity)
+        {
+            case Rarity.Common: return "#808080";
+            case Rarity.Uncommon: return "green";
+            case Rarity.Rare: return "blue";
+            case Rarity.Epic: return "purple";
+            case Rarity.Legendary: return "orange";
+            default: return "white";
+        }
+    }
+}13:T9bc,using UnityEngine;
+using System;
+using System.Collections.Generic;
+using Random = UnityEngine.Random;
+
+[CreateAssetMenu(fileName = "Skill_StatueOfDestructionGod", menuName = "SpecialSkills/Passive/StatueOfDestructionGod")]
+public class Skill_StatueOfDestructionGod : EquipmentPassiveSkill
+{
+    [Header("파괴신의 조각상 설정")]
+    [Range(0f, 1f)]
+    public float activationChance = 0.05f; // 5% 확률
+    [Range(0f, 1f)]
+    public float damagePercentage = 0.10f; // 최대 체력의 10% 데미지
+
+    // 스킬 발동 횟수를 저장할 변수
+    // NonSerialized 어트리뷰트는 플레이 모드를 종료해도 런타임에 변경된 값이 저장되지 않도록 합니다.
+    [NonSerialized]
+    public int activationCount = 0;
+    
+    public override void ApplyGameEffect()
+    {
+        // 스킬 효과가 적용될 때(게임 시작, 장착 시) 발동 횟수를 초기화
+        activationCount = 0;
+        EnemySpawner.OnEnemyKilled += OnEnemyKilled; // 적 처치 이벤트 구독
+    }
+
+    public override void RemoveGameEffect()
+    {
+        EnemySpawner.OnEnemyKilled -= OnEnemyKilled; // 적 처치 이벤트 구독 해제
+    }
+
+    private void OnEnemyKilled()
+    {
+        if (Random.value <= activationChance)
+        {
+            activationCount++;
+            UIEventManager.Instance.ShowSystemMessage(SystemType.StatueOfDestructionGod);
+            SoundManager.Instance.PlaySFX("SFX_Skill_Explosion");
+        
+            if (GameManager.Instance != null && GameManager.Instance.enemySpawner != null)
+            {
+                // 원본 리스트의 '복사본'을 만듭니다.
+                var enemyListCopy = new List<Enemy>(GameManager.Instance.enemySpawner.EnemyList);
+
+                // 이제 원본이 아닌 '복사본' 리스트를 순회하여 안전합니다.
+                foreach (Enemy enemy in enemyListCopy)
+                {
+                    if (enemy != null)
+                    {
+                        EnemyHP enemyHP = enemy.GetComponent<EnemyHP>();
+                        if (enemyHP != null)
+                        {
+                            enemyHP.TakeDamage(enemyHP.MaxHP * damagePercentage);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Debug.LogWarning("[Skill_StatueOfDestructionGod] Required references (GameManager, EnemySpawner) are null. Cannot apply damage to enemies.");
+            }
+        }
+    }
+}
+c:["$","main",null,{"className":"mx-auto max-w-6xl px-4 py-16 space-y-12","children":[["$","section",null,{"className":"grid gap-8 md:grid-cols-2 items-stretch","children":[["$","div",null,{"className":"rounded-xl overflow-hidden shadow-sm","children":["$","$Ld",null,{"src":"/SiteLogo.png","alt":"RogueTower 메인","className":"w-full h-full object-cover"}]}],["$","div",null,{"className":"flex flex-col justify-between","children":[["$","div",null,{"children":[["$","h1",null,{"className":"text-4xl font-bold underline decoration-blue-500 underline-offset-8","children":"RogueTower"}],["$","dl",null,{"className":"grid grid-cols-[120px_1fr] gap-x-4 gap-y-6 text-gray-800 mt-8","children":[["$","dt",null,{"className":"font-semibold text-gray-600","children":"ROLE"}],["$","dd",null,{"children":"Programmer, Game Designer, Artist"}],["$","dt",null,{"className":"font-semibold text-gray-600","children":"DURATION"}],["$","dd",null,{"children":"2024.10 ~ 2025.08"}],["$","dt",null,{"className":"font-semibold text-gray-600","children":"TEAM"}],["$","dd",null,{"children":"1인 개발"}],["$","dt",null,{"className":"font-semibold text-gray-600","children":"PLATFORM"}],["$","dd",null,{"children":"PC"}]]}]]}],["$","div",null,{"className":"mt-6 flex gap-4","children":["$","a",null,{"href":"https://github.com/WooGeun-Nam/RogueTower-Code","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold bg-gray-200 text-gray-900 hover:bg-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-300","children":"GitHub Source"}]}]]}]]}],["$","section",null,{"className":"pt-8","children":["$","$Le",null,{"codeAssets":{"SoundManager":"$f","ExceptionReporter":"$10","LoadingSceneController":"$11","ShopManager":"$12","StatueOfDestructionGod":"$13"}}]}]]}]
