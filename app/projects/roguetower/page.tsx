@@ -9,7 +9,8 @@ const SOURCES = [
 ] as const;
 
 async function fetchRaw(url: string) {
-  const res = await fetch(url, { cache: "no-store" }); // 필요 시 next: { revalidate: 3600 }
+  // 정적 빌드가 가능하도록 기본 캐시(또는 force-cache)로 호출
+  const res = await fetch(url, { cache: "force-cache" });
   if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
   return res.text();
 }
