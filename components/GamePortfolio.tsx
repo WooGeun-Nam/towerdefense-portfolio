@@ -49,7 +49,7 @@ const GamePortfolio = ({ codeAssets }: Props) => {
             <DeployPage onTabChange={setActiveTab} />
           </div>
           <div style={{ display: activeTab === "plan" ? "block" : "none" }}>
-            <PlanPage />
+            <PlanPage codeAssets={codeAssets ?? {}} />
           </div>
           <div style={{ display: activeTab === "devlog" ? "block" : "none" }}>
             <DevLogPage codeAssets={codeAssets ?? {}} />

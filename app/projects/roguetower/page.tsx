@@ -22,6 +22,62 @@ const SOURCES = [
     key: "StatueOfDestructionGod",
     url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Data/SpecialSkills/Skill_StatueOfDestructionGod.cs",
   },
+  {
+    key: "GameManager",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/System/GameManager.cs",
+  },
+  {
+    key: "GameDataManager",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/System/GameDataManager.cs",
+  },
+  {
+    key: "UIManager",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/UI/UIManager.cs",
+  },
+  {
+    key: "UIEventManager",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/UI/UIEventManager.cs",
+  },
+  {
+    key: "TooltipManager",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/System/TooltipManager.cs",
+  },
+  {
+    key: "TooltipTrigger",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/UI/TooltipTrigger.cs",
+  },
+  {
+    key: "TowerArchetype",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Data/Models/TowerArchetype.cs",
+  },
+  {
+    key: "Enemy",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Enemy/Enemy.cs",
+  },
+  {
+    key: "IWeaponState",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Tower/WeaponStates/IWeaponState.cs",
+  },
+  {
+    key: "ObjectPool",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/System/ObjectPool.cs",
+  },
+  {
+    key: "RandomPathGenerator",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Map/RandomPathGenerator.cs",
+  },
+  {
+    key: "MapGenerator",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Map/MapGenerator.cs",
+  },
+  {
+    key: "WeightedRandomReward",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/System/WeightedRandomReward.cs",
+  },
+  {
+    key: "SpecialSkillBase",
+    url: "https://raw.githubusercontent.com/WooGeun-Nam/RogueTower-Code/refs/heads/main/Data/SpecialSkillBase.cs",
+  },
 ] as const;
 
 async function fetchRaw(url: string) {

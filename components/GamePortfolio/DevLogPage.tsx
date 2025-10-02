@@ -25,6 +25,12 @@ const DevLogPage = ({ codeAssets }: Props) => {
   const LoadingSceneController = codeAssets.LoadingSceneController ?? "";
   const ShopManager = codeAssets.ShopManager ?? "";
   const StatueOfDestructionGod = codeAssets.StatueOfDestructionGod ?? "";
+  const GameManager = codeAssets.GameManager ?? "";
+  const UIManager = codeAssets.UIManager ?? "";
+  const TooltipManager = codeAssets.TooltipManager ?? "";
+  const TooltipTrigger = codeAssets.TooltipTrigger ?? "";
+  const TowerArchetype = codeAssets.TowerArchetype ?? "";
+  const Enemy = codeAssets.Enemy ?? "";
 
   return (
     <div className="space-y-8">
@@ -92,6 +98,13 @@ const DevLogPage = ({ codeAssets }: Props) => {
                       전, 원본 리스트의 `복사본`을 만들어 순회하도록 변경하여
                       오류를 원천적으로 방지.
                     </p>
+                    <div className="mt-3 space-y-4">
+                      <CodeSnippetToggle
+                        title="/Data/SpecialSkills/StatueOfDestructionGod.cs"
+                        code={StatueOfDestructionGod}
+                        ranges={[{ start: 32, end: 63 }]}
+                      />
+                    </div>
                   </li>
                   <li>
                     <b>투사체 터널링 문제 해결:</b>
@@ -190,7 +203,8 @@ const DevLogPage = ({ codeAssets }: Props) => {
                   </li>
                   <li>
                     <b>데미지 미터기:</b> 특수 스킬로 소환된 타워의 아이콘이
-                    정상적으로 표시되도록 조회 로직 개선.
+                    정상적으로 표시되도록 조회 로직 개선. ( 특수타워 아이콘
+                    형식을 일반 타워와 통일 )
                   </li>
                 </ul>
               </div>
@@ -207,6 +221,13 @@ const DevLogPage = ({ codeAssets }: Props) => {
                     해결. (적 정보 수집 방식을 `실시간 조회`에서 `웨이브 샘플
                     저장` 방식으로 변경)
                   </li>
+                  <div className="mt-3 space-y-4">
+                    <CodeSnippetToggle
+                      title="/System/GameManager.cs - 적 & 최종 데이터 수집"
+                      code={GameManager}
+                      ranges={[{ start: 482, end: 516 }]}
+                    />
+                  </div>
                 </ul>
               </div>
               <div>
@@ -261,7 +282,8 @@ const DevLogPage = ({ codeAssets }: Props) => {
                     타워 통계 등) 수집을 위한 Log 시스템 개발 및 서버 연동.
                   </li>
                   <li>
-                    <b>데이터 보안:</b> 플레이어 저장 데이터 암호화 적용.
+                    <b>데이터 보안:</b> 플레이어 저장 데이터 암호화 적용. ( XOR
+                    암호화 )
                   </li>
                 </ul>
               </div>
@@ -302,6 +324,13 @@ const DevLogPage = ({ codeAssets }: Props) => {
                       Time.timeScale에 영향받지 않도록 DeltaTime 기반으로 로직을
                       변경하고, animationDuration으로 속도를 제어.
                     </p>
+                    <div className="mt-3 space-y-4">
+                      <CodeSnippetToggle
+                        title="/UI/UIManager.cs - UI 전환 함수"
+                        code={UIManager}
+                        ranges={[{ start: 230, end: 298 }]}
+                      />
+                    </div>
                   </li>
                   <li>
                     <b>UI 대응성 개선:</b>
@@ -409,7 +438,18 @@ const DevLogPage = ({ codeAssets }: Props) => {
                 </h4>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>TowerArchetype 기반 동적 버튼/배치 시스템</li>
+                  <li>
+                    하나의 TowerArchetype으로 한쌍의 타워데이터와 스킬데이터를
+                    관리
+                  </li>
                   <li>타워 설치 안정화 및 널 참조 문제 해결</li>
+                  <div className="mt-3 space-y-4">
+                    <CodeSnippetToggle
+                      title="/Data/Models/TowerArchetype.cs - 타워 & 스킬 데이터 통합관리"
+                      code={TowerArchetype}
+                      ranges={[{ start: 10, end: 46 }]}
+                    />
+                  </div>
                 </ul>
               </div>
               <div>
@@ -419,6 +459,17 @@ const DevLogPage = ({ codeAssets }: Props) => {
                     장비, 타워, 스킬에 마우스 오버 시 툴팁 표시 (TooltipManager
                     & TooltipTrigger 활용)
                   </li>
+                  <div className="mt-3 space-y-4">
+                    <CodeSnippetToggle
+                      title="/System/TooltipManager.cs - 툴팁의 실질적인 표시를 담당"
+                      code={TooltipManager}
+                      ranges={[{ start: 111, end: 179 }]}
+                    />
+                    <CodeSnippetToggle
+                      title="/UI/TooltipTrigger.cs - 객체의 컴포넌트로 추가하여 툴팁 정보를 저장 및 이벤트 감지"
+                      code={TooltipTrigger}
+                    />
+                  </div>
                 </ul>
               </div>
               <div>
@@ -489,6 +540,16 @@ const DevLogPage = ({ codeAssets }: Props) => {
                       방향을 매 프레임 계산하여, 목표 지점 이상으로 이동하지
                       않도록 로직 수정.
                     </p>
+                    <div className="mt-3 space-y-4">
+                      <CodeSnippetToggle
+                        title="/Enemy/Enemy.cs - 경로 탐색 및 이동"
+                        code={Enemy}
+                        ranges={[
+                          { start: 90, end: 137 },
+                          { start: 153, end: 172 },
+                        ]}
+                      />
+                    </div>
                   </li>
                   <li>
                     <b>적 추적 알고리즘 최적화:</b>
