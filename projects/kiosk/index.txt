@@ -1,6 +1,6 @@
 1:HL["/towerdefense-portfolio/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/towerdefense-portfolio/_next/static/css/d85429ec75c7bf6c.css","style"]
-0:["agdcpxejcOFKbaO1Z9BdO",[[["",{"children":["projects",{"children":["kiosk",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/d85429ec75c7bf6c.css","precedence":"next"}]],"$L4"]]]]
+0:["_kfZmGLEtKU30LJruiQ1P",[[["",{"children":["projects",{"children":["kiosk",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/towerdefense-portfolio/_next/static/css/d85429ec75c7bf6c.css","precedence":"next"}]],"$L4"]]]]
 5:HL["/towerdefense-portfolio/_next/static/css/986f079464c860c4.css","style"]
 6:I{"id":4244,"chunks":["185:static/chunks/app/layout-e9aa3fd688bb7a06.js"],"name":"","async":false}
 7:I{"id":7885,"chunks":["185:static/chunks/app/layout-e9aa3fd688bb7a06.js"],"name":"","async":false}
