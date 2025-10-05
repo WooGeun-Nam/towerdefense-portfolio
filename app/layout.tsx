@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="ko" className="scroll-smooth" suppressHydrationWarning>
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"
