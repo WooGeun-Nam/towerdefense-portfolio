@@ -26,6 +26,16 @@ export default function RootLayout({
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"
         strategy="afterInteractive"
+        onLoad={() => {
+          const retry = () => {
+            if (typeof window !== "undefined" && window.Prism) {
+              window.Prism.highlightAll();
+            } else {
+              setTimeout(retry, 100);
+            }
+          };
+          retry();
+        }}
       />
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
