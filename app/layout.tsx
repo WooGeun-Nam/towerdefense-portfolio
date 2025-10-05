@@ -1,11 +1,10 @@
-// app/layout.tsx
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import PrismHydrator from "../components/PrismHydrator";
 
-const inter = Inter({ subsets: ["latin"] }); // 기존 그대로
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "WooGeun Nam",
@@ -23,14 +22,26 @@ export default function RootLayout({
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
         strategy="beforeInteractive"
-      />
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"
-        strategy="afterInteractive"
-      />
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
-        strategy="afterInteractive"
+        onLoad={() => {
+          const load = (src: string) =>
+            new Promise<void>((resolve) => {
+              const el = document.createElement("script");
+              el.src = src;
+              el.defer = true;
+              el.onload = () => resolve();
+              document.head.appendChild(el);
+            });
+
+          load(
+            "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"
+          )
+            .then(() =>
+              load(
+                "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
+              )
+            )
+            .then(() => window.Prism?.highlightAll());
+        }}
       />
 
       <head>
