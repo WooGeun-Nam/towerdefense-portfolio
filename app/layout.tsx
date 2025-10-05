@@ -22,26 +22,14 @@ export default function RootLayout({
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
         strategy="beforeInteractive"
-        onLoad={() => {
-          const load = (src: string) =>
-            new Promise<void>((resolve) => {
-              const el = document.createElement("script");
-              el.src = src;
-              el.defer = true;
-              el.onload = () => resolve();
-              document.head.appendChild(el);
-            });
-
-          load(
-            "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"
-          )
-            .then(() =>
-              load(
-                "https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
-              )
-            )
-            .then(() => window.Prism?.highlightAll());
-        }}
+      />
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"
+        strategy="afterInteractive"
+      />
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
+        strategy="afterInteractive"
       />
 
       <head>
