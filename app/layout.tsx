@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import PrismHydrator from "../components/PrismHydrator";
+import PrismLoader from "../components/PrismLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,29 +20,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="scroll-smooth" suppressHydrationWarning>
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"
-        strategy="beforeInteractive"
-      />
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          const retry = () => {
-            if (typeof window !== "undefined" && window.Prism) {
-              window.Prism.highlightAll();
-            } else {
-              setTimeout(retry, 100);
-            }
-          };
-          retry();
-        }}
-      />
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"
-        strategy="afterInteractive"
-      />
-
       <head>
         <link
           rel="stylesheet"
@@ -54,6 +32,7 @@ export default function RootLayout({
       </head>
 
       <body className={`${inter.className} min-h-dvh bg-gray-100 antialiased`}>
+        <PrismLoader />
         <PrismHydrator />
         {children}
       </body>
