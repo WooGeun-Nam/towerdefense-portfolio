@@ -331,7 +331,7 @@ const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
               }}
               className="text-blue-600 hover:underline"
             >
-              게임 기획서 보기
+              기획서 보기
             </a>
             <span className="mx-2">|</span>
             <a
@@ -342,7 +342,7 @@ const DeployPage: React.FC<DeployPageProps> = ({ onTabChange }) => {
               }}
               className="text-blue-600 hover:underline"
             >
-              개발 일지 보기
+              개발일지 보기
             </a>
           </p>
         </div>

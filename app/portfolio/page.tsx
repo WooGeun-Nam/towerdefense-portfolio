@@ -84,7 +84,7 @@ export default function PortfolioHome() {
                   RogueTower
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  로그라이크 타워 디펜스
+                  로그라이크 타워 디펜스 ( Unity, C#, 1인개발 )
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   타워디펜스의 전략적 배치와 장비 파밍 기반 성장을 결합하고,
@@ -111,7 +111,7 @@ export default function PortfolioHome() {
                   2D Shooter Clone
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  모바일 기반 2D 슈터 액션
+                  모바일 기반 2D 슈터 액션 ( Unity, C#, 1인개발 )
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   FSM 기반 상태 제어와 모바일 UI/UX 경험 설계를 중심으로 학습한
@@ -140,10 +140,10 @@ export default function PortfolioHome() {
                   음식 객체 인식
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  학부 연구 프로젝트
+                  Python, 팀 프로젝트 ( 학부 연구 )
                 </p>
                 <p className="text-sm text-gray-700 text-left">
-                  CNN 기반 머신러닝으로 음식 객체 인식 모델 구현
+                  머신러닝(CNN)을 통한 음식 객체 인식 모델 구현
                 </p>
               </Link>
 
@@ -164,7 +164,7 @@ export default function PortfolioHome() {
                   스마트 온습도 제어
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  Raspberry Pi 기반 팀 프로젝트
+                  Python, 개인 프로젝트
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   온습도 센서를 활용한 IoT 모니터링 시스템 구현
@@ -186,7 +186,7 @@ export default function PortfolioHome() {
                 />
                 <h3 className="text-xl font-semibold text-center">PEI</h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  휴대용 가상악기
+                  Python, 개인 프로젝트
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   Raspberry Pi를 활용한 휴대용 가상악기 제작
@@ -210,7 +210,7 @@ export default function PortfolioHome() {
                   항공 예약 관리 시스템
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  C / Pro*C / OracleSQL
+                  Pro*C, 개인 프로젝트
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   DB 설계 및 DB 연동 예약 관리 로직 구현
@@ -234,7 +234,7 @@ export default function PortfolioHome() {
                   EveryTimeClone
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  Java 팀 프로젝트
+                  Java, 팀 프로젝트
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   MySql 기반의 DB 서버 구축 및 관리
@@ -258,7 +258,7 @@ export default function PortfolioHome() {
                   키오스크 프로그램
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  운영체제 학습 프로젝트
+                  Linux, C, 개인 프로젝트
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   Linux 환경에서 코딩 및 컴파일 숙련
@@ -282,7 +282,7 @@ export default function PortfolioHome() {
                   대학 정보 시스템
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  Java 팀 프로젝트
+                  Java, 팀 프로젝트
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   학사 정보 관리 및 GUI 기반 CRUD 기능 구현
@@ -306,7 +306,7 @@ export default function PortfolioHome() {
                   내 맘대로 연주
                 </h3>
                 <p className="mt-3 font-semibold text-sm text-gray-700 text-left">
-                  C++ 팀 프로젝트
+                  C++, 팀 프로젝트
                 </p>
                 <p className="text-sm text-gray-700 text-left">
                   MFC 기반으로 입력 처리 및 음원 출력 기능 구현

@@ -21,7 +21,7 @@ export default function ShooterClonePage() {
 
             <dl className="grid grid-cols-[120px_1fr] gap-x-4 gap-y-6 text-gray-800 mt-8">
               <dt className="font-semibold text-gray-600">ROLE</dt>
-              <dd>Programmer, Artist</dd>
+              <dd>개발, 기획</dd>
 
               <dt className="font-semibold text-gray-600">DURATION</dt>
               <dd>1주</dd>

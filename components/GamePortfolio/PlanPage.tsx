@@ -15,9 +15,10 @@ type CodeAssets = Record<string, string>;
 
 type Props = {
   codeAssets: CodeAssets;
+  onTabChange: (tab: "deploy" | "plan" | "devlog") => void;
 };
 
-const PlanPage = ({ codeAssets }: Props) => {
+const PlanPage = ({ codeAssets, onTabChange }: Props) => {
   useEffect(() => {
     window.Prism?.highlightAll();
   }, [codeAssets]);
@@ -26,6 +27,7 @@ const PlanPage = ({ codeAssets }: Props) => {
   const UIEventManager = codeAssets.UIEventManager ?? "";
   const ObjectPool = codeAssets.ObjectPool ?? "";
   const SoundManager = codeAssets.SoundManager ?? "";
+  const MapDifficulty = codeAssets.MapDifficulty ?? "";
   const RandomPathGenerator = codeAssets.RandomPathGenerator ?? "";
   const MapGenerator = codeAssets.MapGenerator ?? "";
   const TowerArchetype = codeAssets.TowerArchetype ?? "";
@@ -158,7 +160,336 @@ const PlanPage = ({ codeAssets }: Props) => {
           </li>
           <li>PlayFab 기반 글로벌 랭킹 연동 및 플레이어 데이터 수집·분석</li>
           <li>이벤트 기반 UI 구조 설계로 UI와 게임 로직 간 의존성 최소화</li>
+          <li>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                onTabChange("devlog"); // 'devlog' 탭으로 전환
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="text-blue-600 hover:underline"
+            >
+              개발일지
+            </a>
+            를 통해 주요 패치, 버그 수정, 개선사항을 기록하며 품질 관리
+          </li>
         </ul>
+      </div>
+
+      {/* 기술적 특징 */}
+      <div className="mb-8 bg-white rounded-lg shadow p-6">
+        <h2 className="text-2xl font-bold mb-4">기술적 특징</h2>
+
+        <div className="space-y-6">
+          <ul className="list-disc pl-5 text-sm space-y-3">
+            <li>
+              <b>모듈형 타워 시스템 (State 패턴)</b> : `IWeaponState`
+              인터페이스를 기반으로 타워의 행동(탐색, 공격)을 명확하게 분리하여
+              확장성을 높였습니다.
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/Tower/WeaponStates/IWeaponState.cs - 타워 상태 인터페이스"
+                  code={IWeaponState}
+                />
+              </div>
+            </li>
+            <li>
+              <b>이벤트 기반 UI 업데이트</b> : `UIEventManager`를 통해 게임
+              데이터와 UI를 분리, 데이터 변경 시 UI가 실시간으로 반응하도록
+              설계하여 유지보수성을 강화했습니다.
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/UI/UIEventManager.cs - 이벤트 중앙 관리"
+                  code={UIEventManager}
+                  ranges={[
+                    { start: 13, end: 20 },
+                    { start: 84, end: 102 },
+                  ]}
+                />
+              </div>
+            </li>
+            <li>
+              <b>오브젝트 풀링</b> : 성능 최적화를 위해 적, 발사체 등 반복
+              생성되는 오브젝트를 재활용하는 시스템을 구현했습니다.
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/System/ObjectPool.cs"
+                  code={ObjectPool}
+                />
+              </div>
+              <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/Pooling1.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    풀링 성능 테스트 1 (148.19 FPS)
+                  </figcaption>
+                </div>
+
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/Pooling2.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    풀링 성능 테스트 2 (175.48 FPS)
+                  </figcaption>
+                </div>
+              </div>
+            </li>
+            <li>
+              <b>중앙 집중형 사운드 관리</b> : `SoundManager`를 통해 BGM, SFX를
+              관리하며, 여러 개의 지속 사운드를 독립적으로 제어하는 기능을
+              구현했습니다.
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/System/SoundManager.cs - PlayBGM & PlaySFX"
+                  code={SoundManager}
+                  ranges={[
+                    { start: 70, end: 89 },
+                    { start: 132, end: 184 },
+                  ]}
+                />
+              </div>
+            </li>
+            <li>
+              <b>애니메이션 재사용성</b> : `Animator Override Controller`를
+              활용하여 모든 타워가 하나의 로직을 공유하되, 각 타워의 애니메이션
+              클립만 교체하도록 설계하여 효율성을 높였습니다.
+            </li>
+            <li>
+              <b>데이터 기반 설계</b> : `ScriptableObject`를 활용하여 타워
+              밸런스를 코드 수정 없이 쉽게 조절할 수 있도록 설계했습니다.
+            </li>
+            <li>
+              <b>절차적 맵 생성 및 난이도 정량화 시스템</b>
+              <ul className="list-decimal pl-6 mt-1 space-y-1 text-xs">
+                <li>
+                  <b>경로 생성 :</b> `RandomPathGenerator.cs`를 통해 매 게임
+                  시작 시 새로운 적 이동 경로를 동적으로 생성하며, 생성된 경로의
+                  유효성을 검사하여 항상 완주 가능한 맵을 보장합니다.
+                </li>
+                <li>
+                  <b>난이도 계산 :</b> 생성된 맵의 경로 길이, 꺾이는 횟수, 경로
+                  간 간격 등 세 가지 요소를 가중치에 따라 조합하여 난이도를
+                  객관적인 수치로 평가하는 `MapDifficulty.cs`를 설계했습니다.
+                </li>
+                <li>
+                  <b>시각화 :</b> 생성된 경로 데이터를 기반으로
+                  `MapGenerator.cs`가 Unity의 `Tilemap`을 이용해 길, 코너, 성
+                  등의 타일을 배치하고, 플레이어의 진행도에 따라 다양한 맵
+                  테마가 무작위로 적용되도록 구현했습니다.
+                </li>
+              </ul>
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/Map/RandomPathGenerator.cs - 경로 생성 일부"
+                  code={RandomPathGenerator}
+                  ranges={[{ start: 90, end: 166 }]}
+                />
+                <CodeSnippetToggle
+                  title="/Map/MapGenerator.cs - 경로를 따라 맵 타일 전시"
+                  code={MapGenerator}
+                  ranges={[{ start: 157, end: 227 }]}
+                />
+                <CodeSnippetToggle
+                  title="/Map/MapDifficulty.cs - 생성된 맵 난이도 계산"
+                  code={MapDifficulty}
+                  ranges={[{ start: 6, end: 85 }]}
+                />
+              </div>
+              <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/RandomMap1.png"
+                    className="w-full object-cover"
+                  />
+                </div>
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/RandomMap2.png"
+                    className="w-full object-cover"
+                  />
+                </div>
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/RandomMap3.png"
+                    className="w-full object-cover"
+                  />
+                </div>
+              </div>
+            </li>
+            <li>
+              <b>이벤트 기반 UI 갱신</b> : 장비 장착, 보상 선택 등 주요 이벤트를
+              이벤트 리스너 기반으로 처리하여, 불필요한 Update 호출을 줄이고
+              퍼포먼스를 개선했습니다.
+            </li>
+
+            <li>
+              <b>웨이브 랜덤 보상 / 첫 웨이브 특성 시스템</b> : 선택형 보상
+              패널과 첫 웨이브 특성 선택 시스템을 통합하여, 게임 초반 전략성을
+              강화하고 플레이 전체에 즉각 반영되도록 설계했습니다.
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/System/WeightedRandomReward.cs - 웨이브 랜덤 보상"
+                  code={WeightedRandomReward}
+                  ranges={[{ start: 211, end: 247 }]}
+                />
+              </div>
+            </li>
+
+            <li>
+              <b>타워 및 장비 스킬 고도화</b>
+              <ul className="pl-6 mt-1 space-y-3">
+                <li>
+                  - 타워 데이터와 스킬 데이터를 한쌍으로 TowerArchetype로 통합
+                  <div className="mt-3 space-y-4">
+                    <CodeSnippetToggle
+                      title="/Data/Models/TowerArchetype.cs - 타워 & 스킬 데이터 통합관리"
+                      code={TowerArchetype}
+                      ranges={[{ start: 10, end: 46 }]}
+                    />
+                  </div>
+                </li>
+                <li>
+                  - 장비 특수 스킬을 SpecialSkillBase를 기반으로 상속받아 기능
+                  구현
+                  <div className="mt-3 space-y-4">
+                    <CodeSnippetToggle
+                      title="/Data/SpecialSkillBase.cs - 장비 특수 스킬 추상 클래스"
+                      code={SpecialSkillBase}
+                      ranges={[{ start: 1, end: 32 }]}
+                    />
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <b>맵/적 랜덤성 추가</b> : 맵과 적 스폰 정보를 데이터 랜덤성 추가
+              설계로 리플레이성과 유지보수성을 크게 강화했습니다.
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/Map/MapGenerator.cs - 맵 타일셋 랜덤 생성"
+                  code={MapGenerator}
+                  ranges={[{ start: 76, end: 135 }]}
+                />
+              </div>
+            </li>
+
+            <li>
+              <b>사운드 및 해상도 대응</b> : 사운드 볼륨 정규화 및 1280~1600
+              해상도 대응 UI를 구현하고, 사운드매니저를 통해 관리 편의성과
+              확장성을 높였습니다.
+            </li>
+            <li>
+              <b>데이터 관리 시스템 (암호화 및 마이그레이션)</b>
+              <p className="pl-4 text-xs">
+                `GameDataManager.cs`를 통해 플레이어의 저장 데이터를 XOR
+                암호화하여 로컬 파일 변조를 방지했습니다. 또한, 과거 버전(암호화
+                미적용)의 세이브 파일을 불러올 경우, 자동으로 최신 암호화
+                버전으로 변환 후 저장하는 데이터 마이그레이션 기능을 구현하여
+                안정성을 높였습니다.
+              </p>
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/System/GameDataManager.cs - 암호화 및 마이그레이션"
+                  code={GameDataManager}
+                />
+              </div>
+            </li>
+            <li>
+              <b>툴팁 시스템 : 툴팁을 통한 유저 편의적인 UI 제공</b>
+              <p className="pl-4 text-xs">
+                툴팁이 필요한 객체에 `TooltipTrigger.cs` 컴포넌트를 이용하여
+                정보제공
+              </p>
+              <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/Tooltip1.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    툴팁 예시1 (타워 정보)
+                  </figcaption>
+                </div>
+
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/Tooltip3.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    툴팁 예시2 (특수 장비 인게임 정보 실시간 표기)
+                  </figcaption>
+                </div>
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/Tooltip2.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    툴팁 예시3 (장비 옵션)
+                  </figcaption>
+                </div>
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/Tooltip4.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    툴팁 예시4 (도감에서 장비 옵션)
+                  </figcaption>
+                </div>
+              </div>
+            </li>
+            <li>
+              <b>툴팁 시스템 통합</b> : TooltipManager와 TooltipTrigger를
+              기반으로 장비, 타워, 스킬에 마우스 오버 시 실시간 툴팁을 표시하여
+              UI 일관성과 직관성을 강화했습니다.
+              <div className="mt-3 space-y-4">
+                <CodeSnippetToggle
+                  title="/System/TooltipManager.cs - 툴팁의 실질적인 표시를 담당"
+                  code={TooltipManager}
+                  ranges={[{ start: 111, end: 179 }]}
+                />
+                <CodeSnippetToggle
+                  title="/UI/TooltipTrigger.cs - 객체의 컴포넌트로 추가하여 툴팁 정보를 저장 및 이벤트 감지"
+                  code={TooltipTrigger}
+                />
+              </div>
+            </li>
+            <li>
+              <b>PlayFab을 통한 데이터 수집</b> : 전투 데이터 및 에러 데이터
+              수집
+              <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/PlayFabCombatData.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    PlayFab을 통한 전투 데이터 수집
+                  </figcaption>
+                </div>
+
+                <div>
+                  <ImgPrefixed
+                    src="/Desc/PlayFabError.png"
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="text-center text-sm text-gray-600 mt-2">
+                    PlayFab 을 통한 에러 데이터 수집 쿼리
+                  </figcaption>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
 
       {/* 게임 개요 */}
@@ -639,336 +970,9 @@ const PlanPage = ({ codeAssets }: Props) => {
         </div>
       </div>
 
-      {/* 기술적 특징 */}
-      <div className="mb-8 bg-white rounded-lg shadow p-6">
-        <h2 className="text-2xl font-bold mb-4">기술적 특징</h2>
-
-        <div className="space-y-6">
-          <div>
-            <h3 className="font-semibold mb-2">그래픽 & UI</h3>
-            <div className="p-4 bg-gray-50 rounded">
-              <ul className="list-disc pl-5 text-sm space-y-1">
-                <li>픽셀 아트 그래픽 스타일</li>
-                <li>UI 간소화 설계</li>
-                <li>TAB 키를 통한 UI ON/OFF 기능</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">시스템 설계</h3>
-            <div className="p-4 bg-gray-50 rounded">
-              <ul className="list-disc pl-5 text-sm space-y-3">
-                <li>
-                  <b>모듈형 타워 시스템 (State 패턴)</b> : `IWeaponState`
-                  인터페이스를 기반으로 타워의 행동(탐색, 공격)을 명확하게
-                  분리하여 확장성을 높였습니다.
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/Tower/WeaponStates/IWeaponState.cs - 타워 상태 인터페이스"
-                      code={IWeaponState}
-                    />
-                  </div>
-                </li>
-                <li>
-                  <b>이벤트 기반 UI 업데이트</b> : `UIEventManager`를 통해 게임
-                  데이터와 UI를 분리, 데이터 변경 시 UI가 실시간으로 반응하도록
-                  설계하여 유지보수성을 강화했습니다.
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/UI/UIEventManager.cs - 이벤트 중앙 관리"
-                      code={UIEventManager}
-                      ranges={[
-                        { start: 13, end: 20 },
-                        { start: 84, end: 102 },
-                      ]}
-                    />
-                  </div>
-                </li>
-                <li>
-                  <b>오브젝트 풀링</b> : 성능 최적화를 위해 적, 발사체 등 반복
-                  생성되는 오브젝트를 재활용하는 시스템을 구현했습니다.
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/System/ObjectPool.cs"
-                      code={ObjectPool}
-                    />
-                  </div>
-                  <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/Pooling1.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        풀링 성능 테스트 1 (148.19 FPS)
-                      </figcaption>
-                    </div>
-
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/Pooling2.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        풀링 성능 테스트 2 (175.48 FPS)
-                      </figcaption>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <b>중앙 집중형 사운드 관리</b> : `SoundManager`를 통해 BGM,
-                  SFX를 관리하며, 여러 개의 지속 사운드를 독립적으로 제어하는
-                  기능을 구현했습니다.
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/System/SoundManager.cs - PlayBGM & PlaySFX"
-                      code={SoundManager}
-                      ranges={[
-                        { start: 70, end: 89 },
-                        { start: 132, end: 184 },
-                      ]}
-                    />
-                  </div>
-                </li>
-                <li>
-                  <b>애니메이션 재사용성</b> : `Animator Override Controller`를
-                  활용하여 모든 타워가 하나의 로직을 공유하되, 각 타워의
-                  애니메이션 클립만 교체하도록 설계하여 효율성을 높였습니다.
-                </li>
-                <li>
-                  <b>데이터 기반 설계</b> : `ScriptableObject`를 활용하여 타워
-                  밸런스를 코드 수정 없이 쉽게 조절할 수 있도록 설계했습니다.
-                </li>
-                <li>
-                  <b>절차적 맵 생성 및 난이도 정량화 시스템</b>
-                  <ul className="list-decimal pl-6 mt-1 space-y-1 text-xs">
-                    <li>
-                      <b>경로 생성 :</b> `RandomPathGenerator.cs`를 통해 매 게임
-                      시작 시 새로운 적 이동 경로를 동적으로 생성하며, 생성된
-                      경로의 유효성을 검사하여 항상 완주 가능한 맵을 보장합니다.
-                    </li>
-                    <li>
-                      <b>난이도 계산 :</b> 생성된 맵의 경로 길이, 꺾이는 횟수,
-                      경로 간 간격 등 세 가지 요소를 가중치에 따라 조합하여
-                      난이도를 객관적인 수치로 평가하는 `MapDifficulty.cs`를
-                      설계했습니다.
-                    </li>
-                    <li>
-                      <b>시각화 :</b> 생성된 경로 데이터를 기반으로
-                      `MapGenerator.cs`가 Unity의 `Tilemap`을 이용해 길, 코너,
-                      성 등의 타일을 배치하고, 플레이어의 진행도에 따라 다양한
-                      맵 테마가 무작위로 적용되도록 구현했습니다.
-                    </li>
-                  </ul>
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/Map/RandomPathGenerator.cs - 경로 생성 일부"
-                      code={RandomPathGenerator}
-                      ranges={[{ start: 90, end: 166 }]}
-                    />
-                    <CodeSnippetToggle
-                      title="/Map/MapGenerator.cs - 경로를 따라 맵 타일 전시"
-                      code={MapGenerator}
-                      ranges={[{ start: 157, end: 227 }]}
-                    />
-                  </div>
-                  <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/RandomMap1.png"
-                        className="w-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/RandomMap2.png"
-                        className="w-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/RandomMap3.png"
-                        className="w-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <b>이벤트 기반 UI 갱신</b> : 장비 장착, 보상 선택 등 주요
-                  이벤트를 이벤트 리스너 기반으로 처리하여, 불필요한 Update
-                  호출을 줄이고 퍼포먼스를 개선했습니다.
-                </li>
-
-                <li>
-                  <b>웨이브 랜덤 보상 / 첫 웨이브 특성 시스템</b> : 선택형 보상
-                  패널과 첫 웨이브 특성 선택 시스템을 통합하여, 게임 초반
-                  전략성을 강화하고 플레이 전체에 즉각 반영되도록 설계했습니다.
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/System/WeightedRandomReward.cs - 웨이브 랜덤 보상"
-                      code={WeightedRandomReward}
-                      ranges={[{ start: 211, end: 247 }]}
-                    />
-                  </div>
-                </li>
-
-                <li>
-                  <b>타워 및 장비 스킬 고도화</b>
-                  <ul className="pl-6 mt-1 space-y-3">
-                    <li>
-                      - 타워 데이터와 스킬 데이터를 한쌍으로 TowerArchetype로
-                      통합
-                      <div className="mt-3 space-y-4">
-                        <CodeSnippetToggle
-                          title="/Data/Models/TowerArchetype.cs - 타워 & 스킬 데이터 통합관리"
-                          code={TowerArchetype}
-                          ranges={[{ start: 10, end: 46 }]}
-                        />
-                      </div>
-                    </li>
-                    <li>
-                      - 장비 특수 스킬을 SpecialSkillBase를 기반으로 상속받아
-                      기능 구현
-                      <div className="mt-3 space-y-4">
-                        <CodeSnippetToggle
-                          title="/Data/SpecialSkillBase.cs - 장비 특수 스킬 추상 클래스"
-                          code={SpecialSkillBase}
-                          ranges={[{ start: 1, end: 32 }]}
-                        />
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <b>맵/적 랜덤성 추가</b> : 맵과 적 스폰 정보를 데이터 랜덤성
-                  추가 설계로 리플레이성과 유지보수성을 크게 강화했습니다.
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/Map/MapGenerator.cs - 맵 타일셋 랜덤 생성"
-                      code={MapGenerator}
-                      ranges={[{ start: 76, end: 135 }]}
-                    />
-                  </div>
-                </li>
-
-                <li>
-                  <b>사운드 및 해상도 대응</b> : 사운드 볼륨 정규화 및 1280~1600
-                  해상도 대응 UI를 구현하고, 사운드매니저를 통해 관리 편의성과
-                  확장성을 높였습니다.
-                </li>
-                <li>
-                  <b>데이터 관리 시스템 (암호화 및 마이그레이션)</b>
-                  <p className="pl-4 text-xs">
-                    `GameDataManager.cs`를 통해 플레이어의 저장 데이터를 XOR
-                    암호화하여 로컬 파일 변조를 방지했습니다. 또한, 과거
-                    버전(암호화 미적용)의 세이브 파일을 불러올 경우, 자동으로
-                    최신 암호화 버전으로 변환 후 저장하는 데이터 마이그레이션
-                    기능을 구현하여 안정성을 높였습니다.
-                  </p>
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/System/GameDataManager.cs - 암호화 및 마이그레이션"
-                      code={GameDataManager}
-                    />
-                  </div>
-                </li>
-                <li>
-                  <b>툴팁 시스템 : 툴팁을 통한 유저 편의적인 UI 제공</b>
-                  <p className="pl-4 text-xs">
-                    툴팁이 필요한 객체에 `TooltipTrigger.cs` 컴포넌트를 이용하여
-                    정보제공
-                  </p>
-                  <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/Tooltip1.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        툴팁 예시1 (타워 정보)
-                      </figcaption>
-                    </div>
-
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/Tooltip3.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        툴팁 예시2 (특수 장비 인게임 정보 실시간 표기)
-                      </figcaption>
-                    </div>
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/Tooltip2.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        툴팁 예시3 (장비 옵션)
-                      </figcaption>
-                    </div>
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/Tooltip4.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        툴팁 예시4 (도감에서 장비 옵션)
-                      </figcaption>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <b>툴팁 시스템 통합</b> : TooltipManager와 TooltipTrigger를
-                  기반으로 장비, 타워, 스킬에 마우스 오버 시 실시간 툴팁을
-                  표시하여 UI 일관성과 직관성을 강화했습니다.
-                  <div className="mt-3 space-y-4">
-                    <CodeSnippetToggle
-                      title="/System/TooltipManager.cs - 툴팁의 실질적인 표시를 담당"
-                      code={TooltipManager}
-                      ranges={[{ start: 111, end: 179 }]}
-                    />
-                    <CodeSnippetToggle
-                      title="/UI/TooltipTrigger.cs - 객체의 컴포넌트로 추가하여 툴팁 정보를 저장 및 이벤트 감지"
-                      code={TooltipTrigger}
-                    />
-                  </div>
-                </li>
-                <li>
-                  <b>PlayFab을 통한 데이터 수집</b> : 전투 데이터 및 에러 데이터
-                  수집
-                  <div className="p-4 overflow-hidden grid grid-cols-2 gap-4">
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/PlayFabCombatData.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        PlayFab을 통한 전투 데이터 수집
-                      </figcaption>
-                    </div>
-
-                    <div>
-                      <ImgPrefixed
-                        src="/Desc/PlayFabError.png"
-                        className="w-full object-cover"
-                      />
-                      <figcaption className="text-center text-sm text-gray-600 mt-2">
-                        PlayFab 을 통한 에러 데이터 수집 쿼리
-                      </figcaption>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* 디자인 */}
       <div className="mb-8 bg-white rounded-lg shadow p-6">
-        <h2 className="text-2xl font-bold mb-4">게임 디자인</h2>
+        <h2 className="text-2xl font-bold mb-4">디자인</h2>
         <div className="space-y-6">
           <div>
             <div className="grid gap-4">
