@@ -3,7 +3,7 @@
 /** 배포 환경 prefix 계산: Pages(프로덕션)에서는 레포명 고정, 그 외에는 런타임 정보 사용 */
 const getPrefix = () => {
   if (process.env.NODE_ENV === "production") {
-    return "/towerdefense-portfolio";
+    return "/";
   }
   if (typeof window !== "undefined") {
     const d: any = (window as any).__NEXT_DATA__;

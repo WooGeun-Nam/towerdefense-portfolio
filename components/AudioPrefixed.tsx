@@ -1,7 +1,7 @@
 "use client";
 
 const getPrefix = () => {
-  if (process.env.NODE_ENV === "production") return "/towerdefense-portfolio";
+  if (process.env.NODE_ENV === "production") return "/";
   if (typeof window !== "undefined") {
     const d: any = (window as any).__NEXT_DATA__;
     if (d?.assetPrefix) return d.assetPrefix as string;
