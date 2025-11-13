@@ -10,22 +10,26 @@ const getPrefix = () => {
   return "";
 };
 
+// 파일 경로 정규화: "./", "../", leading "/" 제거
 const normalize = (src: string) =>
   src.startsWith("http")
     ? src
-    : `/${src.replace(/^(\.\/+|\.\.\/+)+/, "").replace(/^\/+/, "")}`;
+    : src.replace(/^(\.\/+|\.\.\/+)+/, "").replace(/^\/+/, "");
 
 type Props = Omit<React.AudioHTMLAttributes<HTMLAudioElement>, "src"> & {
   src?: string;
 };
 
 export default function AudioPrefixed({ src, ...rest }: Props) {
-  const prefix = getPrefix(); // ← 동기 계산
-  const finalSrc = !src
-    ? undefined
-    : src.startsWith("http")
+  const prefix = getPrefix();
+
+  if (!src) {
+    return <audio preload="metadata" {...rest} />;
+  }
+
+  const finalSrc = src.startsWith("http")
     ? src
-    : `${prefix}${normalize(src)}`;
+    : `${prefix.replace(/\/+$/, "")}/${normalize(src).replace(/^\/+/, "")}`;
 
   return <audio src={finalSrc} preload="metadata" {...rest} />;
 }
